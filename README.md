@@ -13,7 +13,7 @@ A classe Database contém todos as métodos a partir dela você tem acesso a ele
 ### Métodos
 
 ```
-  $db->conectar();
+  $db->connect();
   $db->sessionStart();
   $db->delete( $id );
   $db->countUsers();

@@ -9,7 +9,7 @@
   class Database {
 
     // Conecta ao banco de dados
-    public function conectar() {
+    public function connect() {
       $host = "localhost";
       $user = "root";
       $pass = "";
@@ -39,7 +39,7 @@
 
       $loggedUser = $this->getLoggedUser();
 
-      $pdo = $this->conectar();
+      $pdo = $this->connect();
       $sql = $pdo->prepare("DELETE FROM usuarios WHERE ID=:id");
       $sql->bindValue(':id', $id);
 
@@ -55,7 +55,7 @@
 
     // Exibe a quantidade de usuários cadastrados
     public function countUsers() {
-      $pdo = $this->conectar();
+      $pdo = $this->connect();
       $busca = $pdo->prepare("SELECT count(*) as total FROM usuarios");
       $busca->execute();
       $result = $busca->fetchColumn();
@@ -64,7 +64,7 @@
 
     // Resgata o usuário que está logado
     public function getLoggedUser() {
-      $pdo = $this->conectar();
+      $pdo = $this->connect();
 
       $email = $_SESSION['email'];
       $senha = $_SESSION['senha'];
@@ -86,7 +86,7 @@
 
     // Lista todos usuários cadatrados
     public function readAll() {
-      $pdo = $this->conectar();
+      $pdo = $this->connect();
       $busca = $pdo->prepare("SELECT * FROM usuarios");
       $busca->execute();
 
@@ -97,7 +97,7 @@
 
     // Cadastro no banco
     public function insert() {
-      $pdo = $this->conectar();
+      $pdo = $this->connect();
 
       $nome =       $_POST['nome'];
       $endereco =   $_POST['endereco'];
@@ -137,7 +137,7 @@
 
     // Recuperar usuário pelo ID
     public function getById( $id ) {
-      $pdo = $this->conectar();
+      $pdo = $this->connect();
       $busca = $pdo->prepare("SELECT * FROM usuarios WHERE ID = :id");
       $busca->bindValue(':id', $id);
       $busca->execute();
@@ -148,7 +148,7 @@
 
     // Atualizar usuário
     public function update() {
-      $pdo = $this->conectar();
+      $pdo = $this->connect();
 
       $id =         $_POST['ID'];
       $nome =       $_POST['nome'];
@@ -231,7 +231,7 @@
 
     // Login no sistema
     public function login() {
-      $pdo = $this->conectar();
+      $pdo = $this->connect();
       $email = $_POST['email'];
       $senha = md5($_POST['senha']);
 
@@ -259,7 +259,7 @@
 
     // Bloquear usuário
     public function blocked( $id ) {
-      $pdo = conectar();
+      $pdo = connect();
       $sql = $pdo->prepare("UPDATE usuarios SET bloqueado = '1' WHERE id= :id");
       $sql->bindValue(':bloqueado', $id);
       $sql->execute();
