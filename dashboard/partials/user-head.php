@@ -1,0 +1,11 @@
+<th>id</th>
+<th>Nome</th>
+<th>Endereço</th>
+<th>Telefone</th>
+<th>E-mail</th>
+<th>RG</th>
+<th>CPF</th>
+<th>Nascimento</th>
+<th>Genero</th>
+<th>Editar</th>
+<th>Excluir</th>
