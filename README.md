@@ -4,6 +4,15 @@
 Esse projeto de e-commerce é um trabalho académico básico que tem como objetivo a interação entre o PHP e um banco de dados, nele será aplicado as operações do CRUD no MySQL usando a API PDO do PHP.
 
 ### Class Database
+Se preciso altere as variaveis de coneção com o banco de dados na função `connect` dessa classe.
+
+```
+  $host = "localhost";
+  $user = "root";
+  $pass = "";
+  $banco = "nicegames";
+```
+
 Instacie a classe para obter os métodos.
 
 ```
@@ -82,7 +91,7 @@ Instacie a classe para obter os métodos.
 ### Criação das tabelas
 
 ```
-  DROP TABLE IF EXISTS `cliente`;
+DROP TABLE IF EXISTS `cliente`;
 
 CREATE TABLE `cliente` (
   `id` int(11) NOT NULL AUTO_INCREMENT PRIMARY KEY,
