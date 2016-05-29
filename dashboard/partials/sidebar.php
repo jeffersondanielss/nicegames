@@ -5,8 +5,8 @@
       <a href="javascript:;" data-toggle="collapse" data-target="#consulta">
       <i class="fa fa-fw fa-list-ul"></i> Consulta <i class="fa fa-fw fa-caret-down"></i></a>
       <ul id="consulta" class="collapse">
-        <li><a href="client.php"><i class="fa fa-fw fa-user"></i> Clientes</a></li>
-        <li><a href="funcionario.php"><i class="fa fa-fw fa-user"></i> Funcionários</a></li>
+        <li><a href="client.php">Clientes</a></li>
+        <li><a href="funcionario.php">Funcionários</a></li>
       </ul>
     </li>
 

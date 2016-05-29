@@ -3,6 +3,8 @@
 
 Esse projeto de e-commerce é um trabalho académico básico que tem como objetivo a interação entre o PHP e um banco de dados, nele será aplicado as operações do CRUD no MySQL usando a API PDO do PHP.
 
+![NiceGames ilustration](https://raw.githubusercontent.com/jeffersondanielss/nicegames/master/nicegames.png)
+
 ### Class Database
 Se preciso altere as variaveis de coneção com o banco de dados na função `connect` dessa classe.
 

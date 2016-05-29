@@ -1,5 +1,5 @@
 <?php 
-  $title = "LHM - Perfil";
+  $title = "NG - Perfil";
   include 'partials/header.php';
   include 'functions/database.php';
   include 'functions/employe/employe.php';
