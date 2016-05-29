@@ -1,7 +1,10 @@
 <?php 
-  $title = "Lan House manager";
+  $title = "Nice games Store";
   include 'partials/header.php';
   include 'functions/database.php';
+  include 'functions/product/product.php';
+  include 'functions/employe/employe.php';
+  include 'functions/client/client.php';
 ?>
 
 <body>
@@ -19,7 +22,7 @@
         <div class="row">
           <div class="col-lg-12">
             <h1 class="page-header">
-              Painel <small>Todos usuários</small>
+              Painel <small>Todos produtos</small>
             </h1>
           </div>
         </div>
@@ -34,8 +37,8 @@
                     <i class="fa fa-users fa-5x"></i>
                   </div>
                   <div class="col-xs-9 text-right">
-                    <div class="huge"><?php $db->countUsers(); ?></div>
-                    <div>Número de usuários</div>
+                    <div class="huge"><?php $product->count(); ?></div>
+                    <div>Número de produtos</div>
                   </div>
                 </div>
               </div>
@@ -50,8 +53,8 @@
                     <i class="fa fa-ban fa-5x"></i>
                   </div>
                   <div class="col-xs-9 text-right">
-                    <div class="huge">0</div>
-                    <div>Usuários Bloqueados</div>
+                    <div class="huge"><?php $employe->count(); ?></div>
+                    <div>Clientes</div>
                   </div>
                 </div>
               </div>
@@ -66,8 +69,8 @@
                     <i class="fa fa-user fa-5x"></i>
                   </div>
                   <div class="col-xs-9 text-right">
-                    <div class="huge">3</div>
-                    <div>Usuários Ativos</div>
+                    <div class="huge"><?php $client->count(); ?></div>
+                    <div>Funcionários</div>
                   </div>
                 </div>
               </div>
@@ -87,11 +90,11 @@
                   <table class="table table-bordered table-hover table-striped">
                     <thead>
                       <tr>
-                        <?php include 'partials/user-head.php'; ?>
+                        <?php include 'partials/product/user-head.php'; ?>
                       </tr>
                     </thead>
                     <tbody>
-                      <?php $db->listUsers( $db->readAll() ); ?>
+                      <?php $product->wrapperList( $product->readAll() ); ?>
                     </tbody>
                   </table>
 

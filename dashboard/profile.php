@@ -2,6 +2,7 @@
   $title = "LHM - Perfil";
   include 'partials/header.php';
   include 'functions/database.php';
+  include 'functions/employe/employe.php';
 ?>
 
 <body>
@@ -19,7 +20,7 @@
           <div class="row">
               <div class="col-lg-12">
                   <h1 class="page-header">
-                      Perfil: <small><?php echo $db->loggedUserName(); ?></small>
+                      Perfil: <small><?php echo $employe->loggedUserName(); ?></small>
 
                   </h1>
               </div>
@@ -73,11 +74,11 @@
                         <table class="table table-bordered table-hover table-striped">
                             <thead>
                                 <tr>
-                                  <?php include 'partials/user-head.php'; ?>
+                                  <?php include 'partials/employe/user-head.php'; ?>
                                 </tr>
                             </thead>
                             <tbody>
-                                <?php $db->listUsers( $db->getLoggeduser() ); ?>
+                                <?php $employe->wrapperList( $employe->getLoggeduser() ); ?>
                             </tbody>
                         </table>
                     </div>

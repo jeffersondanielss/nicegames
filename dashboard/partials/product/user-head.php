@@ -1,0 +1,12 @@
+<td>id</td>
+<td>image</td>
+<td>titulo</td>
+<td>genero</td>
+<td>preco</td>
+<td>lancamento</td>
+<td>audio</td>
+<td>legenda</td>
+<td>tamanho</td>
+<td>quantidade</td>
+<td>Editar</td>
+<td>Excluir</td>

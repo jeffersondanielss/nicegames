@@ -1,7 +1,7 @@
 <?php
   function update(){
-    include 'database.php';
-    $db = new Database;
+    include 'product.php';
+    $db = new Product;
     $db->update();
   }
 

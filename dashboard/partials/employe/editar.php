@@ -1,14 +1,18 @@
 <?php 
-  $title = "LHM - Cadastro de usuário";
-  include 'partials/header.php';
-  include 'functions/database.php';
+  $title = "NG - Editar Funcionário";
+  include '../../functions/config.php';
+  include '../header.php';
+  include '../../functions/database.php';
+  include '../../functions/product/product.php';
+  include '../../functions/employe/employe.php';
+  include '../../functions/client/client.php';
 ?>
 
 <body>
 
     <div id="wrapper">
 
-        <?php include 'partials/navbar.php'; ?>
+        <?php include '../navbar.php'; ?>
 
         <div id="page-wrapper">
 
@@ -18,7 +22,7 @@
                 <div class="row">
                     <div class="col-lg-12">
                         <h1 class="page-header">
-                            Cadastro
+                            Editar
                         </h1>
                     </div>
                 </div>
@@ -26,7 +30,7 @@
 
                 <div class="row">
                     <div class="col-lg-8">
-                      <?php include 'partials/form-cadastro.php'; ?>
+                      <?php include 'form-editar.php'; ?>
                     </div>
                     
                 <!-- /.row -->
@@ -40,4 +44,4 @@
     </div>
     <!-- /#wrapper -->
 
-<?php include 'partials/footer.php'; ?>
+<?php include '../footer.php'; ?>

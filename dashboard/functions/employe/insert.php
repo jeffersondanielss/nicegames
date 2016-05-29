@@ -1,7 +1,7 @@
 <?php
   function insert() {
-    include 'database.php';
-    $db = new Database;
+    include 'employe.php';
+    $db = new Employe;
     $db->insert();
   }
 

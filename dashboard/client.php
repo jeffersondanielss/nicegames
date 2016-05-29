@@ -1,7 +1,10 @@
 <?php 
-  $title = "LHM - Funcionários";
+  $title = "LHM - Usuários";
   include 'partials/header.php';
   include 'functions/database.php';
+  include 'functions/product/product.php';
+  include 'functions/employe/employe.php';
+  include 'functions/client/client.php';
 ?>
 
 <body>
@@ -18,9 +21,7 @@
                 <!-- Page Heading -->
                 <div class="row">
                     <div class="col-lg-12">
-                        <h1 class="page-header">
-                            Funcionários
-                        </h1>
+                        <h1 class="page-header">Clientes</h1>
                     </div>
                 </div>
                 <!-- /.row -->
@@ -29,18 +30,18 @@
                     <div class="col-lg-12">
                         <div class="panel panel-default">
                             <div class="panel-heading">
-                                <h3 class="panel-title"><i class="fa fa-user fa-fw"></i> Funcionários</h3>
+                                <h3 class="panel-title"><i class="fa fa-user fa-fw"></i> Clientes</h3>
                             </div>
                             <div class="panel-body">
                                 <div class="table-responsive">
                                     <table class="table table-bordered table-hover table-striped">
                                         <thead>
                                             <tr>
-                                                <?php include 'partials/user-head.php'; ?>
+                                                <?php include 'partials/client/user-head.php'; ?>
                                             </tr>
                                         </thead>
                                         <tbody>
-                                            <?php $db->listUsers( $db->readAll() ); ?>
+                                            <?php $client->wrapperList( $client->readAll() ); ?>
                                         </tbody>
                                     </table>
                                     <?php include 'partials/message.php'; ?>
