@@ -6,42 +6,7 @@
   * CRUD PDO
   */
 
-  class Product {
-
-    // Deleta usuários
-    public function delete( $id ) {
-      include '../database.php';
-      echo "<script>confirm('Tem certeza que deseja apagar esse registro?')</script>";
-      $db = new Database;
-      $pdo = $db->connect();
-      $sql = $pdo->prepare("DELETE FROM produto WHERE id=:id");
-      $sql->bindValue(':id', $id);
-      $sql->execute();
-
-      $message = 'Produto excluido com sucesso!';
-      header("Location: ../../index.php?message={$message}");
-    }
-
-    public function count() {
-      $db = new Database;
-      $pdo = $db->connect();
-      $busca = $pdo->prepare("SELECT count(*) as total FROM produto");
-      $busca->execute();
-      $result = $busca->fetchColumn();
-      echo $result;
-    }
-
-    // Lista todos usuários cadatrados
-    public function readAll() {
-      $db = new Database;
-      $pdo = $db->connect();
-      $busca = $pdo->prepare("SELECT * FROM produto");
-      $busca->execute();
-
-      $linha = $busca->fetchAll(PDO::FETCH_ASSOC);
-
-      return $linha;
-    }
+  class Product extends CRUD {
 
     // Cadastro no banco
     public function insert() {
@@ -95,18 +60,6 @@
           header("Location: ../../index.php?message={$message}");
       endif;
     }
-
-    // Recuperar usuário pelo ID
-    public function getById( $id ) {
-      $db = new Database;
-      $pdo = $db->connect();
-      $busca = $pdo->prepare("SELECT * FROM produto WHERE ID = :id");
-      $busca->bindValue(':id', $id);
-      $busca->execute();
-
-      return $busca->fetchAll(PDO::FETCH_ASSOC);
-    }
-
 
     // Atualizar usuário
     public function update() {
@@ -222,7 +175,6 @@
         $line .= '  </a>';
         $line .= '</td> ';
         $line .= '</tr>';
-
         echo $line;
       }
     }

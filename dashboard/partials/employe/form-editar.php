@@ -1,4 +1,4 @@
-<?php $employeEdit = $employe->getById( $_GET['id'] ); ?>
+<?php $employeEdit = $employe->getById( $_GET['id'], 'funcionario' ); ?>
 
 <form class="form-horizontal" action="functions/employe/update.php" method="post" enctype="multipart/form-data">
 

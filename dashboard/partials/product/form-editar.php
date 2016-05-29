@@ -1,4 +1,4 @@
-<?php $productEdit = $product->getById( $_GET['id'] ); ?>
+<?php $productEdit = $product->getById( $_GET['id'], 'produto' ); ?>
 
 <form class="form-horizontal" action="functions/product/update.php" method="post" enctype="multipart/form-data">
 

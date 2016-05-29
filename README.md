@@ -29,12 +29,8 @@ Instacie a classe para obter os métodos.
   $db->login();
 ```
 
-### Class Product
-Instacie a classe para obter os métodos.
-
-```
- $product = new Product;
-```
+### CRUD - Super classe
+Super classe, possui métodos para serem herdados em outras sub classes.
 
 ### Métodos
 
@@ -42,13 +38,26 @@ Instacie a classe para obter os métodos.
   $product->delete( $id );
   $product->count();
   $product->readAll();
-  $product->insert();
   $product->getById( $id );
+```
+
+### Product - Sub classe
+Instacie a classe para obter os métodos.
+
+```
+ $product = new Product;
+```
+
+### Métodos
+Essa sub classe herda todos métodos da classe `CRUD`.
+
+```
+  $product->insert();
   $product->update();
   $product->wrapperList( $array );
 ```
 
-### Class Employe
+### Employe - Sub classe
 Instacie a classe para obter os métodos.
 
 ```
@@ -56,20 +65,17 @@ Instacie a classe para obter os métodos.
 ```
 
 ### Métodos
+Essa sub classe herda todos métodos da classe `CRUD`.
 
 ```
-  $employe->delete( $id );
-  $employe->count();
-  $employe->readAll();
   $employe->insert();
-  $employe->getById( $id );
   $employe->update();
   $employe->wrapperList( $array );
   $employe->getLoggedUser();
   $employe->loggedUserName();
 ```
 
-### Class Client
+### Client - Sub classe
 Instacie a classe para obter os métodos.
 
 ```
@@ -77,13 +83,10 @@ Instacie a classe para obter os métodos.
 ```
 
 ### Métodos
+Essa sub classe herda todos métodos da classe `CRUD`.
 
 ```
-  $client->delete( $id );
-  $client->count();
-  $client->readAll();
   $client->insert();
-  $client->getById( $id );
   $client->update();
   $client->wrapperList( $array );
   $client->getLoggedUser();

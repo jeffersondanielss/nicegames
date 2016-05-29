@@ -1,4 +1,4 @@
-<?php $clientEdit = $client->getById( $_GET['id'] ); ?>
+<?php $clientEdit = $client->getById( $_GET['id'], 'cliente' ); ?>
 
 <form class="form-horizontal" action="functions/client/update.php" method="post" enctype="multipart/form-data">
 

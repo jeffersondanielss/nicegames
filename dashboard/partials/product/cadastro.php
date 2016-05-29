@@ -1,11 +1,7 @@
 <?php 
   $title = "NG - Cadastro de produto";
-  include '../../functions/config.php';
   include '../header.php';
-  include '../../functions/database.php';
-  include '../../functions/product/product.php';
-  include '../../functions/employe/employe.php';
-  include '../../functions/client/client.php';
+  include '../../functions/functions.php';
 ?>
 
 <body>

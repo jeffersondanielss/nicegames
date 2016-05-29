@@ -6,42 +6,7 @@
   * CRUD PDO
   */
 
-  class Employe {
-
-    // Deleta usuários
-    public function delete( $id ) {
-      include '../database.php';
-      echo "<script>confirm('Tem certeza que deseja apagar esse registro?')</script>";
-      $db = new Database;
-      $pdo = $db->connect();
-      $sql = $pdo->prepare("DELETE FROM funcionario WHERE id=:id");
-      $sql->bindValue(':id', $id);
-      $sql->execute();
-
-      $message = 'funcionario excluido com sucesso!';
-      header("Location: ../../funcionario.php?message={$message}");
-    }
-
-    public function count() {
-      $db = new Database;
-      $pdo = $db->connect();
-      $busca = $pdo->prepare("SELECT count(*) as total FROM funcionario");
-      $busca->execute();
-      $result = $busca->fetchColumn();
-      echo $result;
-    }
-
-    // Lista todos usuários cadatrados
-    public function readAll() {
-      $db = new Database;
-      $pdo = $db->connect();
-      $busca = $pdo->prepare("SELECT * FROM funcionario");
-      $busca->execute();
-
-      $linha = $busca->fetchAll(PDO::FETCH_ASSOC);
-
-      return $linha;
-    }
+  class Employe extends CRUD {
 
     // Cadastro no banco
     public function insert() {
@@ -66,22 +31,11 @@
 
         $sql->execute();
         $message = 'Cadastro realizado com sucesso!';
-        header("Location: ../../funcionario.php?message={$message}");
+        header("Location: ../../employe.php?message={$message}");
       else:
         $message = 'Já existe um funcionario com este id!';
-        header("Location: ../../funcionario.php?message={$message}");
+        header("Location: ../../employe.php?message={$message}");
       endif;
-    }
-
-    // Recuperar usuário pelo ID
-    public function getById( $id ) {
-      $db = new Database;
-      $pdo = $db->connect();
-      $busca = $pdo->prepare("SELECT * FROM funcionario WHERE ID = :id");
-      $busca->bindValue(':id', $id);
-      $busca->execute();
-
-      return $busca->fetchAll(PDO::FETCH_ASSOC);
     }
 
 
@@ -118,7 +72,7 @@
       }
 
       $message = 'Usuário atualizado com sucesso!';
-      header("Location: ../../funcionario.php?message={$message}");
+      header("Location: ../../employe.php?message={$message}");
     }
 
     public function wrapperList( $array ) {
@@ -139,7 +93,6 @@
         $line .= '  </a>';
         $line .= '</td> ';
         $line .= '</tr>';
-
         echo $line;
       }
     }

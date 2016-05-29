@@ -1,10 +1,7 @@
 <?php 
   $title = "Nice games Store";
   include 'partials/header.php';
-  include 'functions/database.php';
-  include 'functions/product/product.php';
-  include 'functions/employe/employe.php';
-  include 'functions/client/client.php';
+  include 'functions/functions.php';
 ?>
 
 <body>
@@ -37,7 +34,7 @@
                     <i class="fa fa-users fa-5x"></i>
                   </div>
                   <div class="col-xs-9 text-right">
-                    <div class="huge"><?php $product->count(); ?></div>
+                    <div class="huge"><?php $product->count('produto'); ?></div>
                     <div>Número de produtos</div>
                   </div>
                 </div>
@@ -53,7 +50,7 @@
                     <i class="fa fa-ban fa-5x"></i>
                   </div>
                   <div class="col-xs-9 text-right">
-                    <div class="huge"><?php $employe->count(); ?></div>
+                    <div class="huge"><?php $employe->count('cliente'); ?></div>
                     <div>Clientes</div>
                   </div>
                 </div>
@@ -69,7 +66,7 @@
                     <i class="fa fa-user fa-5x"></i>
                   </div>
                   <div class="col-xs-9 text-right">
-                    <div class="huge"><?php $client->count(); ?></div>
+                    <div class="huge"><?php $client->count('funcionario'); ?></div>
                     <div>Funcionários</div>
                   </div>
                 </div>
@@ -94,7 +91,7 @@
                       </tr>
                     </thead>
                     <tbody>
-                      <?php $product->wrapperList( $product->readAll() ); ?>
+                      <?php $product->wrapperList( $product->readAll('produto') ); ?>
                     </tbody>
                   </table>
 
