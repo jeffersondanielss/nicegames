@@ -88,7 +88,7 @@
         $sql->execute();
       }
 
-      if( !empty( $senha ) ) {
+      if( !empty( $_POST['senha'] ) ) {
         $sql = $pdo->prepare("UPDATE cliente SET senha=:senha WHERE id=:id");
         $sql->bindValue(':senha', $senha);
         $sql->bindValue(':id', $id);

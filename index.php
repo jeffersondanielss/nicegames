@@ -31,6 +31,7 @@
         <li><a href="#portfolio">LOGIN</a></li>
         <li><a href="#pricing">PRICING</a></li>
         <li><a href="#contact">CONTACT</a></li>
+        <li><a href="dashboard/functions/logout.php">SAIR</a></li>
       </ul>
     </div>
   </div>

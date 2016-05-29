@@ -64,7 +64,7 @@
         $sql->execute();
       }
 
-      if( !empty( $senha ) ) {
+      if( !empty( $_POST['senha'] ) ) {
         $sql = $pdo->prepare("UPDATE funcionario SET senha=:senha WHERE id=:id");
         $sql->bindValue(':senha', $senha);
         $sql->bindValue(':id', $id);
@@ -112,6 +112,8 @@
 
       $currentUser = $sql->fetchAll(PDO::FETCH_ASSOC);
       return $currentUser;
+
+
     }
 
     // Mostra o nome do usuário logado

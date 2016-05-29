@@ -32,6 +32,25 @@
       }
     }
 
+    public function isEmploye() {
+
+      if( empty($_SESSION['email']) || empty($_SESSION['senha']) ) {
+        $pdo = $this->connect();
+        $funcionario = $pdo->prepare("SELECT * FROM funcionario WHERE email=:email and senha=:senha");
+
+        $funcionario->bindValue(':email', $_SESSION['email']);
+        $funcionario->bindValue(':senha', $_SESSION['senha']);
+        $funcionario->execute();
+
+        $rowFuncionario = $funcionario->rowCount();
+
+        if( $rowFuncionario < 1 ) {
+          header("Location: ../.");
+        }
+
+      }
+    }
+
     // Login no sistema
     public function login() {
       $pdo = $this->connect();
@@ -76,5 +95,6 @@
 
   $db = new Database;
   $db->sessionStart();
+  $db->isEmploye();
 
 ?>
