@@ -77,12 +77,14 @@
         $_SESSION['senha'] = $senha;
 
         header("Location: ../../.");
+
       } else if( $rowFuncionario > 0 ) {
         session_start();
         $_SESSION['email'] = $email;
         $_SESSION['senha'] = $senha;
 
         header("Location: ../.");
+        
       } else {
         echo "<script>
         alert('Nome de usuarios ou senha invalidos, espera um momento para tentar novamente');

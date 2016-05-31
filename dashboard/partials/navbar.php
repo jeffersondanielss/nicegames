@@ -20,7 +20,7 @@
       <ul class="dropdown-menu">
         <li><a href="../."><i class="fa fa-fw fa-home"></i> home</a></li>
         <li><a href="profile.php"><i class="fa fa-fw fa-user"></i> Perfil</a></li>
-        <li><a href="#"><i class="fa fa-fw fa-envelope"></i> Mensagens</a></li>
+        <li><a href="message.php"><i class="fa fa-fw fa-envelope"></i> Mensagens</a></li>
         <li class="divider"></li>
         <li><a href="./functions/logout.php"><i class="fa fa-fw fa-power-off"></i> Sair</a></li>
       </ul>

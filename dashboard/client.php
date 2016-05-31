@@ -25,7 +25,7 @@ include 'functions/functions.php';
 
         <div class="row">
           <div class="col-lg-12">
-            <div class="panel panel-default">
+            <div class="panel panel-red">
               <div class="panel-heading">
                 <h3 class="panel-title"><i class="fa fa-user fa-fw"></i> Clientes</h3>
               </div>
@@ -38,7 +38,7 @@ include 'functions/functions.php';
                       </tr>
                     </thead>
                     <tbody>
-                      <?php $client->wrapperList( $client->readAll('cliente') ); ?>
+                      <?php $client->wrapperList( $client->readAll('cliente'), false ); ?>
                     </tbody>
                   </table>
                   <?php include 'partials/message.php'; ?>

@@ -134,7 +134,7 @@
         $sql->execute();
       }
 
-      if( isset($_FILES['image']) ){
+      if( !empty( $image ) ){
           $extensao = strtolower(substr($_FILES['image']['name'], -4));
           $newName = md5(time()). $extensao;
           $diretorio = '../../../upload/';
@@ -150,9 +150,8 @@
       header("Location: ../../index.php?message={$message}");
     }
 
-    public function wrapperList( $array ) {
+    public function wrapperList( $array, $oneLine ) {
       foreach ($array as $value) {
-        
         $line = '<tr>';
         $line .=  '<td>' . $value['id'] . '</td>';
         $line .=  '<td><img src="../upload/' . $value['image'] . '" width="30"></td>';
@@ -176,6 +175,9 @@
         $line .= '</td> ';
         $line .= '</tr>';
         echo $line;
+        if($oneLine) {
+          break;
+        }
       }
     }
 

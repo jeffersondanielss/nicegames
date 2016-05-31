@@ -37,4 +37,11 @@ CREATE TABLE `funcionario` (
   `senha` varchar(32) NOT NULL
 ) ENGINE=InnoDB  DEFAULT CHARSET=utf8;
 
-http://blackrockdigital.github.io/startbootstrap-sb-admin/
+DROP TABLE IF EXISTS `mensagem`;
+
+CREATE TABLE `mensagem` (
+  `id` int(11) NOT NULL AUTO_INCREMENT PRIMARY KEY,
+  `nome` varchar(32) NOT NULL,
+  `email` varchar(32) NOT NULL,
+  `mensagem` varchar(800) NOT NULL
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8;

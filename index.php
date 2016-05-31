@@ -40,17 +40,6 @@
 <div class="jumbotron text-center">
   <h1>Company</h1> 
   <p>We specialize in blablabla</p> 
-  <form class="form-inline" action="dashboard/functions/login.php" method="post">
-    <div class="form-group">
-      <label class="sr-only">Email</label>
-      <input type="email" class="form-control" name="email" placeholder="Email" required>
-    </div>
-    <div class="form-group">
-      <label class="sr-only">Senha</label>
-      <input type="password" class="form-control" name="senha" placeholder="Senha" required>
-    </div>
-    <button type="submit" class="btn btn-danger">Entrar</button>
-  </form>
 </div>
 
 <!-- Container (About Section) -->

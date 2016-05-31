@@ -1,5 +1,5 @@
 <?php 
-$title = "NG - Funcionários";
+$title = "NG - Produtos";
 include 'partials/header.php';
 include 'functions/functions.php';
 ?>
@@ -19,7 +19,7 @@ include 'functions/functions.php';
         <div class="row">
           <div class="col-lg-12">
             <h1 class="page-header">
-              Funcionários
+              Produtos
             </h1>
           </div>
         </div>
@@ -27,20 +27,20 @@ include 'functions/functions.php';
 
         <div class="row">
           <div class="col-lg-12">
-            <div class="panel panel-green">
+            <div class="panel panel-primary">
               <div class="panel-heading">
-                <h3 class="panel-title"><i class="fa fa-user fa-fw"></i> Funcionários</h3>
+                <h3 class="panel-title"><i class="fa fa-user fa-fw"></i> Produtos</h3>
               </div>
               <div class="panel-body">
                 <div class="table-responsive">
                   <table class="table table-bordered table-hover table-striped">
                     <thead>
                       <tr>
-                        <?php include 'partials/employe/user-head.php'; ?>
+                        <?php include 'partials/product/user-head.php'; ?>
                       </tr>
                     </thead>
                     <tbody>
-                      <?php $employe->Wrapperlist( $employe->readAll('funcionario'), false ); ?>
+                      <?php $product->Wrapperlist( $product->readAll('produto'), false ); ?>
                     </tbody>
                   </table>
                   <?php include 'partials/message.php'; ?>

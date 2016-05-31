@@ -135,7 +135,7 @@
       header("Location: ../../client.php?message={$message}");
     }
 
-    public function wrapperList( $array ) {
+    public function wrapperList( $array, $oneLine ) {
       foreach ($array as $value) {
         
         $line = '<tr>';
@@ -160,6 +160,9 @@
         $line .= '</td> ';
         $line .= '</tr>';
         echo $line;
+        if($oneLine) {
+          break;
+        }
       }
     }
 

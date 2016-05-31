@@ -42,12 +42,9 @@
                                 </tr>
                             </thead>
                             <tbody>
-                                <?php $employe->wrapperList( $employe->getLoggeduser() ); ?>
+                                <?php $employe->wrapperList( $employe->getLoggeduser(), false ); ?>
                             </tbody>
                         </table>
-                    </div>
-                    <div class="text-right">
-                        <a href="./">Ver todos usuários <i class="fa fa-arrow-circle-right"></i></a>
                     </div>
                   </div>
                 </div>

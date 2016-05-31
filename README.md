@@ -35,10 +35,10 @@ Super classe, possui métodos para serem herdados em outras sub classes.
 ### Métodos
 
 ```
-  $product->delete( $id );
-  $product->count();
-  $product->readAll();
-  $product->getById( $id );
+  $product->delete( $id, $table, $redirectPage );
+  $product->count( $table);
+  $product->readAll( $table);
+  $product->getById( $id, $table );
 ```
 
 ### Product - Sub classe
@@ -54,7 +54,7 @@ Essa sub classe herda todos métodos da classe `CRUD`.
 ```
   $product->insert();
   $product->update();
-  $product->wrapperList( $array );
+  $product->wrapperList( $array, $oneLine );
 ```
 
 ### Employe - Sub classe
@@ -70,7 +70,7 @@ Essa sub classe herda todos métodos da classe `CRUD`.
 ```
   $employe->insert();
   $employe->update();
-  $employe->wrapperList( $array );
+  $employe->wrapperList( $array, $oneLine );
   $employe->getLoggedUser();
   $employe->loggedUserName();
 ```
@@ -88,9 +88,24 @@ Essa sub classe herda todos métodos da classe `CRUD`.
 ```
   $client->insert();
   $client->update();
-  $client->wrapperList( $array );
+  $client->wrapperList( $array, $oneLine );
   $client->getLoggedUser();
   $client->loggedUserName();
+```
+
+### Message - Sub classe
+Instacie a classe para obter os métodos.
+
+```
+ $message = new Message;
+```
+
+### Métodos
+Essa sub classe herda todos métodos da classe `CRUD`.
+
+```
+  $client->insert();
+  $client->allMessages();
 ```
 
 ### Criação das tabelas
@@ -133,5 +148,14 @@ CREATE TABLE `funcionario` (
   `nome` varchar(32) NOT NULL,
   `email` varchar(32) NOT NULL,
   `senha` varchar(32) NOT NULL
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8;
+
+DROP TABLE IF EXISTS `mensagem`;
+
+CREATE TABLE `mensagem` (
+  `id` int(11) NOT NULL AUTO_INCREMENT PRIMARY KEY,
+  `nome` varchar(32) NOT NULL,
+  `email` varchar(32) NOT NULL,
+  `mensagem` varchar(800) NOT NULL
 ) ENGINE=InnoDB  DEFAULT CHARSET=utf8;
 ```
