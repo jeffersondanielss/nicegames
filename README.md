@@ -21,7 +21,7 @@ Instacie a classe para obter os métodos.
  $db = new Database;
 ```
 
-### Métodos
+# Métodos
 
 ```
   $db->connect();
@@ -32,7 +32,7 @@ Instacie a classe para obter os métodos.
 ### CRUD - Super classe
 Super classe, possui métodos para serem herdados em outras sub classes.
 
-### Métodos
+# Métodos
 
 ```
   $product->delete( $id, $table, $redirectPage );
@@ -48,7 +48,7 @@ Instacie a classe para obter os métodos.
  $product = new Product;
 ```
 
-### Métodos
+# Métodos
 Essa sub classe herda todos métodos da classe `CRUD`.
 
 ```
@@ -64,7 +64,7 @@ Instacie a classe para obter os métodos.
  $employe = new Employe;
 ```
 
-### Métodos
+# Métodos
 Essa sub classe herda todos métodos da classe `CRUD`.
 
 ```
@@ -82,7 +82,7 @@ Instacie a classe para obter os métodos.
  $client = new Client;
 ```
 
-### Métodos
+# Métodos
 Essa sub classe herda todos métodos da classe `CRUD`.
 
 ```
@@ -100,7 +100,7 @@ Instacie a classe para obter os métodos.
  $message = new Message;
 ```
 
-### Métodos
+# Métodos
 Essa sub classe herda todos métodos da classe `CRUD`.
 
 ```
