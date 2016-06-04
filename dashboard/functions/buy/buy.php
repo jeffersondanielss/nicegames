@@ -29,66 +29,10 @@
       $sql->execute();
     }
 
-    public function removeCart( $id ) {}
-    public function getCard( $id ) {}
     public function getBuyProducts() {
-      if( !isset($_SESSION) ) {
-        $db = new Database;
-        $userId = $this->getUserId();
-        $prod = [];
-
-       var_dump($userId);
-       die();
-
-        $pdo = $db->connect();
-        $sql = $pdo->prepare("SELECT * FROM buy WHERE id_cliente = :id_cliente");
-        $sql->bindValue(':id_cliente', $userId);
-        $sql->execute();
-        $produtosComprados = $sql->fetchAll(PDO::FETCH_ASSOC);
-
-        foreach ($produtosComprados as $value) {
-          $produto = $pdo->prepare("SELECT * FROM produto WHERE id = :id");
-          $produto->bindValue(':id', $value['id_produto']);
-          $produto->execute();
-          $dadosProduto = $produto->fetchAll(PDO::FETCH_ASSOC);
-          array_push($prod, $dadosProduto);
-        }
-
-        return $prod;
-      }
-    }
-
-    public function buyTotal() {
-      if( !isset($_SESSION) ) {
-
-        $db = new Database;
-        $userId = $this->getUserId();
-
-        $pdo = $db->connect();
-        $sql = $pdo->prepare("SELECT * FROM buy WHERE id_cliente = :id_cliente");
-        $sql->bindValue(':id_cliente', $userId);
-        $sql->execute();
-        $produtosComprados = $sql->fetchAll(PDO::FETCH_ASSOC);
-
-        foreach ($produtosComprados as $value) {
-          $produto = $pdo->prepare("SELECT * FROM produto WHERE id = :id");
-          $produto->bindValue(':id', $value['id_produto']);
-          $produto->execute();
-          $dadosProduto = $produto->fetchAll(PDO::FETCH_ASSOC);
-
-          foreach ($dadosProduto as $val) {
-            $total += $val['preco'];
-          }
-        }
-
-        echo $total;
-
-      }
-    }
-
-    public function showCart() {
       $db = new Database;
       $userId = $this->getUserId();
+      $prod = [];
 
       $pdo = $db->connect();
       $sql = $pdo->prepare("SELECT * FROM buy WHERE id_cliente = :id_cliente");
@@ -101,14 +45,35 @@
         $produto->bindValue(':id', $value['id_produto']);
         $produto->execute();
         $dadosProduto = $produto->fetchAll(PDO::FETCH_ASSOC);
+        array_push($prod, $dadosProduto);
+      }
 
-        foreach ($dadosProduto as $val) {
+      return $prod;
+    }
 
+    public function buyTotaltens() {
+      $dadosProduto = $this->getBuyProducts();
+      echo count($dadosProduto);
+    }
+
+    public function buyTotal() {
+      $total = 0;
+      $dadosProduto = $this->getBuyProducts();
+
+      foreach ($dadosProduto as $value) {
+        foreach ($value as $val) {
+          $total += $val['preco'];
+        }
+      }
+
+      echo 'R$ ' . $total . ',00';
+    }
+
+    public function showCart() {
+      $dadosProduto = $this->getBuyProducts();
+      foreach ($dadosProduto as $value) {
+        foreach ($value as $val) {
           $line = '<tr class="cart_item">';
-            $line .= '<td class="product-remove">';
-              $line .= '<a title="Remove this item" class="remove" href="#">×</a> ';
-            $line .= '</td>';
-
             $line .= '<td class="product-name">';
               $line .= $val['titulo'];
             $line .= '</td>';
@@ -124,7 +89,15 @@
       }
 
     }
-    public function purchase( $id ) {}
+
+    public function purchase( $userId ) {
+      include '../database.php';
+      $db = new Database;
+      $pdo = $db->connect();
+      $sql = $pdo->prepare("DELETE FROM buy WHERE id_cliente = :id_cliente");
+      $sql->bindValue(':id_cliente', $userId);
+      $sql->execute();
+    }
 
   }
 

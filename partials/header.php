@@ -26,7 +26,17 @@
 
       <div class="col-sm-6">
         <div class="shopping-item">
-          <a href="cart.php">R$ <span class="cart-amunt"><?php $buy->buyTotal();?></span> <i class="fa fa-shopping-cart"></i> <span class="product-count"><?php $buy->count('buy'); ?></span></a>
+          <a href="cart.php"><span class="cart-amunt"><?php $buy->buyTotal();?></span> 
+            <i class="fa fa-shopping-cart"></i> <span class="product-count">
+              <?php
+                if( !empty($_SESSION) ) {
+                    $buy->buyTotaltens(); 
+                  } else {
+                    echo '0';
+                }
+              ?>
+            </span>
+          </a>
         </div>
       </div>
     </div>
@@ -50,7 +60,8 @@
           <li><a href="about.php">Sobre nós</a></li>
           <li><a href="shop.php">Produtos</a></li>
           <li><a href="cart.php">Carrinho</a></li>
-          <li><a href="#">Contato</a></li>
+          <li><a href="register.php">Cadastre-se</a></li>
+          <li><a href="contact.php">Contato</a></li>
         </ul>
       </div>  
     </div>

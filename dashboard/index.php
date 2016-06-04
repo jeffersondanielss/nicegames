@@ -61,7 +61,6 @@
                     Ver todos produtos <i class="fa fa-arrow-circle-right"></i>
                   </a>
 
-                  <?php include 'partials/message.php'; ?>
                 </div>
               </div>
             </div>
@@ -102,7 +101,6 @@
                   <a href="./client.php">
                     Ver todos clientes <i class="fa fa-arrow-circle-right"></i>
                   </a>
-                  <?php include 'partials/message.php'; ?>
                 </div>
               </div>
             </div>
@@ -143,12 +141,14 @@
                   <a href="./employe.php">
                     Ver todos funcionários <i class="fa fa-arrow-circle-right"></i>
                   </a>
-                  <?php include 'partials/message.php'; ?>
                 </div>
               </div>
             </div>
 
           </div> <!-- /.employe -->
+          <div class="col-md-12">
+            <?php include 'partials/message.php'; ?>
+          </div>
 
         </div>
         <!-- /.row -->

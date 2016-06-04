@@ -1,6 +1,10 @@
 <?php
   $db->sessionStart();
-  $db->isEmploye();
+  $user = $employe->userType('funcionario');
+
+  if( $user < 1 ) {
+    header("Location: ../.");
+  }
 ?>
 <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
 

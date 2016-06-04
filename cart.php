@@ -25,37 +25,34 @@
     <div class="zigzag-bottom"></div>
     <div class="container">
       <div class="row">
-
-<?php
- 
-  var_dump( $buy->getBuyProducts());
-?>
         <div class="col-md-12">
           <div class="product-content-right">
             <div class="woocommerce">
-              <form method="post" action="#">
-                <table cellspacing="0" border="1" class="shop_table cart">
-                  <thead>
-                    <tr>
-                      <th class="product-remove">&nbsp;</th>
-                      <th class="product-name">Produto</th>
-                      <th class="product-price">Preço</th>
-                      <th class="product-subtotal">Total</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    <?php $buy->showCart(); ?>
-                    <tr>
-                      <td class="actions" colspan="3">
-                        <input type="submit" value="Finalizar compra" name="concluir" class="checkout-button button alt wc-forward">
-                      </td>
-                      <td><?php $buy->buyTotal();?></td>
-                    </tr>
-                  </tbody>
-                </table>
-              </form>
 
-              
+              <table cellspacing="0" border="1" class="shop_table cart">
+                <thead>
+                  <tr>
+                    <th class="product-name">Produtos</th>
+                    <th class="product-price">Preço</th>
+                    <th class="product-subtotal">Total</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <?php $buy->showCart(); ?>
+                  <tr>
+                    <td class="actions" colspan="2">
+                      <?php
+                        $currUser = $client->getLoggedUser();
+                      ?>
+                      <a href="dashboard/functions/buy/purchase.php?id=<?php echo $currUser[0]['id']; ?>"class="add_to_cart_button">Finalizar compra</a>
+                    </td>
+                    <td><?php $buy->buyTotal();?></td>
+                  </tr>
+                </tbody>
+              </table>
+
+              <?php include 'dashboard/partials/message.php'; ?>
+
             </div>
           </div>
         </div>

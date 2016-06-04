@@ -17,7 +17,7 @@
       $nome =      $_POST['nome'];
       $sobrenome = $_POST['sobrenome'];
       $email =     $_POST['email'];
-      $senha =     $_POST['senha'];
+      $senha =     md5($_POST['senha']);
       $endereco =  $_POST['endereco'];
       $cidade =    $_POST['cidade'];
       $cpf =       $_POST['cpf'];
@@ -182,7 +182,14 @@
         $sql->execute();
 
         $currentUser = $sql->fetchAll(PDO::FETCH_ASSOC);
-        return $currentUser;
+
+        if( !empty( $currentUser ) ) {
+          return $currentUser;
+        } else {
+          $employe = new Employe;
+          return $employe->getLoggedUser();
+        }
+
       endif;
     }
 

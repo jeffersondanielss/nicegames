@@ -25,7 +25,7 @@
       $sql->execute();
 
       $message = 'Mensagem enviada com sucesso!';
-      header("Location: ../../../index.php?message={$message}");
+      header("Location: ../../../contact.php?message={$message}");
     }
 
     public function allMessages() {

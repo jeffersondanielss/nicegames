@@ -15,6 +15,23 @@
       header("Location: ../../" . $redirectPage . ".php?message={$message}");
     }
 
+    public function userType( $table ) {
+
+      if( !empty($_SESSION['email']) || !empty($_SESSION['senha']) ) {
+        $db = new Database;
+        $pdo = $db->connect();
+        $user = $pdo->prepare("SELECT * FROM $table WHERE email=:email and senha=:senha");
+
+        $user->bindValue(':email', $_SESSION['email']);
+        $user->bindValue(':senha', $_SESSION['senha']);
+        $user->execute();
+
+        $rowUser = $user->rowCount();
+
+        return $rowUser;
+      }
+    }
+
     public function count( $table ) {
       $db = new Database;
       $pdo = $db->connect();

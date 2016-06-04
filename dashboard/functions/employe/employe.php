@@ -16,7 +16,7 @@
 
       $nome =      $_POST['nome'];
       $email =     $_POST['email'];
-      $senha =     $_POST['senha'];
+      $senha =     md5($_POST['senha']);
 
       $validar = $pdo->prepare("SELECT * FROM funcionario WHERE email=:email");
       $validar->bindValue(':email', $email);

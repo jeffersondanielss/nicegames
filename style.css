@@ -1,3 +1,37 @@
+.prod-infos {
+  margin: 40px 0;
+}
+.gta-slide {
+  position: relative;
+  top: -172px;
+}
+
+.slider-area {
+  overflow: hidden !important;
+  height: 320px !important;
+}
+.about {
+  margin: 40px auto;
+}
+
+.about h2 {
+  font-family: raleway;
+}
+
+.text-center {
+  margin: 10px 0 30px;
+}
+
+.bigicon {
+  font-size: 35px;
+  color: #5A88CA;
+}
+.form-contact{
+  margin: 50px 0;
+  padding-top: 40px;
+}
+.infos{ display: inline-block;}
+.infos-value{padding-left: 10px;}
 .floatleft { float: left }
 .floatright { float: right }
 .alignleft {
