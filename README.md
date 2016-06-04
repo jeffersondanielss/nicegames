@@ -1,5 +1,5 @@
 # NiceGames Store
-> CRUD em PDO - PHP + MySQL
+> CRUD em PDO - PHP + MySQL, rode o projeto em seu servidor Ex: localhost/projetos/nicegames
 
 Esse projeto de e-commerce é um trabalho académico básico que tem como objetivo a interação entre o PHP e um banco de dados, nele será aplicado as operações do CRUD no MySQL usando a API PDO do PHP.
 
