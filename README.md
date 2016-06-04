@@ -36,8 +36,9 @@ Super classe, possui métodos para serem herdados em outras sub classes.
 
 ```
   $product->delete( $id, $table, $redirectPage );
-  $product->count( $table);
-  $product->readAll( $table);
+  $product->count( $table );
+  $product->readAll( $table );
+  $product->getAll();
   $product->getById( $id, $table );
 ```
 

@@ -34,7 +34,7 @@
 
     public function isEmploye() {
 
-      if( empty($_SESSION['email']) || empty($_SESSION['senha']) ) {
+      if( !empty($_SESSION['email']) || !empty($_SESSION['senha']) ) {
         $pdo = $this->connect();
         $funcionario = $pdo->prepare("SELECT * FROM funcionario WHERE email=:email and senha=:senha");
 
@@ -61,13 +61,13 @@
       $cliente->bindValue(':email', $email);
       $cliente->bindValue(':senha', $senha);
       $cliente->execute();
+      $rowCliente = $cliente->rowCount();
+      $dadosCliente = $cliente->fetchAll(PDO::FETCH_ASSOC);
 
       $funcionario = $pdo->prepare("SELECT * FROM funcionario WHERE email=:email and senha=:senha");
       $funcionario->bindValue(':email', $email);
       $funcionario->bindValue(':senha', $senha);
       $funcionario->execute();
-
-      $rowCliente = $cliente->rowCount();
       $rowFuncionario = $funcionario->rowCount();
 
 
@@ -75,6 +75,7 @@
         session_start();
         $_SESSION['email'] = $email;
         $_SESSION['senha'] = $senha;
+        $_SESSION['id'] = $$dadosCliente[0]['id'];
 
         header("Location: ../../.");
 
@@ -96,7 +97,6 @@
   }
 
   $db = new Database;
-  $db->sessionStart();
   $db->isEmploye();
 
 ?>

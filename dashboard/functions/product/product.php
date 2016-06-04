@@ -181,6 +181,17 @@
       }
     }
 
+    public function getAll() {
+      $db = new Database;
+      $pdo = $db->connect();
+      $busca = $pdo->prepare("SELECT * FROM produto");
+      $busca->execute();
+
+      $produtos = $busca->fetchAll(PDO::FETCH_ASSOC);
+
+      return $produtos;
+    }
+
   }
 
   $product = new Product;

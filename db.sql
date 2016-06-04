@@ -1,4 +1,3 @@
-DROP TABLE IF EXISTS `cliente`;
 
 CREATE TABLE `cliente` (
   `id` int(11) NOT NULL AUTO_INCREMENT PRIMARY KEY,
@@ -13,7 +12,6 @@ CREATE TABLE `cliente` (
   `telefone` varchar(16) NOT NULL
 ) ENGINE=InnoDB  DEFAULT CHARSET=utf8;
 
-DROP TABLE IF EXISTS `produto`;
 
 CREATE TABLE `produto` (
   `id` int(11) NOT NULL PRIMARY KEY,
@@ -28,7 +26,6 @@ CREATE TABLE `produto` (
   `image` blob NOT NULL
 ) ENGINE=InnoDB  DEFAULT CHARSET=utf8;
 
-DROP TABLE IF EXISTS `funcionario`;
 
 CREATE TABLE `funcionario` (
   `id` int(11) NOT NULL AUTO_INCREMENT PRIMARY KEY,
@@ -37,11 +34,19 @@ CREATE TABLE `funcionario` (
   `senha` varchar(32) NOT NULL
 ) ENGINE=InnoDB  DEFAULT CHARSET=utf8;
 
-DROP TABLE IF EXISTS `mensagem`;
 
 CREATE TABLE `mensagem` (
   `id` int(11) NOT NULL AUTO_INCREMENT PRIMARY KEY,
   `nome` varchar(32) NOT NULL,
   `email` varchar(32) NOT NULL,
   `mensagem` varchar(800) NOT NULL
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8;
+
+
+CREATE TABLE `buy` (
+  `id` int(11) NOT NULL AUTO_INCREMENT PRIMARY KEY,
+  `id_cliente` int(11) NOT NULL,
+  `id_produto` int(11) NOT NULL,
+  FOREIGN KEY (id_cliente) REFERENCES cliente(id),
+  FOREIGN KEY (id_produto) REFERENCES produto(id)
 ) ENGINE=InnoDB  DEFAULT CHARSET=utf8;

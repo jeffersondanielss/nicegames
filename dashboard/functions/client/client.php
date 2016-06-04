@@ -168,19 +168,22 @@
 
     // Resgata o usuário que está logado
     public function getLoggedUser() {
-      $db = new Database;
-      $pdo = $db->connect();
+      if( !empty($_SESSION['email']) || !empty($_SESSION['senha']) ):
+        $db = new Database;
+        $pdo = $db->connect();
 
-      $email = $_SESSION['email'];
-      $senha = $_SESSION['senha'];
+        $email = $_SESSION['email'];
+        $senha = $_SESSION['senha'];
 
-      $sql = $pdo->prepare("SELECT * FROM client WHERE email=:email and senha=:senha");
-      $sql->bindValue(':email', $email);
-      $sql->bindValue(':senha', $senha);
-      $sql->execute();
 
-      $currentUser = $sql->fetchAll(PDO::FETCH_ASSOC);
-      return $currentUser;
+        $sql = $pdo->prepare("SELECT * FROM cliente WHERE email=:email and senha=:senha");
+        $sql->bindValue(':email', $email);
+        $sql->bindValue(':senha', $senha);
+        $sql->execute();
+
+        $currentUser = $sql->fetchAll(PDO::FETCH_ASSOC);
+        return $currentUser;
+      endif;
     }
 
     // Mostra o nome do usuário logado

@@ -115,8 +115,6 @@
 
       $currentUser = $sql->fetchAll(PDO::FETCH_ASSOC);
       return $currentUser;
-
-
     }
 
     // Mostra o nome do usuário logado

@@ -2,3 +2,5 @@
 /upload/*.jpg
 /upload/*.gif
 /upload/*.jpeg
+*.docx
+*.doc
