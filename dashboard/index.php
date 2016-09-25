@@ -1,5 +1,5 @@
 <?php 
-  $title = "Nice games Store";
+  $title = "Nicegames - admin";
   $page = 'home';
   include 'views/header.php';
   include 'functions/functions.php';
@@ -76,7 +76,7 @@
                     <i class="fa fa-ban fa-5x"></i>
                   </div>
                   <div class="col-xs-9 text-right">
-                    <div class="huge"><?php $employe->count('cliente'); ?></div>
+                    <div class="huge"><?php $client->count('cliente'); ?></div>
                     <div>Clientes</div>
                   </div>
                 </div>
@@ -96,7 +96,7 @@
                       </tr>
                     </thead>
                     <tbody>
-                      <?php $client->wrapperList( $client->readAll('cliente'), true ); ?>
+                      <?php include 'views/client/all-clients.php'; ?>
                     </tbody>
                   </table>
                   <a href="./client.php">
@@ -116,7 +116,7 @@
                     <i class="fa fa-user fa-5x"></i>
                   </div>
                   <div class="col-xs-9 text-right">
-                    <div class="huge"><?php $client->count('funcionario'); ?></div>
+                    <div class="huge"><?php $employe->count('funcionario'); ?></div>
                     <div>Funcionários</div>
                   </div>
                 </div>

@@ -39,7 +39,7 @@ include 'functions/functions.php';
                       </tr>
                     </thead>
                     <tbody>
-                      <?php $client->wrapperList( $client->readAll('cliente'), false ); ?>
+                      <?php include 'views/client/all-clients.php'; ?>
                     </tbody>
                   </table>
                   <?php include 'views/message.php'; ?>

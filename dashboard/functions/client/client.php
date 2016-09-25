@@ -135,37 +135,6 @@
       header("Location: ../../client.php?message={$message}");
     }
 
-    public function wrapperList( $array, $oneLine ) {
-      foreach ($array as $value) {
-        
-        $line = '<tr>';
-        $line .=  '<td>' . $value['id'] . '</td>';
-        $line .=  '<td>' . $value['nome'] . '</td>';
-        $line .=  '<td>' . $value['sobrenome'] . '</td>';
-        $line .=  '<td>' . $value['email'] . '</td>';
-        $line .=  '<td>' . $value['endereco'] . '</td>';
-        $line .=  '<td>' . $value['cidade'] . '</td>';
-        $line .=  '<td>' . $value['cpf'] . '</td>';
-        $line .=  '<td>' . $value['cep'] . '</td>';
-        $line .=  '<td>' . $value['telefone'] . '</td>';
-        $line .=  '<td>';
-        $line .=      '<a class="icon-table" href="./views/client/editar.php?id='. $value['id'] .'">';
-        $line .=          '<i class="glyphicon glyphicon-pencil"></i>';
-        $line .=      '</a>';
-        $line .=  '</td>';
-        $line .= '<td>';
-        $line .= '  <a class="icon-table" href="./functions/client/delete.php?id='. $value['id'] .'">';
-        $line .= '     <i class="glyphicon glyphicon-trash"></i>';
-        $line .= '  </a>';
-        $line .= '</td> ';
-        $line .= '</tr>';
-        echo $line;
-        if($oneLine) {
-          break;
-        }
-      }
-    }
-
     // Resgata o usuário que está logado
     public function getLoggedUser() {
       if( !empty($_SESSION['email']) || !empty($_SESSION['senha']) ):
