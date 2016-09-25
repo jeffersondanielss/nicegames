@@ -69,27 +69,6 @@
       echo 'R$ ' . $total . ',00';
     }
 
-    public function showCart() {
-      $dadosProduto = $this->getBuyProducts();
-      foreach ($dadosProduto as $value) {
-        foreach ($value as $val) {
-          $line = '<tr class="cart_item">';
-            $line .= '<td class="product-name">';
-              $line .= $val['titulo'];
-            $line .= '</td>';
-
-            $line .= '<td class="product-price">';
-              $line .= '<span class="amount">R$ ' . $val['preco'] .'</span> ';
-            $line .= '</td>';
-            $line .= '<td class="product-remove">&nbsp;</td>';
-          $line .= '</tr>';
-
-          echo $line;
-        }
-      }
-
-    }
-
     public function purchase( $userId ) {
       include '../database.php';
       $db = new Database;
