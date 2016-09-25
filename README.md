@@ -38,7 +38,6 @@ Super classe, possui métodos para serem herdados em outras sub classes.
   $product->delete( $id, $table, $redirectPage );
   $product->count( $table );
   $product->readAll( $table );
-  $product->getAll();
   $product->getById( $id, $table );
 ```
 
@@ -70,7 +69,6 @@ Essa sub classe herda todos métodos da classe `CRUD`.
 ```
   $employe->insert();
   $employe->update();
-  $employe->wrapperList( $array, $oneLine );
   $employe->getLoggedUser();
   $employe->loggedUserName();
 ```
@@ -88,7 +86,6 @@ Essa sub classe herda todos métodos da classe `CRUD`.
 ```
   $client->insert();
   $client->update();
-  $client->wrapperList( $array, $oneLine );
   $client->getLoggedUser();
   $client->loggedUserName();
 ```
