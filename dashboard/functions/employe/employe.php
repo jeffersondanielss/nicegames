@@ -75,31 +75,6 @@
       header("Location: ../../employe.php?message={$message}");
     }
 
-    public function wrapperList( $array, $oneLine ) {
-      foreach ($array as $value) {
-        
-        $line = '<tr>';
-        $line .=  '<td>' . $value['id'] . '</td>';
-        $line .=  '<td>' . $value['nome'] . '</td>';
-        $line .=  '<td>' . $value['email'] . '</td>';
-        $line .=  '<td>';
-        $line .=      '<a class="icon-table" href="./views/employe/editar.php?id='. $value['id'] .'">';
-        $line .=          '<i class="glyphicon glyphicon-pencil"></i>';
-        $line .=      '</a>';
-        $line .=  '</td>';
-        $line .= '<td>';
-        $line .= '  <a class="icon-table" href="./functions/employe/delete.php?id='. $value['id'] .'">';
-        $line .= '     <i class="glyphicon glyphicon-trash"></i>';
-        $line .= '  </a>';
-        $line .= '</td> ';
-        $line .= '</tr>';
-        echo $line;
-        if($oneLine) {
-          break;
-        }
-      }
-    }
-
     // Resgata o usuário que está logado
     public function getLoggedUser() {
       $db = new Database;

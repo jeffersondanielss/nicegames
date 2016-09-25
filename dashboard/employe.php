@@ -1,7 +1,8 @@
 <?php 
-$title = "NG - Funcionários";
-include 'views/header.php';
-include 'functions/functions.php';
+  $title = "NG - Funcionários";
+  $page = "employe";
+  include 'views/header.php';
+  include 'functions/functions.php';
 ?>
 
 <body>
@@ -40,7 +41,7 @@ include 'functions/functions.php';
                       </tr>
                     </thead>
                     <tbody>
-                      <?php $employe->Wrapperlist( $employe->readAll('funcionario'), false ); ?>
+                      <?php include 'views/employe/all-employes.php'; ?>
                     </tbody>
                   </table>
                   <?php include 'views/message.php'; ?>

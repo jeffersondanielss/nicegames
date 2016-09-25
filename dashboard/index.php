@@ -136,7 +136,7 @@
                       </tr>
                     </thead>
                     <tbody>
-                      <?php $employe->wrapperList( $employe->readAll('funcionario'), true ); ?>
+                      <?php include 'views/employe/all-employes.php'; ?>
                     </tbody>
                   </table>
                   <a href="./employe.php">

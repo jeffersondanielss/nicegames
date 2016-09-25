@@ -1,5 +1,6 @@
 <?php 
 $title = "NG - Clientes";
+$page = "cliente";
 include 'views/header.php';
 include 'functions/functions.php';
 ?>
