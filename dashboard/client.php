@@ -1,5 +1,5 @@
 <?php 
-$title = "LHM - Clientes";
+$title = "NG - Clientes";
 include 'partials/header.php';
 include 'functions/functions.php';
 ?>

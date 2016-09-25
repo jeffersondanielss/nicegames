@@ -1,26 +1,21 @@
 <div class="header-area">
   <div class="container">
-    <div class="row">
-      <div class="col-md-12">
-        <?php
-          if( empty($_SESSION['email']) || empty($_SESSION['senha']) ){
-            include 'partials/login.php';
-          } else {
-            include 'partials/welcome.php';
-          }
-        ?>
-      </div>
-
-    </div>
+    <?php
+      if( empty($_SESSION['email']) || empty($_SESSION['senha']) ){
+        include 'views/login.php';
+      } else {
+        include 'views/welcome.php';
+      }
+    ?>
   </div>
-</div> <!-- End header area -->
+</div><!-- End header area -->
 
 <div class="site-branding-area">
   <div class="container">
     <div class="row">
       <div class="col-sm-6">
         <div class="logo">
-          <h1><a href="./"><img src="ng-logo.png"></a></h1>
+          <h1><a href="./"><img src="img/ng-logo.png"></a></h1>
         </div>
       </div>
 

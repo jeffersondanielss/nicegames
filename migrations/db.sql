@@ -1,4 +1,3 @@
-
 CREATE TABLE `cliente` (
   `id` int(11) NOT NULL AUTO_INCREMENT PRIMARY KEY,
   `nome` varchar(32) NOT NULL,
