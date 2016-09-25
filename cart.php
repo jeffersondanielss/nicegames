@@ -13,7 +13,7 @@
   <div class="single-product-area">
     <div class="container">
       <?php include 'views/cart/table.php'; ?>
-      <?php include 'dashboard/partials/message.php'; ?>
+      <?php include 'dashboard/views/message.php'; ?>
     </div>
   </div>
 

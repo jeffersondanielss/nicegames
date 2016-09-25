@@ -9,6 +9,6 @@
 
     header("Location: ../../../cart.php");
   }
-
+  
   addCart( $_GET['id'] );
 ?>

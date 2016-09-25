@@ -1,25 +1,25 @@
 <?php
-  $array = $product->readAll('produto');
+  $products = $product->readAll('produto');
 
-  foreach ($array as $value) { ?>
+  foreach ($products as $product) { ?>
     <tr>
-      <td><?php echo $value['id']; ?></td>
-      <td><img src="../upload/<?php echo $value['image']; ?>" width="30"></td>
-      <td><?php echo $value['titulo']; ?></td>
-      <td><?php echo $value['genero']; ?></td>
-      <td> R$<?php echo $value['preco']; ?></td>
-      <td><?php echo $value['lancamento']; ?></td>
-      <td><?php echo $value['audio']; ?></td>
-      <td><?php echo $value['legenda']; ?></td>
-      <td><?php echo $value['tamanho']; ?></td>
-      <td><?php echo $value['quantidade']; ?></td>
+      <td><?php echo $product['id']; ?></td>
+      <td><img src="../upload/<?php echo $product['image']; ?>" width="30"></td>
+      <td><?php echo $product['titulo']; ?></td>
+      <td><?php echo $product['genero']; ?></td>
+      <td> R$<?php echo $product['preco']; ?></td>
+      <td><?php echo $product['lancamento']; ?></td>
+      <td><?php echo $product['audio']; ?></td>
+      <td><?php echo $product['legenda']; ?></td>
+      <td><?php echo $product['tamanho']; ?></td>
+      <td><?php echo $product['quantidade']; ?></td>
       <td>
-        <a class="icon-table" href="./views/product/editar.php?id=<?php echo $value['id']; ?>">
+        <a class="icon-table" href="./views/product/editar.php?id=<?php echo $product['id']; ?>">
           <i class="glyphicon glyphicon-pencil"></i>
         </a>
       </td>
       <td>
-       <a class="icon-table" href="./functions/product/delete.php?id=<?php echo $value['id']; ?>">
+       <a class="icon-table" href="./functions/product/delete.php?id=<?php echo $product['id']; ?>">
           <i class="glyphicon glyphicon-trash"></i>
        </a>
       </td> 

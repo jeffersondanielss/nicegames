@@ -1,27 +1,27 @@
 <div class="product-carousel">
   <?php
-    $produtos = $product->getAll();
+    $products = $product->readAll('produto');
 
-    foreach ($produtos as $value) { ?>
+    foreach ($products as $product) { ?>
      <div class="single-product">';
 
        <div class="product-f-image">
-        <img src="upload/<?php echo $value['image']; ?>" alt="">
+        <img src="upload/<?php echo $product['image']; ?>" alt="">
         <div class="product-hover">
-          <a href="product.php?id=<?php echo $value['id']; ?>" class="view-details-link">
+          <a href="product.php?id=<?php echo $product['id']; ?>" class="view-details-link">
             <i class="fa fa-link"></i> Ver detalhes
           </a>
         </div>
       </div>
 
       <h2>
-        <a href="product.php?id=<?php echo $value['id']; ?>">
-          <?php echo $value['titulo'] ?>
+        <a href="product.php?id=<?php echo $product['id']; ?>">
+          <?php echo $product['titulo'] ?>
         </a>
       </h2>
 
       <div class="product-carousel-price">
-        <ins> R$<?php echo $value['preco'] ?></ins>
+        <ins> R$<?php echo $product['preco'] ?></ins>
       </div>
       
     </div>

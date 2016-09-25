@@ -8,17 +8,18 @@
   </thead>
   <tbody>
     <?php
-      $dadosProduto = $buy->getBuyProducts();
-      foreach ($dadosProduto as $value) {
-        foreach ($value as $val) { ?>
+      $purchases = $buy->getBuyProducts();
+
+      foreach ($purchases as $purchase) {
+        foreach ($purchase as $product) { ?>
 
           <tr class="cart_item">
            <td class="product-name">
-             <?php echo $val['titulo']; ?>
+             <?php echo $product['titulo']; ?>
            </td>
 
            <td class="product-price">
-             <span class="amount">R$ <?php echo $val['preco']; ?> </span> 
+             <span class="amount">R$ <?php echo $product['preco']; ?> </span> 
            </td>
            <td class="product-remove">&nbsp;</td>
          </tr>
@@ -29,7 +30,7 @@
     ?>
     <tr>
       <td class="actions" colspan="2">
-        <a href="dashboard/functions/buy/purchase.php?id=<?php echo $currUser[0]['id']; ?>"class="add_to_cart_button">Finalizar compra</a>
+        <a href="dashboard/functions/buy/purchase.php?id=<?php echo $currUser[0]['id']; ?>" class="add_to_cart_button">Finalizar compra</a>
       </td>
       <td><?php $buy->buyTotal();?></td>
     </tr>
