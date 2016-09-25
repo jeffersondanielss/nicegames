@@ -150,48 +150,6 @@
       header("Location: ../../index.php?message={$message}");
     }
 
-    public function wrapperList( $array, $oneLine ) {
-      foreach ($array as $value) {
-        $line = '<tr>';
-        $line .=  '<td>' . $value['id'] . '</td>';
-        $line .=  '<td><img src="../upload/' . $value['image'] . '" width="30"></td>';
-        $line .=  '<td>' . $value['titulo'] . '</td>';
-        $line .=  '<td>' . $value['genero'] . '</td>';
-        $line .=  '<td> R$' . $value['preco'] . '</td>';
-        $line .=  '<td>' . $value['lancamento'] . '</td>';
-        $line .=  '<td>' . $value['audio'] . '</td>';
-        $line .=  '<td>' . $value['legenda'] . '</td>';
-        $line .=  '<td>' . $value['tamanho'] . '</td>';
-        $line .=  '<td>' . $value['quantidade'] . '</td>';
-        $line .=  '<td>';
-        $line .=      '<a class="icon-table" href="./partials/product/editar.php?id='. $value['id'] .'">';
-        $line .=          '<i class="glyphicon glyphicon-pencil"></i>';
-        $line .=      '</a>';
-        $line .=  '</td>';
-        $line .= '<td>';
-        $line .= '  <a class="icon-table" href="./functions/product/delete.php?id='. $value['id'] .'">';
-        $line .= '     <i class="glyphicon glyphicon-trash"></i>';
-        $line .= '  </a>';
-        $line .= '</td> ';
-        $line .= '</tr>';
-        echo $line;
-        if($oneLine) {
-          break;
-        }
-      }
-    }
-
-    public function getAll() {
-      $db = new Database;
-      $pdo = $db->connect();
-      $busca = $pdo->prepare("SELECT * FROM produto");
-      $busca->execute();
-
-      $produtos = $busca->fetchAll(PDO::FETCH_ASSOC);
-
-      return $produtos;
-    }
-
   }
 
   $product = new Product;

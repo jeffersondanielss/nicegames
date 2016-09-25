@@ -55,8 +55,6 @@ Essa sub classe herda todos métodos da classe `CRUD`.
 ```
   $product->insert();
   $product->update();
-  $product->wrapperList( $array, $oneLine );
-  $product->getAll();
 ```
 
 ### Employe - Sub classe

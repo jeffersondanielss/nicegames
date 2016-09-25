@@ -1,7 +1,8 @@
 <?php 
-$title = "NG - Produtos";
-include 'views/header.php';
-include 'functions/functions.php';
+  $title = "NG - Produtos";
+  $page = "product";
+  include 'views/header.php';
+  include 'functions/functions.php';
 ?>
 
 <body>
@@ -40,7 +41,7 @@ include 'functions/functions.php';
                       </tr>
                     </thead>
                     <tbody>
-                      <?php $product->Wrapperlist( $product->readAll('produto'), false ); ?>
+                      <?php include 'views/product/all-products.php'; ?>
                     </tbody>
                   </table>
                   <?php include 'views/message.php'; ?>

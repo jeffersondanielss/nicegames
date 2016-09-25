@@ -1,5 +1,6 @@
 <?php 
   $title = "Nice games Store";
+  $page = 'home';
   include 'views/header.php';
   include 'functions/functions.php';
 ?>
@@ -54,7 +55,7 @@
                       </tr>
                     </thead>
                     <tbody>
-                      <?php $product->wrapperList( $product->readAll('produto'), true ); ?>
+                      <?php include 'views/product/all-products.php'; ?>
                     </tbody>
                   </table>
                   <a href="./product.php">
