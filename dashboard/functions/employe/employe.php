@@ -83,7 +83,7 @@
         $line .=  '<td>' . $value['nome'] . '</td>';
         $line .=  '<td>' . $value['email'] . '</td>';
         $line .=  '<td>';
-        $line .=      '<a class="icon-table" href="./partials/employe/editar.php?id='. $value['id'] .'">';
+        $line .=      '<a class="icon-table" href="./views/employe/editar.php?id='. $value['id'] .'">';
         $line .=          '<i class="glyphicon glyphicon-pencil"></i>';
         $line .=      '</a>';
         $line .=  '</td>';

@@ -1,6 +1,6 @@
 <?php 
 $title = "NG - Funcionários";
-include 'partials/header.php';
+include 'views/header.php';
 include 'functions/functions.php';
 ?>
 
@@ -9,7 +9,7 @@ include 'functions/functions.php';
   <div id="wrapper">
 
     <!-- Navigation -->
-    <?php include 'partials/navbar.php'; ?>
+    <?php include 'views/navbar.php'; ?>
 
     <div id="page-wrapper">
 
@@ -43,4 +43,4 @@ include 'functions/functions.php';
   </div>
   <!-- /#wrapper -->
 
-<?php include 'partials/footer.php'; ?>
+<?php include 'views/footer.php'; ?>

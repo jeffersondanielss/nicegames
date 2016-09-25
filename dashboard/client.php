@@ -1,6 +1,6 @@
 <?php 
 $title = "NG - Clientes";
-include 'partials/header.php';
+include 'views/header.php';
 include 'functions/functions.php';
 ?>
 
@@ -9,7 +9,7 @@ include 'functions/functions.php';
   <div id="wrapper">
 
     <!-- Navigation -->
-    <?php include 'partials/navbar.php'; ?>
+    <?php include 'views/navbar.php'; ?>
 
     <div id="page-wrapper">
 
@@ -34,14 +34,14 @@ include 'functions/functions.php';
                   <table class="table table-bordered table-hover table-striped">
                     <thead>
                       <tr>
-                        <?php include 'partials/client/user-head.php'; ?>
+                        <?php include 'views/client/user-head.php'; ?>
                       </tr>
                     </thead>
                     <tbody>
                       <?php $client->wrapperList( $client->readAll('cliente'), false ); ?>
                     </tbody>
                   </table>
-                  <?php include 'partials/message.php'; ?>
+                  <?php include 'views/message.php'; ?>
                 </div>
               </div>
             </div>
@@ -58,4 +58,4 @@ include 'functions/functions.php';
   </div>
   <!-- /#wrapper -->
 
-  <?php include 'partials/footer.php'; ?>
+  <?php include 'views/footer.php'; ?>

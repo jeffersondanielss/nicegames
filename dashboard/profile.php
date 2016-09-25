@@ -1,6 +1,6 @@
 <?php 
   $title = "NG - Perfil";
-  include 'partials/header.php';
+  include 'views/header.php';
   include 'functions/functions.php';
 ?>
 
@@ -9,7 +9,7 @@
   <div id="wrapper">
 
     <!-- Navigation -->
-    <?php include 'partials/navbar.php'; ?>
+    <?php include 'views/navbar.php'; ?>
 
     <div id="page-wrapper">
 
@@ -38,7 +38,7 @@
                         <table class="table table-bordered table-hover table-striped">
                             <thead>
                                 <tr>
-                                  <?php include 'partials/employe/user-head.php'; ?>
+                                  <?php include 'views/employe/user-head.php'; ?>
                                 </tr>
                             </thead>
                             <tbody>
@@ -61,4 +61,4 @@
   </div>
   <!-- /#wrapper -->
 
-<?php include 'partials/footer.php'; ?>
+<?php include 'views/footer.php'; ?>

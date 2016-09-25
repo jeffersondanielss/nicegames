@@ -15,9 +15,9 @@
       <a href="javascript:;" data-toggle="collapse" data-target="#cadastro">
       <i class="glyphicon glyphicon-plus"></i> Cadastro <i class="fa fa-fw fa-caret-down"></i></a>
       <ul id="cadastro" class="collapse">
-        <li><a href="partials/product/cadastro.php">Produto</a></li>
-        <li><a href="partials/client/cadastro.php">Cliente</a> </li>
-        <li><a href="partials/employe/cadastro.php">Funcionário</a></li>
+        <li><a href="views/product/cadastro.php">Produto</a></li>
+        <li><a href="views/client/cadastro.php">Cliente</a> </li>
+        <li><a href="views/employe/cadastro.php">Funcionário</a></li>
       </ul>
     </li>
   </ul>

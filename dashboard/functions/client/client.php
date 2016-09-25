@@ -149,7 +149,7 @@
         $line .=  '<td>' . $value['cep'] . '</td>';
         $line .=  '<td>' . $value['telefone'] . '</td>';
         $line .=  '<td>';
-        $line .=      '<a class="icon-table" href="./partials/client/editar.php?id='. $value['id'] .'">';
+        $line .=      '<a class="icon-table" href="./views/client/editar.php?id='. $value['id'] .'">';
         $line .=          '<i class="glyphicon glyphicon-pencil"></i>';
         $line .=      '</a>';
         $line .=  '</td>';

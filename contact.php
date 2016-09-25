@@ -35,7 +35,7 @@
       </form>
     </div>
 
-    <?php include 'dashboard/partials/message.php'; ?>
+    <?php include 'dashboard/views/message.php'; ?>
   </div>
 
 <?php include 'views/footer.php'; ?>
