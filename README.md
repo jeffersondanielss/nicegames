@@ -8,7 +8,7 @@ Esse projeto de e-commerce é um trabalho académico básico que tem como objeti
 ### Class Database
 Se preciso altere as variaveis de coneção com o banco de dados na função `connect` dessa classe.
 
-```
+```php
   $host = "localhost";
   $user = "root";
   $pass = "";
@@ -17,13 +17,13 @@ Se preciso altere as variaveis de coneção com o banco de dados na função `co
 
 Instacie a classe para obter os métodos.
 
-```
+```php
  $db = new Database;
 ```
 
 #### Métodos
 
-```
+```php
   $db->connect();
   $db->sessionStart();
   $db->login();
@@ -34,7 +34,7 @@ Super classe, possui métodos para serem herdados em outras sub classes.
 
 #### Métodos
 
-```
+```php
   $product->delete( $id, $table, $redirectPage );
   $product->count( $table );
   $product->readAll( $table );
@@ -44,14 +44,14 @@ Super classe, possui métodos para serem herdados em outras sub classes.
 ### Product - Sub classe
 Instacie a classe para obter os métodos.
 
-```
+```php
  $product = new Product;
 ```
 
 #### Métodos
 Essa sub classe herda todos métodos da classe `CRUD`.
 
-```
+```php
   $product->insert();
   $product->update();
 ```
@@ -59,14 +59,14 @@ Essa sub classe herda todos métodos da classe `CRUD`.
 ### Employe - Sub classe
 Instacie a classe para obter os métodos.
 
-```
+```php
  $employe = new Employe;
 ```
 
 #### Métodos
 Essa sub classe herda todos métodos da classe `CRUD`.
 
-```
+```php
   $employe->insert();
   $employe->update();
   $employe->getLoggedUser();
@@ -76,14 +76,14 @@ Essa sub classe herda todos métodos da classe `CRUD`.
 ### Client - Sub classe
 Instacie a classe para obter os métodos.
 
-```
+```php
  $client = new Client;
 ```
 
 #### Métodos
 Essa sub classe herda todos métodos da classe `CRUD`.
 
-```
+```php
   $client->insert();
   $client->update();
   $client->getLoggedUser();
@@ -94,14 +94,14 @@ Essa sub classe herda todos métodos da classe `CRUD`.
 ### Buy - Sub classe
 Instacie a classe para obter os métodos.
 
-```
+```php
  $buy = new Buy;
 ```
 
 #### Métodos
 Essa sub classe herda todos métodos da classe `Client`.
 
-```
+```php
   $buy->getUserId();
   $buy->addCart( $productId );
   $buy->getBuyProducts();
@@ -113,14 +113,14 @@ Essa sub classe herda todos métodos da classe `Client`.
 ### Message - Sub classe
 Instacie a classe para obter os métodos.
 
-```
+```php
  $message = new Message;
 ```
 
 #### Métodos
 Essa sub classe herda todos métodos da classe `CRUD`.
 
-```
+```php
   $client->insert();
   $client->allMessages();
 ```
