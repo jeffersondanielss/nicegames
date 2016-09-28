@@ -42,7 +42,7 @@
                                 </tr>
                             </thead>
                             <tbody>
-                                <?php $employe->wrapperList( $employe->getLoggeduser(), false ); ?>
+                                <?php var_dump( $employe->getLoggeduser() ); ?>
                             </tbody>
                         </table>
                     </div>
