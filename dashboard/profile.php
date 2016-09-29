@@ -42,7 +42,7 @@
                                 </tr>
                             </thead>
                             <tbody>
-                                <?php var_dump( $employe->getLoggeduser() ); ?>
+                              <?php include 'views/employe/current-employe.php'; ?>
                             </tbody>
                         </table>
                     </div>
