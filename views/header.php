@@ -21,14 +21,12 @@
 
       <div class="col-sm-6">
         <div class="shopping-item">
-          <a href="cart.php"><span class="cart-amunt"><?php $buy->buyTotal();?></span> 
+          <a href="cart.php">
+            <span class="cart-amunt"><?php $buy->buyTotal(); ?></span> 
             <i class="fa fa-shopping-cart"></i> <span class="product-count">
               <?php
-                if( !empty($_SESSION) ) {
-                    $buy->buyTotaltens(); 
-                  } else {
-                    echo '0';
-                }
+                $totalitens = !empty($_SESSION) ? $buy->buyTotaltens() : '0';
+                echo $totalitens;
               ?>
             </span>
           </a>

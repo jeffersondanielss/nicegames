@@ -1,3 +1,21 @@
+/**********************************************\
+| WELCOME
+\**********************************************/
+
+.welcome {
+  margin-top: 15px;
+}
+
+  .welcome__logout {
+    font-size: 18px;
+    float: right;
+  }
+
+  .welcome__name {
+    float: left;
+  }
+
+
 .prod-infos {
   margin: 40px 0;
   padding: 0;

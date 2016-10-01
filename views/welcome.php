@@ -1,6 +1,10 @@
-<a href="views/logout.php" class="pull-right" style="margin-top: 10px; font-size: 20px">
-<i class="glyphicon glyphicon-log-out"></i></a>
-<h4 class="pull-left" style="margin-top: 10px">
-  Seja bem vindo
-  <strong><?php $client->loggedUserName(); ?>!</strong>
-</h4>
+<div class="welcome">
+  <a href="controllers/LogoutController.php" class="welcome__logout">
+    <i class="glyphicon glyphicon-log-out"></i>
+  </a>
+
+  <h4 class="welcome__name">
+    Seja bem vindo
+    <strong><?php $client->loggedUserName(); ?>!</strong>
+  </h4>
+</div>

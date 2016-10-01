@@ -19,7 +19,7 @@
         <p class="product-carousel-price">R$ <?php  echo $product['preco'] ; ?></p>  
 
         <div class="product-option-shop">
-          <a class="add_to_cart_button" href="dashboard/functions/buy/addCart.php?id=<?php echo $product['id']; ?>">Adicionar ao carrinho</a>
+          <a class="add_to_cart_button" href="controllers/buy/addCartController.php?id=<?php echo $product['id']; ?>">Adicionar ao carrinho</a>
         </div>
       </div>
     </div>
