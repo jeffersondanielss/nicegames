@@ -1,7 +1,6 @@
 <?php 
   $title = 'NICEGAMES';
   include 'views/head.php';
-  include 'dashboard/functions/functions.php';
 ?>
 <body>
 

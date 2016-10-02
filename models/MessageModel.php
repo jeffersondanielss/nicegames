@@ -25,11 +25,9 @@
       $sql->execute();
 
       $message = 'Mensagem enviada com sucesso!';
-      header("Location: ../../../contact.php?message={$message}");
+      header("Location: ../../contact.php?message={$message}");
     }
 
   }
-
-  $message = new Message;
 
 ?>

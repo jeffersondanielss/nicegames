@@ -8,8 +8,6 @@
   </thead>
   <tbody>
     <?php
-      $purchases = $buy->getBuyProducts();
-
       foreach ($purchases as $purchase) {
         foreach ($purchase as $product) { ?>
 
@@ -32,7 +30,7 @@
       <td class="actions" colspan="2">
         <a href="dashboard/functions/buy/purchase.php?id=<?php echo $currUser[0]['id']; ?>" class="add_to_cart_button">Finalizar compra</a>
       </td>
-      <td><?php $buy->buyTotal();?></td>
+      <td><?php $PurchasesCtrl->getTotal();?></td>
     </tr>
   </tbody>
 </table>

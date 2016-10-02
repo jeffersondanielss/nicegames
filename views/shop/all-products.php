@@ -1,6 +1,4 @@
 <?php
-
-  $products = $product->readAll('produto');
   
   foreach ($products as $product) { ?>
 

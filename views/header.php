@@ -1,13 +1,14 @@
+<?php
+  include_once 'controllers/HeaderController.php';
+  $header = new HeaderController();
+  $name = $header->getUserName();
+  $user = empty($_SESSION['email']) || empty($_SESSION['senha']) ? true : false;
+?>
+
 <div class="header-area">
   <div class="container">
-    <?php
-      if( empty($_SESSION['email']) || empty($_SESSION['senha']) ){
-        include 'views/login.php';
-      } else {
-        include 'views/welcome.php';
-      }
-    ?>
-  </div>
+    <?php $user ? include 'views/login.php' : include 'views/welcome.php'; ?>
+  </div> 
 </div><!-- End header area -->
 
 <div class="site-branding-area">
@@ -22,12 +23,11 @@
       <div class="col-sm-6">
         <div class="shopping-item">
           <a href="cart.php">
-            <span class="cart-amunt"><?php $buy->buyTotal(); ?></span> 
+            <span class="cart-amunt">
+              <?php $header->getTotal(); ?>
+            </span> 
             <i class="fa fa-shopping-cart"></i> <span class="product-count">
-              <?php
-                $totalitens = !empty($_SESSION) ? $buy->buyTotaltens() : '0';
-                echo $totalitens;
-              ?>
+              <?php $header->getItens() ?>
             </span>
           </a>
         </div>

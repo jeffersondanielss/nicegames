@@ -1,11 +1,10 @@
 <?php 
   $title = 'NG - Cadastro';
-  include 'views/head.php';
-  include 'dashboard/functions/functions.php';
+  include_once 'views/head.php';
 ?>
 <body>
 
-  <?php include 'views/header.php'; ?>
+  <?php include_once 'views/header.php'; ?>
 
   <header>
     <h2 class="big-title">Cadastre-se</h2>
@@ -14,7 +13,7 @@
 
   <div class="container">
     <div class="well well-sm form-contact">
-      <form class="form-horizontal" action="dashboard/functions/client/insert.php" method="post" enctype="multipart/form-data">
+      <form class="form-horizontal" action="controllers/client/RegisterClientController.php" method="post" enctype="multipart/form-data">
 
         <div class="form-group">
           <label class="col-sm-3 control-label">Nome</label>
@@ -99,4 +98,4 @@
     </div>
   </div>
 
-<?php include 'views/footer.php'; ?>
+<?php include_once 'views/footer.php'; ?>

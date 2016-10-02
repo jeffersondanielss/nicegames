@@ -1,6 +1,8 @@
 <div class="product-carousel">
   <?php
-    $products = $product->readAll('produto');
+    include_once 'controllers/product/GetProductsController.php';
+    $productsCtrl = new GetProductsController();
+    $products = $productsCtrl->getProducts();
 
     foreach ($products as $product) { ?>
      <div class="single-product">';

@@ -100,6 +100,4 @@
 
   }
 
-  $employe = new Employe;
-
 ?>

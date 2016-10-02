@@ -1,11 +1,10 @@
 <?php 
   $title = 'NG - Contato';
-  include 'views/head.php';
-  include 'dashboard/functions/functions.php';
+  include_once 'views/head.php';
 ?>
 <body>
 
-  <?php include 'views/header.php'; ?>
+  <?php include_once 'views/header.php'; ?>
 
   <header>
     <h2 class="big-title">Fale Conosco</h2>
@@ -14,7 +13,7 @@
 
   <div class="container">
     <div class="form-contact">
-      <form class="" action="dashboard/functions/message/insert.php" method="post">
+      <form class="" action="controllers/message/SendMessageController.php" method="post">
 
         <div class="form-group">
           <input name="nome" type="text" placeholder="Nome" class="form-control">
@@ -35,7 +34,7 @@
       </form>
     </div>
 
-    <?php include 'dashboard/views/message.php'; ?>
+    <?php include_once 'dashboard/views/message.php'; ?>
   </div>
 
-<?php include 'views/footer.php'; ?>
+<?php include_once 'views/footer.php'; ?>

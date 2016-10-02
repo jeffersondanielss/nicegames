@@ -152,6 +152,4 @@
 
   }
 
-  $product = new Product;
-
 ?>

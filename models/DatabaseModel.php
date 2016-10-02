@@ -77,6 +77,4 @@
 
   }
 
-  $db = new Database;
-
 ?>

@@ -5,6 +5,8 @@
 
   <h4 class="welcome__name">
     Seja bem vindo
-    <strong><?php $client->loggedUserName(); ?>!</strong>
+    <strong>
+    <?php echo $name; ?>!
+    </strong>
   </h4>
 </div>

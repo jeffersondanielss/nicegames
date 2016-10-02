@@ -165,11 +165,9 @@
     // Mostra o nome do usuário logado
     public function loggedUserName() {
       $user = $this->getLoggedUser();
-      echo $user[0]['nome'];
+      return $user[0]['nome'];
     }
 
   }
-
-  $client = new Client;
 
 ?>

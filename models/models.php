@@ -1,9 +1,9 @@
 <?php
-  include 'database.php';
-  include 'CRUD.php';
-  include 'product.php';
-  include 'employe.php';
-  include 'client.php';
-  include 'message.php';
-  include 'buy.php';
+  include_once 'DatabaseModel.php';
+  include_once 'CRUDModel.php';
+  include_once 'ProductModel.php';
+  include_once 'EmployeModel.php';
+  include_once 'ClientModel.php';
+  include_once 'MessageModel.php';
+  include_once 'BuyModel.php';
 ?>

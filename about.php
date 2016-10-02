@@ -1,7 +1,6 @@
 <?php 
   $title = 'NG - Sobre nós';
   include 'views/head.php';
-  include 'dashboard/functions/functions.php';
 ?>
 <body>
 

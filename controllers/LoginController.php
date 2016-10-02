@@ -1,6 +1,6 @@
 <?php
   function login(){
-    include '../models/database.php';
+    include '../models/DatabaseModel.php';
     $db = new Database;
     $db->login();
   }

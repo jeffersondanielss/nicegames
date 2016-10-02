@@ -1,7 +1,9 @@
 <?php 
   $title = 'NG - Shop';
   include 'views/head.php';
-  include 'dashboard/functions/functions.php';
+  include_once 'controllers/product/GetProductsController.php';
+  $productsCtrl = new GetProductsController();
+  $products = $productsCtrl->getProducts();
 ?>
 <body>
 

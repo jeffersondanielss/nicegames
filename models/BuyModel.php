@@ -52,7 +52,7 @@
 
     public function buyTotaltens() {
       $dadosProduto = $this->getBuyProducts();
-      echo count($dadosProduto);
+      return count($dadosProduto);
     }
 
     public function buyTotal() {
