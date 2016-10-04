@@ -1,10 +1,10 @@
 <?php 
   $title = 'NG - Contato';
-  include_once 'views/head.php';
+  include_once('views/head.php');
 ?>
 <body>
 
-  <?php include_once 'views/header.php'; ?>
+  <?php include_once('views/header.php'); ?>
 
   <header>
     <h2 class="big-title">Fale Conosco</h2>
@@ -34,7 +34,7 @@
       </form>
     </div>
 
-    <?php include_once 'dashboard/views/message.php'; ?>
+    <?php include_once('dashboard/views/message.php'); ?>
   </div>
 
-<?php include_once 'views/footer.php'; ?>
+<?php include_once('views/footer.php'); ?>

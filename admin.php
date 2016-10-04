@@ -1,6 +1,6 @@
 <?php
   $title = 'NG - Login';
-  include 'dashboard/views/header.php';
+  include_once('dashboard/views/header.php');
 ?>
 
   <body>
@@ -21,4 +21,4 @@
       </form>
     </div>
   
-<?php include 'dashboard/views/footer.php'; ?>
+<?php include_once('dashboard/views/footer.php'); ?>

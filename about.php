@@ -1,10 +1,10 @@
 <?php 
   $title = 'NG - Sobre nós';
-  include 'views/head.php';
+  include_once('views/head.php');
 ?>
 <body>
 
-  <?php include 'views/header.php'; ?>
+  <?php include_once('views/header.php'); ?>
 
   <header>
     <h2 class="big-title">Sobre nós</h2>
@@ -22,4 +22,4 @@
     </article>
   </section>
 
-<?php include 'views/footer.php'; ?>
+<?php include_once('views/footer.php'); ?>

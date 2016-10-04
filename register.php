@@ -1,10 +1,10 @@
 <?php 
   $title = 'NG - Cadastro';
-  include_once 'views/head.php';
+  include_once('views/head.php');
 ?>
 <body>
 
-  <?php include_once 'views/header.php'; ?>
+  <?php include_once('views/header.php'); ?>
 
   <header>
     <h2 class="big-title">Cadastre-se</h2>
@@ -98,4 +98,4 @@
     </div>
   </div>
 
-<?php include_once 'views/footer.php'; ?>
+<?php include_once('views/footer.php'); ?>

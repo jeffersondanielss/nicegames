@@ -1,13 +1,13 @@
 <?php 
   $title = 'NG - Shop';
-  include 'views/head.php';
-  include_once 'controllers/product/GetProductsController.php';
+  include_once('views/head.php');
+  include_once('controllers/product/GetProductsController.php');
   $productsCtrl = new GetProductsController();
   $products = $productsCtrl->getProducts();
 ?>
 <body>
 
-  <?php include 'views/header.php'; ?>
+  <?php include_once('views/header.php'); ?>
 
   <header>
     <h2 class="big-title">Produtos</h2>
@@ -15,7 +15,7 @@
 
 
   <div class="single-product-area container">
-    <?php include 'views/shop/all-products.php'; ?>
+    <?php include_once('views/shop/all-products.php'); ?>
   </div>
 
-<?php include 'views/footer.php'; ?>
+<?php include_once('views/footer.php'); ?>
