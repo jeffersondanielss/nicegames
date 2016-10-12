@@ -1,0 +1,160 @@
+<html>
+    <head>
+        <script
+            type="text/javascript"
+            src="../js/jquery-1.4.2.min.js">
+        </script>
+        <script
+            type="text/javascript"
+            src="../syntax_highlighter/scripts/shCore.js">
+        </script>
+        <script
+            type="text/javascript"
+            src="../syntax_highlighter/scripts/shBrushJScript.js">
+        </script>
+        <script
+            type="text/javascript"
+            src="../syntax_highlighter/scripts/shBrushPhp.js">
+        </script>
+        <script
+            type="text/javascript"
+            src="../syntax_highlighter/scripts/shBrushXml.js">
+        </script>
+        <link
+            href="../syntax_highlighter/styles/shCore.css" rel="stylesheet"
+            type="text/css"
+        />
+        <link
+            href="../syntax_highlighter/styles/shCoreEclipse.css"
+            rel="stylesheet" type="text/css"
+        />
+        <link
+            href="../syntax_highlighter/styles/shThemeWordpress.css"
+            rel="stylesheet" type="text/css"
+        />
+    </head>
+    <body>
+        <pre class="brush: php">&lt;?php
+
+  /**
+  * CRUDModel.php
+  * @author Jefferson Daniel &lt;jeffersondanielss@gmail.com&gt;
+  */
+
+  /**
+  * Classe CRUD
+  *
+  * Classe com m&eacute;todos comuns entre as classes e o banco de dados.
+  */
+
+  class CRUD {
+
+    /**
+    * Deleta itens de uma tabela de acordo com os parametros passados.
+    *
+    * @param int $id cont&eacute;m o id do registro.
+    * @param String $table cont&eacute;m o nome da tabela.
+    * @param String $redirectPage cont&eacute;m o caminho da p&aacute;gina que o usu&aacute;rio vai ser redirecionado ap&oacute;s a fun&ccedil;&atilde;o ser chamada.
+    * @return void
+    */
+
+    public function delete( $id, $table, $redirectPage ) {
+      include '../database.php';
+      echo &quot;&lt;script&gt;confirm('Tem certeza que deseja apagar esse registro?')&lt;/script&gt;&quot;;
+      $db = new Database;
+      $pdo = $db-&gt;connect();
+      $sql = $pdo-&gt;prepare(&quot;DELETE FROM $table WHERE id=:id&quot;);
+      $sql-&gt;bindValue(':id', $id);
+      $sql-&gt;execute();
+
+      $message = 'Produto excluido com sucesso!';
+      header(&quot;Location: ../../&quot; . $redirectPage . &quot;.php?message={$message}&quot;);
+    }
+
+    /**
+    * Compara email e senha da $_SESSION com os registros cadastrados na tabela desejada.
+    * 
+    * @param String $table nome da tabela onde o email e senha v&atilde;o ser buscados.
+    * @return int Retorna um inteiro com a quantidade de linhas encontradas na tebela com esse email e senha.
+    */
+
+    public function userType( $table ) {
+
+      if( !empty($_SESSION['email']) || !empty($_SESSION['senha']) ) {
+        $db = new Database;
+        $pdo = $db-&gt;connect();
+        $user = $pdo-&gt;prepare(&quot;SELECT * FROM $table WHERE email=:email and senha=:senha&quot;);
+
+        $user-&gt;bindValue(':email', $_SESSION['email']);
+        $user-&gt;bindValue(':senha', $_SESSION['senha']);
+        $user-&gt;execute();
+
+        $rowUser = $user-&gt;rowCount();
+
+        return $rowUser;
+      }
+    }
+
+    /**
+    * Conta registros em uma tabela.
+    * 
+    * @param String $table nome da tabela.
+    * @return void
+    */
+
+    public function count( $table ) {
+      $db = new Database;
+      $pdo = $db-&gt;connect();
+      $busca = $pdo-&gt;prepare(&quot;SELECT count(*) as total FROM $table&quot;);
+      $busca-&gt;execute();
+      $result = $busca-&gt;fetchColumn();
+      echo $result;
+    }
+
+    /**
+    * Busca todos registros de uma tabela.
+    * 
+    * @param String $table nome da tabela.
+    * @return array Retorna um array com todos registros.
+    */
+
+    public function readAll( $table ) {
+      $db = new Database;
+      $pdo = $db-&gt;connect();
+      $busca = $pdo-&gt;prepare(&quot;SELECT * FROM $table&quot;);
+      $busca-&gt;execute();
+
+      $linha = $busca-&gt;fetchAll(PDO::FETCH_ASSOC);
+
+      return $linha;
+    }
+
+    /**
+    * Busca todos registros de uma tabela.
+    * 
+    * @param int $id ID do registro.
+    * @param String $table nome da tabela.
+    * @return array Retorna um array com o registro procurado.
+    */
+
+    public function getById( $id, $table ) {
+      $db = new Database;
+      $pdo = $db-&gt;connect();
+      $busca = $pdo-&gt;prepare(&quot;SELECT * FROM $table WHERE ID = :id&quot;);
+      $busca-&gt;bindValue(':id', $id);
+      $busca-&gt;execute();
+
+      return $busca-&gt;fetchAll(PDO::FETCH_ASSOC);
+    }
+  
+  }
+
+?&gt;</pre>
+        <script type="text/javascript">
+             SyntaxHighlighter.all();
+             jQuery('.gutter div').each(function(key, data){
+                jQuery(data).prepend('<a name="L'+jQuery(data).text()+'"/>');
+             });
+        </script>
+    </body>
+</html>

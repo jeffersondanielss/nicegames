@@ -1,0 +1,185 @@
+<html>
+    <head>
+        <script
+            type="text/javascript"
+            src="../js/jquery-1.4.2.min.js">
+        </script>
+        <script
+            type="text/javascript"
+            src="../syntax_highlighter/scripts/shCore.js">
+        </script>
+        <script
+            type="text/javascript"
+            src="../syntax_highlighter/scripts/shBrushJScript.js">
+        </script>
+        <script
+            type="text/javascript"
+            src="../syntax_highlighter/scripts/shBrushPhp.js">
+        </script>
+        <script
+            type="text/javascript"
+            src="../syntax_highlighter/scripts/shBrushXml.js">
+        </script>
+        <link
+            href="../syntax_highlighter/styles/shCore.css" rel="stylesheet"
+            type="text/css"
+        />
+        <link
+            href="../syntax_highlighter/styles/shCoreEclipse.css"
+            rel="stylesheet" type="text/css"
+        />
+        <link
+            href="../syntax_highlighter/styles/shThemeWordpress.css"
+            rel="stylesheet" type="text/css"
+        />
+    </head>
+    <body>
+        <pre class="brush: php">&lt;?php
+
+  /**
+  * EmployeModel.php
+  * @author Jefferson Daniel &lt;jeffersondanielss@gmail.com&gt;
+  */
+
+  /**
+  * Classe Employe
+  */
+
+  class Employe extends CRUD {
+
+    /**
+    * Inseri um registro na tabela de funcion&aacute;rio.
+    * 
+    * @return void
+    */
+
+    public function insert() {
+      include '../database.php';
+      $db = new Database;
+      $pdo = $db-&gt;connect();
+
+      $nome =      $_POST['nome'];
+      $email =     $_POST['email'];
+      $senha =     md5($_POST['senha']);
+
+      $validar = $pdo-&gt;prepare(&quot;SELECT * FROM funcionario WHERE email=:email&quot;);
+      $validar-&gt;bindValue(':email', $email);
+      $validar-&gt;execute();
+
+      if( $validar-&gt;rowCount() == 0 ):
+        $sql = $pdo-&gt;prepare(&quot;INSERT INTO funcionario(nome, email, senha)VALUES(:nome, :email, :senha)&quot;);
+
+        $sql-&gt;bindValue(':nome',      $nome);
+        $sql-&gt;bindValue(':email',     $email);
+        $sql-&gt;bindValue(':senha',     $senha);
+
+        $sql-&gt;execute();
+        $message = 'Cadastro realizado com sucesso!';
+        header(&quot;Location: ../../employe.php?message={$message}&quot;);
+      else:
+        $message = 'J&aacute; existe um funcionario com este id!';
+        header(&quot;Location: ../../employe.php?message={$message}&quot;);
+      endif;
+    }
+
+
+    /**
+    * Atualiza dos registros da tabela funcion&aacute;rio.
+    * 
+    * @return void
+    */
+
+    public function update() {
+      include '../database.php';
+      $db = new Database;
+      $pdo = $db-&gt;connect();
+
+      $id =        $_POST['id'];
+      $nome =      $_POST['nome'];
+      $email =     $_POST['email'];
+      $senha =     md5($_POST['senha']);
+
+      if( !empty( $nome ) ) {
+        $sql = $pdo-&gt;prepare(&quot;UPDATE funcionario SET nome=:nome WHERE id=:id&quot;);
+        $sql-&gt;bindValue(':nome', $nome);
+        $sql-&gt;bindValue(':id', $id);
+        $sql-&gt;execute();
+      }
+
+      if( !empty( $email ) ) {
+        $sql = $pdo-&gt;prepare(&quot;UPDATE funcionario SET email=:email WHERE id=:id&quot;);
+        $sql-&gt;bindValue(':email', $email);
+        $sql-&gt;bindValue(':id', $id);
+        $sql-&gt;execute();
+      }
+
+      if( !empty( $_POST['senha'] ) ) {
+        $sql = $pdo-&gt;prepare(&quot;UPDATE funcionario SET senha=:senha WHERE id=:id&quot;);
+        $sql-&gt;bindValue(':senha', $senha);
+        $sql-&gt;bindValue(':id', $id);
+        $sql-&gt;execute();
+      }
+
+      $message = 'Usu&aacute;rio atualizado com sucesso!';
+      header(&quot;Location: ../../employe.php?message={$message}&quot;);
+    }
+
+    /**
+    * Busca e retorna um array com o usu&aacute;rio logado.
+    * 
+    * @return void
+    */
+
+    public function getLoggedUser() {
+      $db = new Database;
+      $pdo = $db-&gt;connect();
+
+      $email = $_SESSION['email'];
+      $senha = $_SESSION['senha'];
+
+      $sql = $pdo-&gt;prepare(&quot;SELECT * FROM funcionario WHERE email=:email and senha=:senha&quot;);
+      $sql-&gt;bindValue(':email', $email);
+      $sql-&gt;bindValue(':senha', $senha);
+      $sql-&gt;execute();
+
+      $currentUser = $sql-&gt;fetchAll(PDO::FETCH_ASSOC);
+      return $currentUser;
+    }
+
+    /**
+    * Exibe o nome do usu&aacute;rio logado.
+    * 
+    * @return void
+    */
+
+    public function loggedUserName() {
+      $user = $this-&gt;getLoggedUser();
+      echo $user[0]['nome'];
+    }
+
+    /**
+    * Verifica se usu&aacute;rio logado &eacute; um funcion&aacute;rio.
+    * 
+    * @return void
+    */
+
+    public function authenticate() {
+      $db-&gt;sessionStart();
+      $user = parent::userType('funcionario');
+
+      if( $user &lt; 1 ) {
+        header(&quot;Location: ../.&quot;);
+      }
+    }
+
+  }
+
+?&gt;</pre>
+        <script type="text/javascript">
+             SyntaxHighlighter.all();
+             jQuery('.gutter div').each(function(key, data){
+                jQuery(data).prepend('<a name="L'+jQuery(data).text()+'"/>');
+             });
+        </script>
+    </body>
+</html>

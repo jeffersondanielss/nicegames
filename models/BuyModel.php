@@ -1,12 +1,23 @@
 <?php
 
-  /*
-  * Author Jeferson Daniel
-  * Version 1.0.0
-  * CRUD PDO
+  /**
+  * BuyModel.php
+  * @author Jefferson Daniel <jeffersondanielss@gmail.com>
+  */
+
+  /**
+  * Classe Buy
+  *
+  * Subclasse de Client, contém médodos das compras.
   */
 
   class Buy extends Client {
+
+    /**
+    * Busca o id do usuário logado.
+    *
+    * @return int $userId Id do usuário.
+    */
 
     public function getUserId() {
       if( !isset($_SESSION) ) {
@@ -16,6 +27,13 @@
       $userId = $user[0]['id'];
       return $userId;
     }
+
+    /**
+    * Adiciona produtos ao carrinho.
+    *
+    * @param int $productId Id do produto
+    * @return void
+    */
 
     public function addCart( $productId ) {
       $db = new Database;
@@ -27,6 +45,12 @@
       $sql->bindValue(':id_produto', $productId);
       $sql->execute();
     }
+
+    /**
+    * Retorna um array com todos produtos que o cliente logado comprou.
+    *
+    * @return Array
+    */
 
     public function getBuyProducts() {
       $db = new Database;
@@ -50,10 +74,23 @@
       return $prod;
     }
 
+    /**
+    * Retona a quantidade de compras.
+    *
+    * @return int
+    */
+
     public function buyTotaltens() {
       $dadosProduto = $this->getBuyProducts();
       return count($dadosProduto);
     }
+
+
+    /**
+    * Exibe valor total das compras.
+    *
+    * @return void
+    */
 
     public function buyTotal() {
       $total = 0;
@@ -67,6 +104,16 @@
 
       echo 'R$ ' . $total . ',00';
     }
+
+    /**
+    * Método que conclui uma compra.
+    *
+    * Recebe o Id do cliente e apaga os registros de compras na tabela Buy.
+    *
+    * @param int $userId com o ID do usuário.
+    *
+    * @return void
+    */
 
     public function purchase( $userId ) {
       $db = new Database;

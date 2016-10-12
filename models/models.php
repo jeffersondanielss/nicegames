@@ -1,4 +1,13 @@
 <?php
+  /**
+  * models.php
+  * @author Jefferson Daniel <jeffersondanielss@gmail.com>
+  */
+
+  /**
+  * Include de todos models do projeto.
+  */
+
   include_once 'DatabaseModel.php';
   include_once 'CRUDModel.php';
   include_once 'ProductModel.php';

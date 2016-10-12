@@ -1,0 +1,143 @@
+<html>
+    <head>
+        <script
+            type="text/javascript"
+            src="../js/jquery-1.4.2.min.js">
+        </script>
+        <script
+            type="text/javascript"
+            src="../syntax_highlighter/scripts/shCore.js">
+        </script>
+        <script
+            type="text/javascript"
+            src="../syntax_highlighter/scripts/shBrushJScript.js">
+        </script>
+        <script
+            type="text/javascript"
+            src="../syntax_highlighter/scripts/shBrushPhp.js">
+        </script>
+        <script
+            type="text/javascript"
+            src="../syntax_highlighter/scripts/shBrushXml.js">
+        </script>
+        <link
+            href="../syntax_highlighter/styles/shCore.css" rel="stylesheet"
+            type="text/css"
+        />
+        <link
+            href="../syntax_highlighter/styles/shCoreEclipse.css"
+            rel="stylesheet" type="text/css"
+        />
+        <link
+            href="../syntax_highlighter/styles/shThemeWordpress.css"
+            rel="stylesheet" type="text/css"
+        />
+    </head>
+    <body>
+        <pre class="brush: php">&lt;?php
+
+  /**
+  * DatabaseModel.php
+  * @author Jefferson Daniel &lt;jeffersondanielss@gmail.com&gt;
+  */
+
+  /**
+  * Classe Database
+  */
+
+  class Database {
+
+    /**
+    * Faz a conec&ccedil;&atilde;o com o banco de dados.
+    *
+    * @return void
+    */
+
+    public function connect() {
+      $host = &quot;localhost&quot;;
+      $user = &quot;root&quot;;
+      $pass = &quot;&quot;;
+      $banco = &quot;nicegames&quot;;
+
+      try {
+        $pdo = new PDO(&quot;mysql:host=$host;dbname=$banco&quot;, $user, $pass);
+      } catch( PDOException $e ) {
+        $e-&gt;getMessage();
+      }
+
+      return $pdo;
+    }
+
+    /**
+    * Inicia uma se&ccedil;&atilde;o.
+    *
+    * @return void
+    */
+
+    public function sessionStart() {
+      session_start();
+
+      if( empty($_SESSION['email']) || empty($_SESSION['senha']) ) {
+        header(&quot;Location: ../.&quot;);
+      }
+    }
+
+    /**
+    * Faz o login no sistema e redireciona o usu&aacute;rio dependendo de tipo.
+    *
+    * @return void
+    */
+
+    public function login() {
+      $pdo = $this-&gt;connect();
+      $email = $_POST['email'];
+      $senha = md5($_POST['senha']);
+
+      $cliente = $pdo-&gt;prepare(&quot;SELECT * FROM cliente WHERE email=:email and senha=:senha&quot;);
+      $cliente-&gt;bindValue(':email', $email);
+      $cliente-&gt;bindValue(':senha', $senha);
+      $cliente-&gt;execute();
+      $rowCliente = $cliente-&gt;rowCount();
+      $dadosCliente = $cliente-&gt;fetchAll(PDO::FETCH_ASSOC);
+
+      $funcionario = $pdo-&gt;prepare(&quot;SELECT * FROM funcionario WHERE email=:email and senha=:senha&quot;);
+      $funcionario-&gt;bindValue(':email', $email);
+      $funcionario-&gt;bindValue(':senha', $senha);
+      $funcionario-&gt;execute();
+      $rowFuncionario = $funcionario-&gt;rowCount();
+
+
+      if( $rowCliente &gt; 0 ) {
+        session_start();
+        $_SESSION['email'] = $email;
+        $_SESSION['senha'] = $senha;
+        $_SESSION['id'] = $$dadosCliente[0]['id'];
+
+        header(&quot;Location: ../.&quot;);
+
+      } else if( $rowFuncionario &gt; 0 ) {
+        session_start();
+        $_SESSION['email'] = $email;
+        $_SESSION['senha'] = $senha;
+
+        header(&quot;Location: ../dashboard&quot;);
+        
+      } else {
+        echo &quot;&lt;script&gt;
+        alert('Nome de usuarios ou senha invalidos, espera um momento para tentar novamente');
+        window.location.href = '../../index.php';
+        &lt;/script&gt;&quot;;
+      }
+    }
+
+  }
+
+?&gt;</pre>
+        <script type="text/javascript">
+             SyntaxHighlighter.all();
+             jQuery('.gutter div').each(function(key, data){
+                jQuery(data).prepend('<a name="L'+jQuery(data).text()+'"/>');
+             });
+        </script>
+    </body>
+</html>

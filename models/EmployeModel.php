@@ -1,14 +1,22 @@
 <?php
 
-  /*
-  * Author Jeferson Daniel
-  * Version 1.0.0
-  * CRUD PDO
+  /**
+  * EmployeModel.php
+  * @author Jefferson Daniel <jeffersondanielss@gmail.com>
+  */
+
+  /**
+  * Classe Employe
   */
 
   class Employe extends CRUD {
 
-    // Cadastro no banco
+    /**
+    * Inseri um registro na tabela de funcionário.
+    * 
+    * @return void
+    */
+
     public function insert() {
       include '../database.php';
       $db = new Database;
@@ -39,7 +47,12 @@
     }
 
 
-    // Atualizar usuário
+    /**
+    * Atualiza dos registros da tabela funcionário.
+    * 
+    * @return void
+    */
+
     public function update() {
       include '../database.php';
       $db = new Database;
@@ -75,7 +88,12 @@
       header("Location: ../../employe.php?message={$message}");
     }
 
-    // Resgata o usuário que está logado
+    /**
+    * Busca e retorna um array com o usuário logado.
+    * 
+    * @return void
+    */
+
     public function getLoggedUser() {
       $db = new Database;
       $pdo = $db->connect();
@@ -92,10 +110,30 @@
       return $currentUser;
     }
 
-    // Mostra o nome do usuário logado
+    /**
+    * Exibe o nome do usuário logado.
+    * 
+    * @return void
+    */
+
     public function loggedUserName() {
       $user = $this->getLoggedUser();
       echo $user[0]['nome'];
+    }
+
+    /**
+    * Verifica se usuário logado é um funcionário.
+    * 
+    * @return void
+    */
+
+    public function authenticate() {
+      $db->sessionStart();
+      $user = parent::userType('funcionario');
+
+      if( $user < 1 ) {
+        header("Location: ../.");
+      }
     }
 
   }

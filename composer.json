@@ -1,0 +1,8 @@
+{
+  "scripts": {
+    "docs": ".\\vendor\\bin\\phpdoc.php.bat -d .\\models\\ --template responsive-twig"
+  },
+  "require-dev": {
+    "phpdocumentor/phpdocumentor": "2.*"
+  }
+}

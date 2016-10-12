@@ -1,0 +1,86 @@
+<html>
+    <head>
+        <script
+            type="text/javascript"
+            src="../js/jquery-1.4.2.min.js">
+        </script>
+        <script
+            type="text/javascript"
+            src="../syntax_highlighter/scripts/shCore.js">
+        </script>
+        <script
+            type="text/javascript"
+            src="../syntax_highlighter/scripts/shBrushJScript.js">
+        </script>
+        <script
+            type="text/javascript"
+            src="../syntax_highlighter/scripts/shBrushPhp.js">
+        </script>
+        <script
+            type="text/javascript"
+            src="../syntax_highlighter/scripts/shBrushXml.js">
+        </script>
+        <link
+            href="../syntax_highlighter/styles/shCore.css" rel="stylesheet"
+            type="text/css"
+        />
+        <link
+            href="../syntax_highlighter/styles/shCoreEclipse.css"
+            rel="stylesheet" type="text/css"
+        />
+        <link
+            href="../syntax_highlighter/styles/shThemeWordpress.css"
+            rel="stylesheet" type="text/css"
+        />
+    </head>
+    <body>
+        <pre class="brush: php">&lt;?php
+
+  /**
+  * MessageModel.php
+  * @author Jefferson Daniel &lt;jeffersondanielss@gmail.com&gt;
+  */
+
+  /**
+  * Classe Message
+  */
+
+  class Message extends CRUD {
+
+    /**
+    * Inseri um registro na tabela de mensagens.
+    * 
+    * @return void
+    */
+
+    public function insert() {
+      include '../database.php';
+      $db = new Database;
+      $pdo = $db-&gt;connect();
+
+      $nome =      $_POST['nome'];
+      $email =     $_POST['email'];
+      $mensagem =  $_POST['mensagem'];
+
+      $sql = $pdo-&gt;prepare(&quot;INSERT INTO mensagem(nome, email, mensagem)VALUES(:nome, :email, :mensagem)&quot;);
+
+      $sql-&gt;bindValue(':nome',      $nome);
+      $sql-&gt;bindValue(':email',     $email);
+      $sql-&gt;bindValue(':mensagem',     $mensagem);
+      $sql-&gt;execute();
+
+      $message = 'Mensagem enviada com sucesso!';
+      header(&quot;Location: ../../contact.php?message={$message}&quot;);
+    }
+
+  }
+
+?&gt;</pre>
+        <script type="text/javascript">
+             SyntaxHighlighter.all();
+             jQuery('.gutter div').each(function(key, data){
+                jQuery(data).prepend('<a name="L'+jQuery(data).text()+'"/>');
+             });
+        </script>
+    </body>
+</html>

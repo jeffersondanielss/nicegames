@@ -1,14 +1,22 @@
 <?php
 
-  /*
-  * Author Jeferson Daniel
-  * Version 1.0.0
-  * CRUD PDO
+  /**
+  * ProductModel.php
+  * @author Jefferson Daniel <jeffersondanielss@gmail.com>
+  */
+
+  /**
+  * Classe Product
   */
 
   class Product extends CRUD {
 
-    // Cadastro no banco
+    /**
+    * Inseri um registro na tabela de produtos.
+    * 
+    * @return void
+    */
+
     public function insert() {
       include '../database.php';
       $db = new Database;
@@ -61,7 +69,12 @@
       endif;
     }
 
-    // Atualizar usuário
+    /**
+    * Atualiza um registro na tabela de produtos.
+    * 
+    * @return void
+    */
+
     public function update() {
       include '../database.php';
       $db = new Database;

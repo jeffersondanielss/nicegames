@@ -1,12 +1,21 @@
 <?php
 
-  /*
-  * Author Jeferson Daniel
-  * Version 1.0.0
-  * CRUD PDO
+  /**
+  * MessageModel.php
+  * @author Jefferson Daniel <jeffersondanielss@gmail.com>
+  */
+
+  /**
+  * Classe Message
   */
 
   class Message extends CRUD {
+
+    /**
+    * Inseri um registro na tabela de mensagens.
+    * 
+    * @return void
+    */
 
     public function insert() {
       include '../database.php';

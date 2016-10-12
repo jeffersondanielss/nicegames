@@ -1,0 +1,242 @@
+<html>
+    <head>
+        <script
+            type="text/javascript"
+            src="../js/jquery-1.4.2.min.js">
+        </script>
+        <script
+            type="text/javascript"
+            src="../syntax_highlighter/scripts/shCore.js">
+        </script>
+        <script
+            type="text/javascript"
+            src="../syntax_highlighter/scripts/shBrushJScript.js">
+        </script>
+        <script
+            type="text/javascript"
+            src="../syntax_highlighter/scripts/shBrushPhp.js">
+        </script>
+        <script
+            type="text/javascript"
+            src="../syntax_highlighter/scripts/shBrushXml.js">
+        </script>
+        <link
+            href="../syntax_highlighter/styles/shCore.css" rel="stylesheet"
+            type="text/css"
+        />
+        <link
+            href="../syntax_highlighter/styles/shCoreEclipse.css"
+            rel="stylesheet" type="text/css"
+        />
+        <link
+            href="../syntax_highlighter/styles/shThemeWordpress.css"
+            rel="stylesheet" type="text/css"
+        />
+    </head>
+    <body>
+        <pre class="brush: php">&lt;?php
+
+  /**
+  * ClientModel.php
+  * @author Jefferson Daniel &lt;jeffersondanielss@gmail.com&gt;
+  */
+
+  /**
+  * Classe Client
+  */
+
+  class Client extends CRUD {
+
+    /**
+    * Inseri um registro na tabela de client.
+    * 
+    * @return void
+    */
+
+    public function insert() {
+      include '../database.php';
+      $db = new Database;
+      $pdo = $db-&gt;connect();
+
+      $nome =      $_POST['nome'];
+      $sobrenome = $_POST['sobrenome'];
+      $email =     $_POST['email'];
+      $senha =     md5($_POST['senha']);
+      $endereco =  $_POST['endereco'];
+      $cidade =    $_POST['cidade'];
+      $cpf =       $_POST['cpf'];
+      $cep =       $_POST['cep'];
+      $telefone =  $_POST['telefone'];
+
+      $validar = $pdo-&gt;prepare(&quot;SELECT * FROM cliente WHERE email=:email&quot;);
+      $validar-&gt;bindValue(':email', $email);
+      $validar-&gt;execute();
+
+      if( $validar-&gt;rowCount() == 0 ):
+        $sql = $pdo-&gt;prepare(&quot;INSERT INTO cliente(nome, sobrenome, email, senha, endereco, cidade, cpf, cep, telefone)VALUES(:nome, :sobrenome, :email, :senha, :endereco, :cidade, :cpf, :cep, :telefone)&quot;);
+
+        $sql-&gt;bindValue(':nome',      $nome);
+        $sql-&gt;bindValue(':sobrenome', $sobrenome);
+        $sql-&gt;bindValue(':email',     $email);
+        $sql-&gt;bindValue(':senha',     $senha);
+        $sql-&gt;bindValue(':endereco',  $endereco);
+        $sql-&gt;bindValue(':cidade',    $cidade);
+        $sql-&gt;bindValue(':cpf' ,      $cpf);
+        $sql-&gt;bindValue(':cep',       $cep);
+        $sql-&gt;bindValue(':telefone',  $telefone);
+
+        $sql-&gt;execute();
+        $message = 'Cadastro realizado com sucesso!';
+        header(&quot;Location: ../../client.php?message={$message}&quot;);
+      else:
+        $message = 'J&aacute; existe um cliente com este id!';
+        header(&quot;Location: ../../client.php?message={$message}&quot;);
+      endif;
+    }
+
+    /**
+    * Atualiza um registro na tabela de cliente.
+    * 
+    * @return void
+    */
+
+    public function update() {
+      include '../database.php';
+      $db = new Database;
+      $pdo = $db-&gt;connect();
+
+      $id =        $_POST['id'];
+      $nome =      $_POST['nome'];
+      $sobrenome = $_POST['sobrenome'];
+      $email =     $_POST['email'];
+      $senha =     md5($_POST['senha']);
+      $endereco =  $_POST['endereco'];
+      $cidade =    $_POST['cidade'];
+      $cpf =       $_POST['cpf'];
+      $cep =       $_POST['cep'];
+      $telefone =  $_POST['telefone'];
+
+      if( !empty( $nome ) ) {
+        $sql = $pdo-&gt;prepare(&quot;UPDATE cliente SET nome=:nome WHERE id=:id&quot;);
+        $sql-&gt;bindValue(':nome', $nome);
+        $sql-&gt;bindValue(':id', $id);
+        $sql-&gt;execute();
+      }
+
+      if( !empty( $sobrenome ) ) {
+        $sql = $pdo-&gt;prepare(&quot;UPDATE cliente SET sobrenome=:sobrenome WHERE id=:id&quot;);
+        $sql-&gt;bindValue(':sobrenome', $sobrenome);
+        $sql-&gt;bindValue(':id', $id);
+        $sql-&gt;execute();
+      }
+
+      if( !empty( $email ) ) {
+        $sql = $pdo-&gt;prepare(&quot;UPDATE cliente SET email=:email WHERE id=:id&quot;);
+        $sql-&gt;bindValue(':email', $email);
+        $sql-&gt;bindValue(':id', $id);
+        $sql-&gt;execute();
+      }
+
+      if( !empty( $_POST['senha'] ) ) {
+        $sql = $pdo-&gt;prepare(&quot;UPDATE cliente SET senha=:senha WHERE id=:id&quot;);
+        $sql-&gt;bindValue(':senha', $senha);
+        $sql-&gt;bindValue(':id', $id);
+        $sql-&gt;execute();
+      }
+
+      if( !empty( $endereco ) ) {
+        $sql = $pdo-&gt;prepare(&quot;UPDATE cliente SET endereco=:endereco WHERE id=:id&quot;);
+        $sql-&gt;bindValue(':endereco', $endereco);
+        $sql-&gt;bindValue(':id', $id);
+        $sql-&gt;execute();
+      }
+
+      if( !empty( $cidade ) ) {
+        $sql = $pdo-&gt;prepare(&quot;UPDATE cliente SET cidade=:cidade WHERE id=:id&quot;);
+        $sql-&gt;bindValue(':cidade', $cidade);
+        $sql-&gt;bindValue(':id', $id);
+        $sql-&gt;execute();
+      }
+
+      if( !empty( $cpf ) ) {
+        $sql = $pdo-&gt;prepare(&quot;UPDATE cliente SET cpf=:cpf WHERE id=:id&quot;);
+        $sql-&gt;bindValue(':cpf', $cpf);
+        $sql-&gt;bindValue(':id', $id);
+        $sql-&gt;execute();
+      }
+
+      if( !empty( $cep ) ) {
+        $sql = $pdo-&gt;prepare(&quot;UPDATE cliente SET cep=:cep WHERE id=:id&quot;);
+        $sql-&gt;bindValue(':cep', $cep);
+        $sql-&gt;bindValue(':id', $id);
+        $sql-&gt;execute();
+      }
+
+      if( !empty( $telefone ) ) {
+        $sql = $pdo-&gt;prepare(&quot;UPDATE cliente SET telefone=:telefone WHERE id=:id&quot;);
+        $sql-&gt;bindValue(':telefone', $telefone);
+        $sql-&gt;bindValue(':id', $id);
+        $sql-&gt;execute();
+      }
+
+
+      $message = 'Usu&aacute;rio atualizado com sucesso!';
+      header(&quot;Location: ../../client.php?message={$message}&quot;);
+    }
+
+    /**
+    * Busca o usu&aacute;rio logado.
+    * 
+    * Retorna o cliente ou o funcion&aacute;rio logado.
+    * 
+    * @return void
+    */
+
+    public function getLoggedUser() {
+      if( !empty($_SESSION['email']) || !empty($_SESSION['senha']) ):
+        $db = new Database;
+        $pdo = $db-&gt;connect();
+
+        $email = $_SESSION['email'];
+        $senha = $_SESSION['senha'];
+
+
+        $sql = $pdo-&gt;prepare(&quot;SELECT * FROM cliente WHERE email=:email and senha=:senha&quot;);
+        $sql-&gt;bindValue(':email', $email);
+        $sql-&gt;bindValue(':senha', $senha);
+        $sql-&gt;execute();
+
+        $currentUser = $sql-&gt;fetchAll(PDO::FETCH_ASSOC);
+
+        if( !empty( $currentUser ) ) {
+          return $currentUser;
+        } else {
+          $employe = new Employe;
+          return $employe-&gt;getLoggedUser();
+        }
+
+      endif;
+    }
+
+    /**
+    * Retorna o nome do usu&aacute;rio logado.
+    * 
+    * @return void
+    */
+
+    public function loggedUserName() {
+      $user = $this-&gt;getLoggedUser();
+      return $user[0]['nome'];
+    }
+
+  }
+
+?&gt;</pre>
+        <script type="text/javascript">
+             SyntaxHighlighter.all();
+             jQuery('.gutter div').each(function(key, data){
+                jQuery(data).prepend('<a name="L'+jQuery(data).text()+'"/>');
+             });
+        </script>
+    </body>
+</html>

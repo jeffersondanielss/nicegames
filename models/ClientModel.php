@@ -1,14 +1,22 @@
 <?php
 
-  /*
-  * Author Jeferson Daniel
-  * Version 1.0.0
-  * CRUD PDO
+  /**
+  * ClientModel.php
+  * @author Jefferson Daniel <jeffersondanielss@gmail.com>
+  */
+
+  /**
+  * Classe Client
   */
 
   class Client extends CRUD {
 
-    // Cadastro no banco
+    /**
+    * Inseri um registro na tabela de client.
+    * 
+    * @return void
+    */
+
     public function insert() {
       include '../database.php';
       $db = new Database;
@@ -50,7 +58,12 @@
       endif;
     }
 
-    // Atualizar usuário
+    /**
+    * Atualiza um registro na tabela de cliente.
+    * 
+    * @return void
+    */
+
     public function update() {
       include '../database.php';
       $db = new Database;
@@ -135,7 +148,14 @@
       header("Location: ../../client.php?message={$message}");
     }
 
-    // Resgata o usuário que está logado
+    /**
+    * Busca o usuário logado.
+    * 
+    * Retorna o cliente ou o funcionário logado.
+    * 
+    * @return void
+    */
+
     public function getLoggedUser() {
       if( !empty($_SESSION['email']) || !empty($_SESSION['senha']) ):
         $db = new Database;
@@ -162,7 +182,12 @@
       endif;
     }
 
-    // Mostra o nome do usuário logado
+    /**
+    * Retorna o nome do usuário logado.
+    * 
+    * @return void
+    */
+
     public function loggedUserName() {
       $user = $this->getLoggedUser();
       return $user[0]['nome'];

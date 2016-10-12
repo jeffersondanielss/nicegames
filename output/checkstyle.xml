@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<checkstyle version="1.3.0">
+  <file name="BuyModel.php"/>
+  <file name="ProductModel.php"/>
+  <file name="MessageModel.php"/>
+  <file name="DatabaseModel.php"/>
+  <file name="EmployeModel.php"/>
+  <file name="ClientModel.php"/>
+  <file name="models.php"/>
+  <file name="CRUDModel.php"/>
+</checkstyle>

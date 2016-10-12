@@ -1,0 +1,172 @@
+<html>
+    <head>
+        <script
+            type="text/javascript"
+            src="../js/jquery-1.4.2.min.js">
+        </script>
+        <script
+            type="text/javascript"
+            src="../syntax_highlighter/scripts/shCore.js">
+        </script>
+        <script
+            type="text/javascript"
+            src="../syntax_highlighter/scripts/shBrushJScript.js">
+        </script>
+        <script
+            type="text/javascript"
+            src="../syntax_highlighter/scripts/shBrushPhp.js">
+        </script>
+        <script
+            type="text/javascript"
+            src="../syntax_highlighter/scripts/shBrushXml.js">
+        </script>
+        <link
+            href="../syntax_highlighter/styles/shCore.css" rel="stylesheet"
+            type="text/css"
+        />
+        <link
+            href="../syntax_highlighter/styles/shCoreEclipse.css"
+            rel="stylesheet" type="text/css"
+        />
+        <link
+            href="../syntax_highlighter/styles/shThemeWordpress.css"
+            rel="stylesheet" type="text/css"
+        />
+    </head>
+    <body>
+        <pre class="brush: php">&lt;?php
+
+  /**
+  * BuyModel.php
+  * @author Jefferson Daniel &lt;jeffersondanielss@gmail.com&gt;
+  */
+
+  /**
+  * Classe Buy
+  *
+  * Subclasse de Client, cont&eacute;m m&eacute;dodos das compras.
+  */
+
+  class Buy extends Client {
+
+    /**
+    * Busca o id do usu&aacute;rio logado.
+    *
+    * @return int $userId Id do usu&aacute;rio.
+    */
+
+    public function getUserId() {
+      if( !isset($_SESSION) ) {
+        session_start();
+      }
+      $user = parent::getLoggedUser();
+      $userId = $user[0]['id'];
+      return $userId;
+    }
+
+    /**
+    * Adiciona produtos ao carrinho.
+    *
+    * @param int $productId Id do produto
+    * @return void
+    */
+
+    public function addCart( $productId ) {
+      $db = new Database;
+      $userId = $this-&gt;getUserId();
+
+      $pdo = $db-&gt;connect();
+      $sql = $pdo-&gt;prepare(&quot;INSERT INTO buy(id_cliente, id_produto)VALUES(:id_cliente, :id_produto)&quot;);
+      $sql-&gt;bindValue(':id_cliente',  $userId);
+      $sql-&gt;bindValue(':id_produto', $productId);
+      $sql-&gt;execute();
+    }
+
+    /**
+    * Retorna um array com todos produtos que o cliente logado comprou.
+    *
+    * @return Array
+    */
+
+    public function getBuyProducts() {
+      $db = new Database;
+      $userId = $this-&gt;getUserId();
+      $prod = [];
+
+      $pdo = $db-&gt;connect();
+      $sql = $pdo-&gt;prepare(&quot;SELECT * FROM buy WHERE id_cliente = :id_cliente&quot;);
+      $sql-&gt;bindValue(':id_cliente', $userId);
+      $sql-&gt;execute();
+      $produtosComprados = $sql-&gt;fetchAll(PDO::FETCH_ASSOC);
+
+      foreach ($produtosComprados as $value) {
+        $produto = $pdo-&gt;prepare(&quot;SELECT * FROM produto WHERE id = :id&quot;);
+        $produto-&gt;bindValue(':id', $value['id_produto']);
+        $produto-&gt;execute();
+        $dadosProduto = $produto-&gt;fetchAll(PDO::FETCH_ASSOC);
+        array_push($prod, $dadosProduto);
+      }
+
+      return $prod;
+    }
+
+    /**
+    * Retona a quantidade de compras.
+    *
+    * @return int
+    */
+
+    public function buyTotaltens() {
+      $dadosProduto = $this-&gt;getBuyProducts();
+      return count($dadosProduto);
+    }
+
+
+    /**
+    * Exibe valor total das compras.
+    *
+    * @return void
+    */
+
+    public function buyTotal() {
+      $total = 0;
+      $dadosProduto = $this-&gt;getBuyProducts();
+
+      foreach ($dadosProduto as $value) {
+        foreach ($value as $val) {
+          $total += $val['preco'];
+        }
+      }
+
+      echo 'R$ ' . $total . ',00';
+    }
+
+    /**
+    * M&eacute;todo que conclui uma compra.
+    *
+    * Recebe o Id do cliente e apaga os registros de compras na tabela Buy.
+    *
+    * @param int $userId com o ID do usu&aacute;rio.
+    *
+    * @return void
+    */
+
+    public function purchase( $userId ) {
+      $db = new Database;
+      $pdo = $db-&gt;connect();
+      $sql = $pdo-&gt;prepare(&quot;DELETE FROM buy WHERE id_cliente = :id_cliente&quot;);
+      $sql-&gt;bindValue(':id_cliente', $userId);
+      $sql-&gt;execute();
+    }
+
+  }
+
+?&gt;</pre>
+        <script type="text/javascript">
+             SyntaxHighlighter.all();
+             jQuery('.gutter div').each(function(key, data){
+                jQuery(data).prepend('<a name="L'+jQuery(data).text()+'"/>');
+             });
+        </script>
+    </body>
+</html>

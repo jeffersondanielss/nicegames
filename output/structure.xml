@@ -1,0 +1,1189 @@
+<?xml version="1.0" encoding="utf-8"?>
+<project title="API Documentation" version="2.8.5">
+  <partials/>
+  <file path="BuyModel.php" generated-path="BuyModel.html" hash="aa13bdb56319fed72679f52e610be231" package="Default">
+    <docblock line="0">
+      <description>BuyModel.php</description>
+      <long-description></long-description>
+      <tag name="author" line="0" description="Jefferson Daniel" link="mailto:jeffersondanielss@gmail.com"/>
+      <tag name="package" line="0" description="Default"/>
+    </docblock>
+    <class final="false" abstract="false" namespace="" line="14" package="Default">
+      <extends>\Client</extends>
+      <name>Buy</name>
+      <full_name>\Buy</full_name>
+      <docblock line="14">
+        <description>Classe Buy</description>
+        <long-description>Subclasse de Client, contém médodos das compras.</long-description>
+        <tag name="package" line="14" description="Default"/>
+        <tag name="inherited_from" description="\Client" refers="\Client" link="/classes/Client.html"/>
+      </docblock>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="" line="22" package="Default">
+        <name>getUserId</name>
+        <full_name>\Buy::getUserId()</full_name>
+        <docblock line="22">
+          <description>Busca o id do usuário logado.</description>
+          <long-description></long-description>
+          <tag name="return" line="22" description="$userId Id do usuário." type="integer">
+            <type>integer</type>
+          </tag>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="" line="38" package="Default">
+        <name>addCart</name>
+        <full_name>\Buy::addCart()</full_name>
+        <docblock line="38">
+          <description>Adiciona produtos ao carrinho.</description>
+          <long-description></long-description>
+          <tag name="param" line="38" description="&lt;p&gt;Id do produto&lt;/p&gt;" type="integer" variable="$productId">
+            <type>integer</type>
+          </tag>
+          <tag name="return" line="38" description="" type="void">
+            <type>void</type>
+          </tag>
+        </docblock>
+        <argument line="0" by_reference="false">
+          <name>$productId</name>
+          <default></default>
+          <type>integer</type>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="" line="55" package="Default">
+        <name>getBuyProducts</name>
+        <full_name>\Buy::getBuyProducts()</full_name>
+        <docblock line="55">
+          <description>Retorna um array com todos produtos que o cliente logado comprou.</description>
+          <long-description></long-description>
+          <tag name="return" line="55" description="" type="Array">
+            <type>Array</type>
+          </tag>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="" line="83" package="Default">
+        <name>buyTotaltens</name>
+        <full_name>\Buy::buyTotaltens()</full_name>
+        <docblock line="83">
+          <description>Retona a quantidade de compras.</description>
+          <long-description></long-description>
+          <tag name="return" line="83" description="" type="integer">
+            <type>integer</type>
+          </tag>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="" line="95" package="Default">
+        <name>buyTotal</name>
+        <full_name>\Buy::buyTotal()</full_name>
+        <docblock line="95">
+          <description>Exibe valor total das compras.</description>
+          <long-description></long-description>
+          <tag name="return" line="95" description="" type="void">
+            <type>void</type>
+          </tag>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="" line="118" package="Default">
+        <name>purchase</name>
+        <full_name>\Buy::purchase()</full_name>
+        <docblock line="118">
+          <description>Método que conclui uma compra.</description>
+          <long-description>Recebe o Id do cliente e apaga os registros de compras na tabela Buy.</long-description>
+          <tag name="param" line="118" description="&lt;p&gt;com o ID do usuário.&lt;/p&gt;" type="integer" variable="$userId">
+            <type>integer</type>
+          </tag>
+          <tag name="return" line="118" description="" type="void">
+            <type>void</type>
+          </tag>
+        </docblock>
+        <argument line="0" by_reference="false">
+          <name>$userId</name>
+          <default></default>
+          <type>integer</type>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="" line="20" package="Default">
+        <name>insert</name>
+        <full_name>\Client::insert()</full_name>
+        <docblock line="20">
+          <description>Inseri um registro na tabela de client.</description>
+          <long-description></long-description>
+          <tag name="return" line="20" description="" type="void">
+            <type>void</type>
+          </tag>
+        </docblock>
+        <inherited_from>\Client</inherited_from>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="" line="67" package="Default">
+        <name>update</name>
+        <full_name>\Client::update()</full_name>
+        <docblock line="67">
+          <description>Atualiza um registro na tabela de cliente.</description>
+          <long-description></long-description>
+          <tag name="return" line="67" description="" type="void">
+            <type>void</type>
+          </tag>
+        </docblock>
+        <inherited_from>\Client</inherited_from>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="" line="159" package="Default">
+        <name>getLoggedUser</name>
+        <full_name>\Client::getLoggedUser()</full_name>
+        <docblock line="159">
+          <description>Busca o usuário logado.</description>
+          <long-description>Retorna o cliente ou o funcionário logado.</long-description>
+          <tag name="return" line="159" description="" type="void">
+            <type>void</type>
+          </tag>
+        </docblock>
+        <inherited_from>\Client</inherited_from>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="" line="191" package="Default">
+        <name>loggedUserName</name>
+        <full_name>\Client::loggedUserName()</full_name>
+        <docblock line="191">
+          <description>Retorna o nome do usuário logado.</description>
+          <long-description></long-description>
+          <tag name="return" line="191" description="" type="void">
+            <type>void</type>
+          </tag>
+        </docblock>
+        <inherited_from>\Client</inherited_from>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="" line="25" package="Default">
+        <name>delete</name>
+        <full_name>\CRUD::delete()</full_name>
+        <docblock line="25">
+          <description>Deleta itens de uma tabela de acordo com os parametros passados.</description>
+          <long-description></long-description>
+          <tag name="param" line="25" description="&lt;p&gt;contém o id do registro.&lt;/p&gt;" type="integer" variable="$id">
+            <type>integer</type>
+          </tag>
+          <tag name="param" line="25" description="&lt;p&gt;contém o nome da tabela.&lt;/p&gt;" type="String" variable="$table">
+            <type>String</type>
+          </tag>
+          <tag name="param" line="25" description="&lt;p&gt;contém o caminho da página que o usuário vai ser redirecionado após a função ser chamada.&lt;/p&gt;" type="String" variable="$redirectPage">
+            <type>String</type>
+          </tag>
+          <tag name="return" line="25" description="" type="void">
+            <type>void</type>
+          </tag>
+        </docblock>
+        <argument line="0" by_reference="false">
+          <name>$id</name>
+          <default></default>
+          <type>integer</type>
+        </argument>
+        <argument line="0" by_reference="false">
+          <name>$table</name>
+          <default></default>
+          <type>String</type>
+        </argument>
+        <argument line="0" by_reference="false">
+          <name>$redirectPage</name>
+          <default></default>
+          <type>String</type>
+        </argument>
+        <inherited_from>\CRUD</inherited_from>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="" line="45" package="Default">
+        <name>userType</name>
+        <full_name>\CRUD::userType()</full_name>
+        <docblock line="45">
+          <description>Compara email e senha da $_SESSION com os registros cadastrados na tabela desejada.</description>
+          <long-description></long-description>
+          <tag name="param" line="45" description="&lt;p&gt;nome da tabela onde o email e senha vão ser buscados.&lt;/p&gt;" type="String" variable="$table">
+            <type>String</type>
+          </tag>
+          <tag name="return" line="45" description="Retorna um inteiro com a quantidade de linhas encontradas na tebela com esse email e senha." type="integer">
+            <type>integer</type>
+          </tag>
+        </docblock>
+        <argument line="0" by_reference="false">
+          <name>$table</name>
+          <default></default>
+          <type>String</type>
+        </argument>
+        <inherited_from>\CRUD</inherited_from>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="" line="69" package="Default">
+        <name>count</name>
+        <full_name>\CRUD::count()</full_name>
+        <docblock line="69">
+          <description>Conta registros em uma tabela.</description>
+          <long-description></long-description>
+          <tag name="param" line="69" description="&lt;p&gt;nome da tabela.&lt;/p&gt;" type="String" variable="$table">
+            <type>String</type>
+          </tag>
+          <tag name="return" line="69" description="" type="void">
+            <type>void</type>
+          </tag>
+        </docblock>
+        <argument line="0" by_reference="false">
+          <name>$table</name>
+          <default></default>
+          <type>String</type>
+        </argument>
+        <inherited_from>\CRUD</inherited_from>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="" line="85" package="Default">
+        <name>readAll</name>
+        <full_name>\CRUD::readAll()</full_name>
+        <docblock line="85">
+          <description>Busca todos registros de uma tabela.</description>
+          <long-description></long-description>
+          <tag name="param" line="85" description="&lt;p&gt;nome da tabela.&lt;/p&gt;" type="String" variable="$table">
+            <type>String</type>
+          </tag>
+          <tag name="return" line="85" description="Retorna um array com todos registros." type="array">
+            <type>array</type>
+          </tag>
+        </docblock>
+        <argument line="0" by_reference="false">
+          <name>$table</name>
+          <default></default>
+          <type>String</type>
+        </argument>
+        <inherited_from>\CRUD</inherited_from>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="" line="104" package="Default">
+        <name>getById</name>
+        <full_name>\CRUD::getById()</full_name>
+        <docblock line="104">
+          <description>Busca todos registros de uma tabela.</description>
+          <long-description></long-description>
+          <tag name="param" line="104" description="&lt;p&gt;ID do registro.&lt;/p&gt;" type="integer" variable="$id">
+            <type>integer</type>
+          </tag>
+          <tag name="param" line="104" description="&lt;p&gt;nome da tabela.&lt;/p&gt;" type="String" variable="$table">
+            <type>String</type>
+          </tag>
+          <tag name="return" line="104" description="Retorna um array com o registro procurado." type="array">
+            <type>array</type>
+          </tag>
+        </docblock>
+        <argument line="0" by_reference="false">
+          <name>$id</name>
+          <default></default>
+          <type>integer</type>
+        </argument>
+        <argument line="0" by_reference="false">
+          <name>$table</name>
+          <default></default>
+          <type>String</type>
+        </argument>
+        <inherited_from>\CRUD</inherited_from>
+      </method>
+    </class>
+    <source>eJzFVt1u2zYUvi/QdzgtDEjJHCfXTu3Gc1TUQxIHlttdBIFBk7TFQRZVkewSDH2YXeY58mI9pH4iy2qcdQPmG9vk+fu+88d379Moff3q9SuA48ND+3UIv5r7S8l43HNX9uSMGB3JDH7jqxXPlEzgnCSCx/Duj/KEuQOlztYbIuIelZuh0z1uGB/HRClufbj/+WFoljQ/ZxwlBE90F6hM9OPDBjaPD0wyqYARhYebNCOqV7ftVK1F4HeaJ0wVJuCv/L7ynoNTlIAEwYBJMMo8/p0JCbFcEyZ7hVQpfJZxbbIEBBrrGMWzCYPJlmKpcVy6Ss0yFhRWJqFaIFFrrj85Rf/AxgPuI1Y+vBGIV/udRRiE4WR6dQA1AQDFlUL9hdIk0/7BaXnzrfzh4oEBpCRDrP0+OrqQ6zVn1l1NoYx7kP+6Obm98QTzbiuBAmMhVxx/a6FuxATFkAikmWRGY0aIBEqyTCTRLnUYF9nkzDl5qivyCv0my1+lYPvoJIyNLSF1ozXeOmyJQBP+JxaoJkuieBsPOhLqaFjLzGnpDsVSDHBgDR0NsQITTuvsd9SX2N6i0NEwzbgl3387uQqD2RwmV/MpLM29L9iCugrkXayzRQH34PPo4lMQ+v36db92/3bbz9FwKRL2mcSG+15NyetWYPYoFIZR4Ymtpgq/49RoXmFsS/yMa5lh3s0GMNvk3nYhaNeTVSl8MRy7qgixaKe8W6X5UVuNrLEXNBC29nUev/L/k2SXqUajKHJz+y/zHwYXwXiOwD7Mppe2AuD3j8EsgKecoU4tgy9P9A/y3ExagcUmYuwGpE3NoBBecU2jURz71+fTfv9DMB9/XIzCcDqul/1KZpzQCPwWQzh2O19tdFsDqhTcR0cpVlKSU1Gj4MlUkwhLgHNsJ1ZVzbftqruc2AqxAK5rgZbSz5JSqrtiX6RGRTkt3W2DW0O5OU2t/J6Wwo4i2Dck0QLNut1XX2/te2hfu2D1zaUmMS7CRrM0qKj6Yqu7mluBSpPgkmqD7WDtAAvuxJIDZg2fC9oGsrO2W3C9ZPKXwLZA5R4GcHL6z3Hulv6WanvVPwm7u1JqS6aK65eBu7zxsDWorK3c2hqvlQ6nkQRv1gEPeqWJHnjdkxPvmUq6fHywo9gNYBxYNDYCBzUpKG8yPuOUL+2kzjdxOZ4QSErW+C5SmPi1UDqz762qHgFLFScsj4l9Zj236ou5axcE+jhveyr9TPJTk9EIB7xfeXjhHviJaX6O42se/G+zvMix+3o//A7hFT6I</source>
+  </file>
+  <file path="ProductModel.php" generated-path="ProductModel.html" hash="e19fe011e9f810c55ccf65f375dbd4ce" package="Default">
+    <docblock line="0">
+      <description>ProductModel.php</description>
+      <long-description></long-description>
+      <tag name="author" line="0" description="Jefferson Daniel" link="mailto:jeffersondanielss@gmail.com"/>
+      <tag name="package" line="0" description="Default"/>
+    </docblock>
+    <class final="false" abstract="false" namespace="" line="12" package="Default">
+      <extends>\CRUD</extends>
+      <name>Product</name>
+      <full_name>\Product</full_name>
+      <docblock line="12">
+        <description>Classe Product</description>
+        <long-description>Classe com métodos comuns entre as classes e o banco de dados.</long-description>
+        <tag name="package" line="12" description="Default"/>
+        <tag name="inherited_from" description="\CRUD" refers="\CRUD" link="/classes/CRUD.html"/>
+      </docblock>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="" line="20" package="Default">
+        <name>insert</name>
+        <full_name>\Product::insert()</full_name>
+        <docblock line="20">
+          <description>Inseri um registro na tabela de produtos.</description>
+          <long-description></long-description>
+          <tag name="return" line="20" description="" type="void">
+            <type>void</type>
+          </tag>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="" line="78" package="Default">
+        <name>update</name>
+        <full_name>\Product::update()</full_name>
+        <docblock line="78">
+          <description>Atualiza um registro na tabela de produtos.</description>
+          <long-description></long-description>
+          <tag name="return" line="78" description="" type="void">
+            <type>void</type>
+          </tag>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="" line="25" package="Default">
+        <name>delete</name>
+        <full_name>\CRUD::delete()</full_name>
+        <docblock line="25">
+          <description>Deleta itens de uma tabela de acordo com os parametros passados.</description>
+          <long-description></long-description>
+          <tag name="param" line="25" description="&lt;p&gt;contém o id do registro.&lt;/p&gt;" type="integer" variable="$id">
+            <type>integer</type>
+          </tag>
+          <tag name="param" line="25" description="&lt;p&gt;contém o nome da tabela.&lt;/p&gt;" type="String" variable="$table">
+            <type>String</type>
+          </tag>
+          <tag name="param" line="25" description="&lt;p&gt;contém o caminho da página que o usuário vai ser redirecionado após a função ser chamada.&lt;/p&gt;" type="String" variable="$redirectPage">
+            <type>String</type>
+          </tag>
+          <tag name="return" line="25" description="" type="void">
+            <type>void</type>
+          </tag>
+        </docblock>
+        <argument line="0" by_reference="false">
+          <name>$id</name>
+          <default></default>
+          <type>integer</type>
+        </argument>
+        <argument line="0" by_reference="false">
+          <name>$table</name>
+          <default></default>
+          <type>String</type>
+        </argument>
+        <argument line="0" by_reference="false">
+          <name>$redirectPage</name>
+          <default></default>
+          <type>String</type>
+        </argument>
+        <inherited_from>\CRUD</inherited_from>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="" line="45" package="Default">
+        <name>userType</name>
+        <full_name>\CRUD::userType()</full_name>
+        <docblock line="45">
+          <description>Compara email e senha da $_SESSION com os registros cadastrados na tabela desejada.</description>
+          <long-description></long-description>
+          <tag name="param" line="45" description="&lt;p&gt;nome da tabela onde o email e senha vão ser buscados.&lt;/p&gt;" type="String" variable="$table">
+            <type>String</type>
+          </tag>
+          <tag name="return" line="45" description="Retorna um inteiro com a quantidade de linhas encontradas na tebela com esse email e senha." type="integer">
+            <type>integer</type>
+          </tag>
+        </docblock>
+        <argument line="0" by_reference="false">
+          <name>$table</name>
+          <default></default>
+          <type>String</type>
+        </argument>
+        <inherited_from>\CRUD</inherited_from>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="" line="69" package="Default">
+        <name>count</name>
+        <full_name>\CRUD::count()</full_name>
+        <docblock line="69">
+          <description>Conta registros em uma tabela.</description>
+          <long-description></long-description>
+          <tag name="param" line="69" description="&lt;p&gt;nome da tabela.&lt;/p&gt;" type="String" variable="$table">
+            <type>String</type>
+          </tag>
+          <tag name="return" line="69" description="" type="void">
+            <type>void</type>
+          </tag>
+        </docblock>
+        <argument line="0" by_reference="false">
+          <name>$table</name>
+          <default></default>
+          <type>String</type>
+        </argument>
+        <inherited_from>\CRUD</inherited_from>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="" line="85" package="Default">
+        <name>readAll</name>
+        <full_name>\CRUD::readAll()</full_name>
+        <docblock line="85">
+          <description>Busca todos registros de uma tabela.</description>
+          <long-description></long-description>
+          <tag name="param" line="85" description="&lt;p&gt;nome da tabela.&lt;/p&gt;" type="String" variable="$table">
+            <type>String</type>
+          </tag>
+          <tag name="return" line="85" description="Retorna um array com todos registros." type="array">
+            <type>array</type>
+          </tag>
+        </docblock>
+        <argument line="0" by_reference="false">
+          <name>$table</name>
+          <default></default>
+          <type>String</type>
+        </argument>
+        <inherited_from>\CRUD</inherited_from>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="" line="104" package="Default">
+        <name>getById</name>
+        <full_name>\CRUD::getById()</full_name>
+        <docblock line="104">
+          <description>Busca todos registros de uma tabela.</description>
+          <long-description></long-description>
+          <tag name="param" line="104" description="&lt;p&gt;ID do registro.&lt;/p&gt;" type="integer" variable="$id">
+            <type>integer</type>
+          </tag>
+          <tag name="param" line="104" description="&lt;p&gt;nome da tabela.&lt;/p&gt;" type="String" variable="$table">
+            <type>String</type>
+          </tag>
+          <tag name="return" line="104" description="Retorna um array com o registro procurado." type="array">
+            <type>array</type>
+          </tag>
+        </docblock>
+        <argument line="0" by_reference="false">
+          <name>$id</name>
+          <default></default>
+          <type>integer</type>
+        </argument>
+        <argument line="0" by_reference="false">
+          <name>$table</name>
+          <default></default>
+          <type>String</type>
+        </argument>
+        <inherited_from>\CRUD</inherited_from>
+      </method>
+    </class>
+    <source>eJztWMtu2zgU3RfoP9wGASQHij2LmY1SOQkcF5MiTYLY6SyKIqBFOuFAIlU9kswU+Zh+S39s+JRoW64fU+9qGBB0ee8hD3lf1Nvj7CF7/er1K4DewYF8HMB1znEVlx84JklXDUvpCarKB57DezKdkrzgDM4QoySBt39bCVaCoji5TxFNujFP+8q2NzfBIEFFQew8rkosR+wAkOeSMFzA4Ob2DL5qjRpGAp2zguQUqhRyck+LMufAEJRoQhIEmEAmgUpedK2BfZ7kpKxyBo+cYiPrWfysmiQ0hmnF4pIKmlROUvoduQJQP8ripBLwXrfbw0hMhwoiN8o7shr7eAIRMPIkNkmPN0MZ5mJMaBz2Y84YiQX2kZ1cjFMshu1v/+76ajT+5FHsfW4gSlpWCTdqVkULXbV7wkg+r6aFrlqWk9hq1WpK6GoliMUoJaxUqzdajdBVRRWmC4BKOANIxFIw0no1oBbOkEUpYg98Vs8IXb0vFWIlxUgcTLPARuiq0hTdk2aB784vhiOxx1LqfRbgaXbHBC1lUh/61Acq3Lb05w064PiGwFNuWyC5YuGSJU/4E8n9opqItwXjT56eKYDD3zudIwdGeM+lGBIoKf7DL2lK/E6n28C7upgKh+a52nXplfpfZQlHuOc5LABS/kju9AjBd1OaEF/vR+DAdO3szYpeHBd9RInY01zus/Dmw75wlgzlxN8bDS+Gg7EIsHc3Vx9s+MFffw5vhkBxFFK81yBamMP+hDL8ESUV8T2h4gUyCNr0yDOJq5LMxIs8l0Yj508DXjEZrlEEv0EnbJj3eoCpNq7jC/aLL8kij/PL0fBmDOeX4yvLwqc4AB1jAeggCkBFSQBNGASg/FyItCMLE+2pATSuGIDa8M7H04vb4cgPJXJooUOLHRrw0EUPDXxY44f1BKE7Q6in2OvMHL7m27Lh9bC78e36Js8EJjrV2yobk3SMjX5bZaMzkFmaTlKrTJx0FLgZa5Wdzk12KvW2ciqTqJSRzWUrt85kLW1k3lYZOSkscLPcKjudYCwpJ54Xzdy4csZSUhQ6UXoDhJGqrzkRofYvEjVMlHcoqljo8DfejOEDEcvL/b0LHiNZQkPQ+UgsjjzLQnlskKOvdo4XJy+IFoKEyxby/vs30ReIWk9k2bcZRq6FSBnFP3ktDNOpeXtp6UBOy0rtx457kCoTfQb51YP86kHgDUmz8h+/PoD57qO1nt1en52Oh3W4jIZjU8oik86X1egfFoCW5L+kvMyVlWVZ52UJVeNE21LV5pGpQptQretWS83aDVUdCNsyVdaRLp2b8LS1drHM7oalE8jbUm0gIqfub0J6nW5hN/R1ctqWubKOdNOyCV/b5Sw2ODs6ZJNctz5hbR/ZXmujs63bs7bebDd8bZHYOiNr+8i2iRvl5LqzbGsrd8PXKXbbUm4gIqfP3YT4Ot3xbujrAi6YO8R/2u1/s/v/Ol8AGt3NvwCsvjC3nK2CjPQ1ZPmJ/ujmsvgRYv3TXOs83YvFbVF9/yb3D5mWfukV539dKczs6nHc/w/Tjd3f</source>
+  </file>
+  <file path="MessageModel.php" generated-path="MessageModel.html" hash="7c3fe6d563d312f6e1c9ed9b56f3cfb3" package="Default">
+    <docblock line="0">
+      <description>MessageModel.php</description>
+      <long-description></long-description>
+      <tag name="author" line="0" description="Jefferson Daniel" link="mailto:jeffersondanielss@gmail.com"/>
+      <tag name="package" line="0" description="Default"/>
+    </docblock>
+    <class final="false" abstract="false" namespace="" line="12" package="Default">
+      <extends>\CRUD</extends>
+      <name>Message</name>
+      <full_name>\Message</full_name>
+      <docblock line="12">
+        <description>Classe Message</description>
+        <long-description>Classe com métodos comuns entre as classes e o banco de dados.</long-description>
+        <tag name="package" line="12" description="Default"/>
+        <tag name="inherited_from" description="\CRUD" refers="\CRUD" link="/classes/CRUD.html"/>
+      </docblock>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="" line="20" package="Default">
+        <name>insert</name>
+        <full_name>\Message::insert()</full_name>
+        <docblock line="20">
+          <description>Inseri um registro na tabela de mensagens.</description>
+          <long-description></long-description>
+          <tag name="return" line="20" description="" type="void">
+            <type>void</type>
+          </tag>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="" line="25" package="Default">
+        <name>delete</name>
+        <full_name>\CRUD::delete()</full_name>
+        <docblock line="25">
+          <description>Deleta itens de uma tabela de acordo com os parametros passados.</description>
+          <long-description></long-description>
+          <tag name="param" line="25" description="&lt;p&gt;contém o id do registro.&lt;/p&gt;" type="integer" variable="$id">
+            <type>integer</type>
+          </tag>
+          <tag name="param" line="25" description="&lt;p&gt;contém o nome da tabela.&lt;/p&gt;" type="String" variable="$table">
+            <type>String</type>
+          </tag>
+          <tag name="param" line="25" description="&lt;p&gt;contém o caminho da página que o usuário vai ser redirecionado após a função ser chamada.&lt;/p&gt;" type="String" variable="$redirectPage">
+            <type>String</type>
+          </tag>
+          <tag name="return" line="25" description="" type="void">
+            <type>void</type>
+          </tag>
+        </docblock>
+        <argument line="0" by_reference="false">
+          <name>$id</name>
+          <default></default>
+          <type>integer</type>
+        </argument>
+        <argument line="0" by_reference="false">
+          <name>$table</name>
+          <default></default>
+          <type>String</type>
+        </argument>
+        <argument line="0" by_reference="false">
+          <name>$redirectPage</name>
+          <default></default>
+          <type>String</type>
+        </argument>
+        <inherited_from>\CRUD</inherited_from>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="" line="45" package="Default">
+        <name>userType</name>
+        <full_name>\CRUD::userType()</full_name>
+        <docblock line="45">
+          <description>Compara email e senha da $_SESSION com os registros cadastrados na tabela desejada.</description>
+          <long-description></long-description>
+          <tag name="param" line="45" description="&lt;p&gt;nome da tabela onde o email e senha vão ser buscados.&lt;/p&gt;" type="String" variable="$table">
+            <type>String</type>
+          </tag>
+          <tag name="return" line="45" description="Retorna um inteiro com a quantidade de linhas encontradas na tebela com esse email e senha." type="integer">
+            <type>integer</type>
+          </tag>
+        </docblock>
+        <argument line="0" by_reference="false">
+          <name>$table</name>
+          <default></default>
+          <type>String</type>
+        </argument>
+        <inherited_from>\CRUD</inherited_from>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="" line="69" package="Default">
+        <name>count</name>
+        <full_name>\CRUD::count()</full_name>
+        <docblock line="69">
+          <description>Conta registros em uma tabela.</description>
+          <long-description></long-description>
+          <tag name="param" line="69" description="&lt;p&gt;nome da tabela.&lt;/p&gt;" type="String" variable="$table">
+            <type>String</type>
+          </tag>
+          <tag name="return" line="69" description="" type="void">
+            <type>void</type>
+          </tag>
+        </docblock>
+        <argument line="0" by_reference="false">
+          <name>$table</name>
+          <default></default>
+          <type>String</type>
+        </argument>
+        <inherited_from>\CRUD</inherited_from>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="" line="85" package="Default">
+        <name>readAll</name>
+        <full_name>\CRUD::readAll()</full_name>
+        <docblock line="85">
+          <description>Busca todos registros de uma tabela.</description>
+          <long-description></long-description>
+          <tag name="param" line="85" description="&lt;p&gt;nome da tabela.&lt;/p&gt;" type="String" variable="$table">
+            <type>String</type>
+          </tag>
+          <tag name="return" line="85" description="Retorna um array com todos registros." type="array">
+            <type>array</type>
+          </tag>
+        </docblock>
+        <argument line="0" by_reference="false">
+          <name>$table</name>
+          <default></default>
+          <type>String</type>
+        </argument>
+        <inherited_from>\CRUD</inherited_from>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="" line="104" package="Default">
+        <name>getById</name>
+        <full_name>\CRUD::getById()</full_name>
+        <docblock line="104">
+          <description>Busca todos registros de uma tabela.</description>
+          <long-description></long-description>
+          <tag name="param" line="104" description="&lt;p&gt;ID do registro.&lt;/p&gt;" type="integer" variable="$id">
+            <type>integer</type>
+          </tag>
+          <tag name="param" line="104" description="&lt;p&gt;nome da tabela.&lt;/p&gt;" type="String" variable="$table">
+            <type>String</type>
+          </tag>
+          <tag name="return" line="104" description="Retorna um array com o registro procurado." type="array">
+            <type>array</type>
+          </tag>
+        </docblock>
+        <argument line="0" by_reference="false">
+          <name>$id</name>
+          <default></default>
+          <type>integer</type>
+        </argument>
+        <argument line="0" by_reference="false">
+          <name>$table</name>
+          <default></default>
+          <type>String</type>
+        </argument>
+        <inherited_from>\CRUD</inherited_from>
+      </method>
+    </class>
+    <source>eJx9Ul1v4jAQfK/U/7CHTkpAIbxDCZzaPnAqbVVoX06nk7EX8CmxU3+0lar+99pOHCjSHUKyMjM7413vxaze1+dn52cAo8HAHwNYotZkh0vJsMwD7dE5sWYvFfzE7RaVlgKuiOBYwsXfiLAAaD3fVYSXOZVVEWpHJwGXJdEaY86xhHomEoBvBgXTcPnweAXvjaKz8UYLoVFxsBUo3HFtlARBwJANlgQYQoXCGwmdx4p4zhUaqwS8SM5abBQDarspOYWtFdRw1yf3KSbt+ytA+HFBS+v8kzwfMeLyiEY/qWQSFd/ZBqYg8NVNqeEPVM2k45xiWFApBFLnPYnhjheyQidoPv7c363WvxKPJb8PHugn3IqiJmDHorb9yuuiKGJB1yn1szfzNxsWtcKaKEx7i9vV9cMaFrfruzjJKvUXySBEZR3af/px83i9SscNO27pccf3+idpw2LDBXsipcU0CWVJdtR+f/JvcdNmdjSH/6m7frOvMzmtwTek1uDXl6jaRZxCsoyzRPHCCSPgthu0pU4hvx3efY+EoUp7N5ISvzxjcCvi/u6hDaHGL8msdZ2+R/+PXrzNRxMejlnxCV64/x4=</source>
+  </file>
+  <file path="DatabaseModel.php" generated-path="DatabaseModel.html" hash="2fff8a1cf53b359f0eb10cc30ba7ba06" package="Default">
+    <docblock line="0">
+      <description>DatabaseModel.php</description>
+      <long-description></long-description>
+      <tag name="author" line="0" description="Jefferson Daniel" link="mailto:jeffersondanielss@gmail.com"/>
+      <tag name="package" line="0" description="Default"/>
+    </docblock>
+    <class final="false" abstract="false" namespace="" line="12" package="Default">
+      <extends/>
+      <name>Database</name>
+      <full_name>\Database</full_name>
+      <docblock line="12">
+        <description>Classe Database</description>
+        <long-description></long-description>
+        <tag name="package" line="12" description="Default"/>
+      </docblock>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="" line="20" package="Default">
+        <name>connect</name>
+        <full_name>\Database::connect()</full_name>
+        <docblock line="20">
+          <description>Faz a conecção com o banco de dados.</description>
+          <long-description></long-description>
+          <tag name="return" line="20" description="" type="void">
+            <type>void</type>
+          </tag>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="" line="41" package="Default">
+        <name>sessionStart</name>
+        <full_name>\Database::sessionStart()</full_name>
+        <docblock line="41">
+          <description>Inicia uma seção.</description>
+          <long-description></long-description>
+          <tag name="return" line="41" description="" type="void">
+            <type>void</type>
+          </tag>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="" line="55" package="Default">
+        <name>login</name>
+        <full_name>\Database::login()</full_name>
+        <docblock line="55">
+          <description>Faz o login no sistema e redireciona o usuário dependendo de tipo.</description>
+          <long-description></long-description>
+          <tag name="return" line="55" description="" type="void">
+            <type>void</type>
+          </tag>
+        </docblock>
+      </method>
+    </class>
+    <source>eJy9Vt1u00oQvkfiHUZWpLhV6nBzbkITikIqOKINIhVcIFRtvJN4j+xdn911f/h5GMQFD9IXY2ftOGuaUhASUSRvZr75+2Z2nMMnZVY+fPDwAcBwf58e+/CMWbZkBk8UxzzxehIfscpmSsO/uFqhNko6oBSYw+F/Gwn3AmOO1gUTeZKqYuJthz9EmObMGGwDhZiUVK0GPtbS1pasj9kHYJAqienNt5uvyh0LULBkMlXAETjjyiQNemN0pNFWWsKFEryRDTe+y2qZixRWlUytcHU51863jfcoPPhPL1PGwhiiXKUspx/R41ZXGdSk00qF4pIqceJAVOfoZFKkuGYFGlJu1FZfbyOSA05YiZfw6tk8jopr838+othjn85jvpTOxbj2Gg3qRAZ14L026GdImU2zmJzMrlIsfY09hL1OMDyYrNGeoDFsjXFgvs2voZDyatSfd7TnhatNMKgKBgZ9g/6kF8Yl5J4Ly3SnIY383NSKgEWxigGL0l7HvfPFbLF4MT9910cayP77Pfj06bbSoMwYKTuMZMg46jh66TpOqYwgSYZJ1GHmLg5oRBXkai0kSAVGGOsyAHQUcqExde6YA1SmuvmiBU1tiZK7rx9gK8o/4szH7UxvPUk9mwlzMGnHezuXnh5CnL+aL85aurYAT5EDFPyfeAPa0BZw30tzgdIiuXIxDyalxpJpjKPF7OVsekbUvJ6fwAb29vns9Qx8tPGoToJJDt7zeOQfAeEb7weTpZD8DcsrjPu1WX/QFHEfuk560FS0C41XmFY2vAI9rS6n28JaJIlVJTtM+uWzC7xCdwmf5nnsruFodDw7mz4/f7pYzKcd/qiHNBw0FPdwGEJ/k8fA9Be5vNPiTj47Frs5Pe4W27HocNu93GE7JvCoe2tv74V2w93aBhTUH3ejmvkmlD/uRgleQzqdf/fofa0JevvTjbJd1u79iW2ZIUN/udR70ubMZEvFNI/CwD+UESSLaaYgOjSpFqWdbOUsR5d8/1QVSKvPbUQq1oCq6ukFIS9YLhy1A0BToqY3CxQOLq0Cdy8YWHdk2u3ZC0ZS7IcZXbpZVZdJ3uSeZBpXrsw+MZ8MnRKv6C9OPzA5HDZZRnesev94MvkOqYOLFg==</source>
+  </file>
+  <file path="EmployeModel.php" generated-path="EmployeModel.html" hash="f8d6517788763a5520212e4f1a7cc222" package="Default">
+    <docblock line="0">
+      <description>EmployeModel.php</description>
+      <long-description></long-description>
+      <tag name="author" line="0" description="Jefferson Daniel" link="mailto:jeffersondanielss@gmail.com"/>
+      <tag name="package" line="0" description="Default"/>
+    </docblock>
+    <class final="false" abstract="false" namespace="" line="12" package="Default">
+      <extends>\CRUD</extends>
+      <name>Employe</name>
+      <full_name>\Employe</full_name>
+      <docblock line="12">
+        <description>Classe Employe</description>
+        <long-description>Classe com métodos comuns entre as classes e o banco de dados.</long-description>
+        <tag name="package" line="12" description="Default"/>
+        <tag name="inherited_from" description="\CRUD" refers="\CRUD" link="/classes/CRUD.html"/>
+      </docblock>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="" line="20" package="Default">
+        <name>insert</name>
+        <full_name>\Employe::insert()</full_name>
+        <docblock line="20">
+          <description>Inseri um registro na tabela de funcionário.</description>
+          <long-description></long-description>
+          <tag name="return" line="20" description="" type="void">
+            <type>void</type>
+          </tag>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="" line="56" package="Default">
+        <name>update</name>
+        <full_name>\Employe::update()</full_name>
+        <docblock line="56">
+          <description>Atualiza dos registros da tabela funcionário.</description>
+          <long-description></long-description>
+          <tag name="return" line="56" description="" type="void">
+            <type>void</type>
+          </tag>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="" line="97" package="Default">
+        <name>getLoggedUser</name>
+        <full_name>\Employe::getLoggedUser()</full_name>
+        <docblock line="97">
+          <description>Busca e retorna um array com o usuário logado.</description>
+          <long-description></long-description>
+          <tag name="return" line="97" description="" type="void">
+            <type>void</type>
+          </tag>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="" line="119" package="Default">
+        <name>loggedUserName</name>
+        <full_name>\Employe::loggedUserName()</full_name>
+        <docblock line="119">
+          <description>Exibe o nome do usuário logado.</description>
+          <long-description></long-description>
+          <tag name="return" line="119" description="" type="void">
+            <type>void</type>
+          </tag>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="" line="130" package="Default">
+        <name>authenticate</name>
+        <full_name>\Employe::authenticate()</full_name>
+        <docblock line="130">
+          <description>Verifica se usuário logado é um funcionário.</description>
+          <long-description></long-description>
+          <tag name="return" line="130" description="" type="void">
+            <type>void</type>
+          </tag>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="" line="25" package="Default">
+        <name>delete</name>
+        <full_name>\CRUD::delete()</full_name>
+        <docblock line="25">
+          <description>Deleta itens de uma tabela de acordo com os parametros passados.</description>
+          <long-description></long-description>
+          <tag name="param" line="25" description="&lt;p&gt;contém o id do registro.&lt;/p&gt;" type="integer" variable="$id">
+            <type>integer</type>
+          </tag>
+          <tag name="param" line="25" description="&lt;p&gt;contém o nome da tabela.&lt;/p&gt;" type="String" variable="$table">
+            <type>String</type>
+          </tag>
+          <tag name="param" line="25" description="&lt;p&gt;contém o caminho da página que o usuário vai ser redirecionado após a função ser chamada.&lt;/p&gt;" type="String" variable="$redirectPage">
+            <type>String</type>
+          </tag>
+          <tag name="return" line="25" description="" type="void">
+            <type>void</type>
+          </tag>
+        </docblock>
+        <argument line="0" by_reference="false">
+          <name>$id</name>
+          <default></default>
+          <type>integer</type>
+        </argument>
+        <argument line="0" by_reference="false">
+          <name>$table</name>
+          <default></default>
+          <type>String</type>
+        </argument>
+        <argument line="0" by_reference="false">
+          <name>$redirectPage</name>
+          <default></default>
+          <type>String</type>
+        </argument>
+        <inherited_from>\CRUD</inherited_from>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="" line="45" package="Default">
+        <name>userType</name>
+        <full_name>\CRUD::userType()</full_name>
+        <docblock line="45">
+          <description>Compara email e senha da $_SESSION com os registros cadastrados na tabela desejada.</description>
+          <long-description></long-description>
+          <tag name="param" line="45" description="&lt;p&gt;nome da tabela onde o email e senha vão ser buscados.&lt;/p&gt;" type="String" variable="$table">
+            <type>String</type>
+          </tag>
+          <tag name="return" line="45" description="Retorna um inteiro com a quantidade de linhas encontradas na tebela com esse email e senha." type="integer">
+            <type>integer</type>
+          </tag>
+        </docblock>
+        <argument line="0" by_reference="false">
+          <name>$table</name>
+          <default></default>
+          <type>String</type>
+        </argument>
+        <inherited_from>\CRUD</inherited_from>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="" line="69" package="Default">
+        <name>count</name>
+        <full_name>\CRUD::count()</full_name>
+        <docblock line="69">
+          <description>Conta registros em uma tabela.</description>
+          <long-description></long-description>
+          <tag name="param" line="69" description="&lt;p&gt;nome da tabela.&lt;/p&gt;" type="String" variable="$table">
+            <type>String</type>
+          </tag>
+          <tag name="return" line="69" description="" type="void">
+            <type>void</type>
+          </tag>
+        </docblock>
+        <argument line="0" by_reference="false">
+          <name>$table</name>
+          <default></default>
+          <type>String</type>
+        </argument>
+        <inherited_from>\CRUD</inherited_from>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="" line="85" package="Default">
+        <name>readAll</name>
+        <full_name>\CRUD::readAll()</full_name>
+        <docblock line="85">
+          <description>Busca todos registros de uma tabela.</description>
+          <long-description></long-description>
+          <tag name="param" line="85" description="&lt;p&gt;nome da tabela.&lt;/p&gt;" type="String" variable="$table">
+            <type>String</type>
+          </tag>
+          <tag name="return" line="85" description="Retorna um array com todos registros." type="array">
+            <type>array</type>
+          </tag>
+        </docblock>
+        <argument line="0" by_reference="false">
+          <name>$table</name>
+          <default></default>
+          <type>String</type>
+        </argument>
+        <inherited_from>\CRUD</inherited_from>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="" line="104" package="Default">
+        <name>getById</name>
+        <full_name>\CRUD::getById()</full_name>
+        <docblock line="104">
+          <description>Busca todos registros de uma tabela.</description>
+          <long-description></long-description>
+          <tag name="param" line="104" description="&lt;p&gt;ID do registro.&lt;/p&gt;" type="integer" variable="$id">
+            <type>integer</type>
+          </tag>
+          <tag name="param" line="104" description="&lt;p&gt;nome da tabela.&lt;/p&gt;" type="String" variable="$table">
+            <type>String</type>
+          </tag>
+          <tag name="return" line="104" description="Retorna um array com o registro procurado." type="array">
+            <type>array</type>
+          </tag>
+        </docblock>
+        <argument line="0" by_reference="false">
+          <name>$id</name>
+          <default></default>
+          <type>integer</type>
+        </argument>
+        <argument line="0" by_reference="false">
+          <name>$table</name>
+          <default></default>
+          <type>String</type>
+        </argument>
+        <inherited_from>\CRUD</inherited_from>
+      </method>
+    </class>
+    <source>eJzFV91O20gUvq/Ud5hGSHZQCN2LvTEkkA2uSkUJwgm9qBCaeE6SWTkz3hm7ha14mF7uc/BiPTO2k3ESECjsLkKyPOeb8zff+Tw5PEpn6ds3b98Qsr+7ax67JJynibyDz5JB0rZms3pM82wmFfkEkwkoLQU5oYJDQg7/rFaYXdD6eDqnPGnHct61e/dXAvQTqjVUcVxIbCyVgcBtBoJp0r8cnZAfBWLhxjg6FRoUJ/mcKJhynSlJBCUZHUNCCQMyyUXMpXj4qbhsV5uq57GCLFeCfJOclWv7VYw0Hyc8tvszdEC4CZT5TZMFsX9cxEmOIbx2e59RDEk1mGZ5BxVih41Jhwj4jo0q7EtTyiTaELHXjaUQEKPvgyo42oWcAwKKl5uLQTT86pk173rpA0yTS1CFsWsuSIOY0RI0Z7/7FdCue9e1oN9owhlVJjHMb6+bKkipAr8RhWdhf4gt+3A5+Fw1lWJPyZeP4WVIbNROYB+N5sGqw73umAt2RZMcfK9Aea0y/01ouIU4z6DWET7xHYSS3/syF+ZAOh3ynjSDCmdK/itZL+H0PAovh+T0fDhwC/BNU1tFAS1im9K86p2NwsgPClNQ2oLC2HCTKoLVy7On1HKOcVnhJnjVjeWJPo0vzq3lHO6mhNwOLixz0JpODa28PmXUTosCbOnfFNmIw0p0HiNGvvOcbTOgDJTfOJMxNaMQECQ8/kMxo4byR6Xnzo8qxr3DAhQECDan8enhJ844zi2YEXZ5ZbIBs87ZK2cjGJ+Ub/emcWua0sty2xPCpF7IiiZsoSuvJip5isIB/52ocFZJylIwOHPV4v+QHTPZ7/D8sju/TKBJnJY8NtCji5PeMKyRJgqHxDjo2CEstYmzTsBZ4+mpKof2GfOK/WqZTq6j1mfu/pEiiw5uU6UruC+p8zHt/bcqrZ/6ViVbH51C/15SciWYS7F89ZJdSRvp3AoDoaWMPCqtW0rZ/Qbp+iPXMSWAqpVJhRchFFWqFL2zGUiSV7klcop5baVdU8jO5HQKbIQXI1fCthGoSlp2bqIwik4H508oi4Mp6eV62sisl1xjCBWsxjn3XvPsuXo+HddptrDEuVIgMtNoU5MFTiCLZ70k8S9OBkHwIRz2P970omjQX3osD9Pd/gR1wls+BuSIVU72ulxJFkQ5p/Pa924nL4vKZlzvdVdItfxoxzNZYL++v175Im0q5gp/FEw4jgL+yFgphDz849w1tv+Gmx9F2F0MVv+SW5JrHFoERRlVmVNOVbVhpciCwLwO71Kkh8NJb+32a3cdkt/qIrpZRho1oXL6ZB9H3V/7L9Dw</source>
+  </file>
+  <file path="ClientModel.php" generated-path="ClientModel.html" hash="d5cfe52bd5b19c05308e083cea87b9b1" package="Default">
+    <docblock line="0">
+      <description>ClientModel.php</description>
+      <long-description></long-description>
+      <tag name="author" line="0" description="Jefferson Daniel" link="mailto:jeffersondanielss@gmail.com"/>
+      <tag name="package" line="0" description="Default"/>
+    </docblock>
+    <class final="false" abstract="false" namespace="" line="12" package="Default">
+      <extends>\CRUD</extends>
+      <name>Client</name>
+      <full_name>\Client</full_name>
+      <docblock line="12">
+        <description>Classe Client</description>
+        <long-description>Classe com métodos comuns entre as classes e o banco de dados.</long-description>
+        <tag name="package" line="12" description="Default"/>
+        <tag name="inherited_from" description="\CRUD" refers="\CRUD" link="/classes/CRUD.html"/>
+      </docblock>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="" line="20" package="Default">
+        <name>insert</name>
+        <full_name>\Client::insert()</full_name>
+        <docblock line="20">
+          <description>Inseri um registro na tabela de client.</description>
+          <long-description></long-description>
+          <tag name="return" line="20" description="" type="void">
+            <type>void</type>
+          </tag>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="" line="67" package="Default">
+        <name>update</name>
+        <full_name>\Client::update()</full_name>
+        <docblock line="67">
+          <description>Atualiza um registro na tabela de cliente.</description>
+          <long-description></long-description>
+          <tag name="return" line="67" description="" type="void">
+            <type>void</type>
+          </tag>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="" line="159" package="Default">
+        <name>getLoggedUser</name>
+        <full_name>\Client::getLoggedUser()</full_name>
+        <docblock line="159">
+          <description>Busca o usuário logado.</description>
+          <long-description>Retorna o cliente ou o funcionário logado.</long-description>
+          <tag name="return" line="159" description="" type="void">
+            <type>void</type>
+          </tag>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="" line="191" package="Default">
+        <name>loggedUserName</name>
+        <full_name>\Client::loggedUserName()</full_name>
+        <docblock line="191">
+          <description>Retorna o nome do usuário logado.</description>
+          <long-description></long-description>
+          <tag name="return" line="191" description="" type="void">
+            <type>void</type>
+          </tag>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="" line="25" package="Default">
+        <name>delete</name>
+        <full_name>\CRUD::delete()</full_name>
+        <docblock line="25">
+          <description>Deleta itens de uma tabela de acordo com os parametros passados.</description>
+          <long-description></long-description>
+          <tag name="param" line="25" description="&lt;p&gt;contém o id do registro.&lt;/p&gt;" type="integer" variable="$id">
+            <type>integer</type>
+          </tag>
+          <tag name="param" line="25" description="&lt;p&gt;contém o nome da tabela.&lt;/p&gt;" type="String" variable="$table">
+            <type>String</type>
+          </tag>
+          <tag name="param" line="25" description="&lt;p&gt;contém o caminho da página que o usuário vai ser redirecionado após a função ser chamada.&lt;/p&gt;" type="String" variable="$redirectPage">
+            <type>String</type>
+          </tag>
+          <tag name="return" line="25" description="" type="void">
+            <type>void</type>
+          </tag>
+        </docblock>
+        <argument line="0" by_reference="false">
+          <name>$id</name>
+          <default></default>
+          <type>integer</type>
+        </argument>
+        <argument line="0" by_reference="false">
+          <name>$table</name>
+          <default></default>
+          <type>String</type>
+        </argument>
+        <argument line="0" by_reference="false">
+          <name>$redirectPage</name>
+          <default></default>
+          <type>String</type>
+        </argument>
+        <inherited_from>\CRUD</inherited_from>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="" line="45" package="Default">
+        <name>userType</name>
+        <full_name>\CRUD::userType()</full_name>
+        <docblock line="45">
+          <description>Compara email e senha da $_SESSION com os registros cadastrados na tabela desejada.</description>
+          <long-description></long-description>
+          <tag name="param" line="45" description="&lt;p&gt;nome da tabela onde o email e senha vão ser buscados.&lt;/p&gt;" type="String" variable="$table">
+            <type>String</type>
+          </tag>
+          <tag name="return" line="45" description="Retorna um inteiro com a quantidade de linhas encontradas na tebela com esse email e senha." type="integer">
+            <type>integer</type>
+          </tag>
+        </docblock>
+        <argument line="0" by_reference="false">
+          <name>$table</name>
+          <default></default>
+          <type>String</type>
+        </argument>
+        <inherited_from>\CRUD</inherited_from>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="" line="69" package="Default">
+        <name>count</name>
+        <full_name>\CRUD::count()</full_name>
+        <docblock line="69">
+          <description>Conta registros em uma tabela.</description>
+          <long-description></long-description>
+          <tag name="param" line="69" description="&lt;p&gt;nome da tabela.&lt;/p&gt;" type="String" variable="$table">
+            <type>String</type>
+          </tag>
+          <tag name="return" line="69" description="" type="void">
+            <type>void</type>
+          </tag>
+        </docblock>
+        <argument line="0" by_reference="false">
+          <name>$table</name>
+          <default></default>
+          <type>String</type>
+        </argument>
+        <inherited_from>\CRUD</inherited_from>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="" line="85" package="Default">
+        <name>readAll</name>
+        <full_name>\CRUD::readAll()</full_name>
+        <docblock line="85">
+          <description>Busca todos registros de uma tabela.</description>
+          <long-description></long-description>
+          <tag name="param" line="85" description="&lt;p&gt;nome da tabela.&lt;/p&gt;" type="String" variable="$table">
+            <type>String</type>
+          </tag>
+          <tag name="return" line="85" description="Retorna um array com todos registros." type="array">
+            <type>array</type>
+          </tag>
+        </docblock>
+        <argument line="0" by_reference="false">
+          <name>$table</name>
+          <default></default>
+          <type>String</type>
+        </argument>
+        <inherited_from>\CRUD</inherited_from>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="" line="104" package="Default">
+        <name>getById</name>
+        <full_name>\CRUD::getById()</full_name>
+        <docblock line="104">
+          <description>Busca todos registros de uma tabela.</description>
+          <long-description></long-description>
+          <tag name="param" line="104" description="&lt;p&gt;ID do registro.&lt;/p&gt;" type="integer" variable="$id">
+            <type>integer</type>
+          </tag>
+          <tag name="param" line="104" description="&lt;p&gt;nome da tabela.&lt;/p&gt;" type="String" variable="$table">
+            <type>String</type>
+          </tag>
+          <tag name="return" line="104" description="Retorna um array com o registro procurado." type="array">
+            <type>array</type>
+          </tag>
+        </docblock>
+        <argument line="0" by_reference="false">
+          <name>$id</name>
+          <default></default>
+          <type>integer</type>
+        </argument>
+        <argument line="0" by_reference="false">
+          <name>$table</name>
+          <default></default>
+          <type>String</type>
+        </argument>
+        <inherited_from>\CRUD</inherited_from>
+      </method>
+    </class>
+    <source>eJztWMtu2zgU3RfoP7BBANuBknTTjVI5yTgqmiKNg9jpLIogYMQrmwOZ1OjRx7T5mH5Lf2wuJVKi4odi153VBEEEkYeXPLyvo7w+jqfx82fPnxFyuLenHntkEHEQ2XvJIDooZtXgCc2zqUzIOwhDSFIpyBkVHCLy+i8zwoqBND2ZzCiPDgI56xdrD+fs0zQFvY2NCNSEHifwJQPB8PX65ox8KwGVEWXmXKSQcJLPSAITnmaJJIKSjN5DRAkDtKbsHBi4eZ4kkOWJIJ8kZ3rs0FiP8/uIByTMRZBxpMjVFlm3p/YnxQ8XQZSj8c7BwSGjuBlNQV1S58ggdtk98YiAz3hB5Xw9FTOJc4jY7wdSCAjQ9pHZHOeFnAECype7q+Fo/LGjxjq3tY1U3ieggQZTjdlAUF7Q1gywGGtYAzGlGjRjr7qVRTXeue1Z5gSDBAJFoDanx2yLAWeUaRYGV441UHFoiNaoOGxAIJ6HQGxDMogglALsM5mxAlchP9EIz5CoO0Mn7PfjBGKaQHdn5F/4gzHGxZvr4XsdM0D+fOtf+6S4Lc8tHjvWVWhj+/17LtgHGuXQ7ZSojqPvfREavkCQZ9BwOQ+7FiKRnwcyFyriPI+8JD3X4JSr/o7mj39+OfKvx+T8cjw0h++qQHBIFRNOyQNHlE/xTTvNIaVb8BmH+Adih5jL6304vbjxR123NOBaxlxtzdXm3Nqeawy6hUW3MOlWNnds4iWh5hUWEexYuVDf4iJ4HfWOlRar1xgv1RnSskeRB46VLC32TUY4VsqsXqKTw7Gyp2UB5gkx14QvLWhMGcfM4stqdJU9jpVei/xmB3M1M4M0pROVjp0BZbSoyQlgdP9DsfJhQyBpHiBGvuhYy6aAlJPuzoUMqCq7LsHiir+6gGN1PdaGvW9miwcrH7HngLv4FO9+/sBGgs0BVJ8w2a0OAmqMs+0eRDAe6reHBR3rNMuLu2jrWfBLTSuPsTHBf9e0OKvKdFWEObPL9P9t7Te1NdU9XsAszr529S33iOX3ZU3j5ursdOxX6TDyx0Qt9ooCrHsfZ57L2c7qamGKb3vdxYBwVKjMo+YLycMSgnWIbMqysuDVzWMdvpt0nG0wL2N+U9a2jFmH7TJF87tYNnN0cyer9V7Zuddyrm71T2nzW3GqqTwb+1Ub8CrVsZZ3a6XyRKGyDdK6jG5KuVzuac20Dt1KZT1JYm2FKvaCjXnGoad03loMsc84TxCEW+GGTWxjbhB7SpWuxa0Qse3ydRvcqu67KUFjwKvU9DpULQXeEOBbJF0JDUsp36T5zx8Jl4RqkbpUsP+aSl6ki//I04ASSXJzhkhOcP85FXwNmUyEQprrljm+KOWL51i5dB0BPYHsQk4mwG5S5Gnr6DpMdu9G/mh0PrysxGePfP++YNYozua3/HK53S64LQ08f4pGCGgRPH+aIzsKlkX2U/8zQqhgjaa7RVnR1pMX/UtFaew8QWmWKf8pXgU0hCyYnkZR9+ps6Lpv/PHg7d3paDQcNNc2y5xl51E1IERHlA2yzvdQfJY2VyDjOJJfQfveL9+OFhnVyP3+o2C0d6iP3fbhWSdOoXhZe6qtky9Rdb5LOmt8eO7m2gPZlKfLuRjSCv3x5e2jj0NNqHgc9/8FVPwdzA==</source>
+  </file>
+  <file path="models.php" generated-path="models.html" hash="5ae0dcd814c08e14f4cd6b75571dcf09" package="Default">
+    <docblock line="0">
+      <description>models.php</description>
+      <long-description></long-description>
+      <tag name="author" line="0" description="Jefferson Daniel" link="mailto:jeffersondanielss@gmail.com"/>
+      <tag name="package" line="0" description="Default"/>
+    </docblock>
+    <source>eJyFjk8LgkAQxe+C32Fuggf9AIlK2aFAiKBzbO6oK+uO7J+D3740gyQwGBh483vvTZIN7eB7AHEYTiuEnjhKEy1yCDlztiUNZ6xr1IYUFEwJlJB0H4XPgjF50zMho4r6dPbGvreKPqlKOo7wGkuczNIFnGDQ1KGl6Nsn3vidVIUQFMyyBzNYTp7pvWD3Cx2ut2ITuGjirrKbzLEfJI1/iqRAtR1TojGs2Y7Zu3F1z9InTIh+OQ==</source>
+  </file>
+  <file path="CRUDModel.php" generated-path="CRUDModel.html" hash="3847d786ab4eba1bc4750d9ab69a6163" package="Default">
+    <docblock line="0">
+      <description>CRUDModel.php</description>
+      <long-description></long-description>
+      <tag name="author" line="0" description="Jefferson Daniel" link="mailto:jeffersondanielss@gmail.com"/>
+      <tag name="package" line="0" description="Default"/>
+    </docblock>
+    <class final="false" abstract="false" namespace="" line="14" package="Default">
+      <extends/>
+      <name>CRUD</name>
+      <full_name>\CRUD</full_name>
+      <docblock line="14">
+        <description>Classe CRUD</description>
+        <long-description>Classe com métodos comuns entre as classes e o banco de dados.</long-description>
+        <tag name="package" line="14" description="Default"/>
+      </docblock>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="" line="25" package="Default">
+        <name>delete</name>
+        <full_name>\CRUD::delete()</full_name>
+        <docblock line="25">
+          <description>Deleta itens de uma tabela de acordo com os parametros passados.</description>
+          <long-description></long-description>
+          <tag name="param" line="25" description="&lt;p&gt;contém o id do registro.&lt;/p&gt;" type="integer" variable="$id">
+            <type>integer</type>
+          </tag>
+          <tag name="param" line="25" description="&lt;p&gt;contém o nome da tabela.&lt;/p&gt;" type="String" variable="$table">
+            <type>String</type>
+          </tag>
+          <tag name="param" line="25" description="&lt;p&gt;contém o caminho da página que o usuário vai ser redirecionado após a função ser chamada.&lt;/p&gt;" type="String" variable="$redirectPage">
+            <type>String</type>
+          </tag>
+          <tag name="return" line="25" description="" type="void">
+            <type>void</type>
+          </tag>
+        </docblock>
+        <argument line="0" by_reference="false">
+          <name>$id</name>
+          <default></default>
+          <type>integer</type>
+        </argument>
+        <argument line="0" by_reference="false">
+          <name>$table</name>
+          <default></default>
+          <type>String</type>
+        </argument>
+        <argument line="0" by_reference="false">
+          <name>$redirectPage</name>
+          <default></default>
+          <type>String</type>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="" line="45" package="Default">
+        <name>userType</name>
+        <full_name>\CRUD::userType()</full_name>
+        <docblock line="45">
+          <description>Compara email e senha da $_SESSION com os registros cadastrados na tabela desejada.</description>
+          <long-description></long-description>
+          <tag name="param" line="45" description="&lt;p&gt;nome da tabela onde o email e senha vão ser buscados.&lt;/p&gt;" type="String" variable="$table">
+            <type>String</type>
+          </tag>
+          <tag name="return" line="45" description="Retorna um inteiro com a quantidade de linhas encontradas na tebela com esse email e senha." type="integer">
+            <type>integer</type>
+          </tag>
+        </docblock>
+        <argument line="0" by_reference="false">
+          <name>$table</name>
+          <default></default>
+          <type>String</type>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="" line="69" package="Default">
+        <name>count</name>
+        <full_name>\CRUD::count()</full_name>
+        <docblock line="69">
+          <description>Conta registros em uma tabela.</description>
+          <long-description></long-description>
+          <tag name="param" line="69" description="&lt;p&gt;nome da tabela.&lt;/p&gt;" type="String" variable="$table">
+            <type>String</type>
+          </tag>
+          <tag name="return" line="69" description="" type="void">
+            <type>void</type>
+          </tag>
+        </docblock>
+        <argument line="0" by_reference="false">
+          <name>$table</name>
+          <default></default>
+          <type>String</type>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="" line="85" package="Default">
+        <name>readAll</name>
+        <full_name>\CRUD::readAll()</full_name>
+        <docblock line="85">
+          <description>Busca todos registros de uma tabela.</description>
+          <long-description></long-description>
+          <tag name="param" line="85" description="&lt;p&gt;nome da tabela.&lt;/p&gt;" type="String" variable="$table">
+            <type>String</type>
+          </tag>
+          <tag name="return" line="85" description="Retorna um array com todos registros." type="array">
+            <type>array</type>
+          </tag>
+        </docblock>
+        <argument line="0" by_reference="false">
+          <name>$table</name>
+          <default></default>
+          <type>String</type>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="" line="104" package="Default">
+        <name>getById</name>
+        <full_name>\CRUD::getById()</full_name>
+        <docblock line="104">
+          <description>Busca todos registros de uma tabela.</description>
+          <long-description></long-description>
+          <tag name="param" line="104" description="&lt;p&gt;ID do registro.&lt;/p&gt;" type="integer" variable="$id">
+            <type>integer</type>
+          </tag>
+          <tag name="param" line="104" description="&lt;p&gt;nome da tabela.&lt;/p&gt;" type="String" variable="$table">
+            <type>String</type>
+          </tag>
+          <tag name="return" line="104" description="Retorna um array com o registro procurado." type="array">
+            <type>array</type>
+          </tag>
+        </docblock>
+        <argument line="0" by_reference="false">
+          <name>$id</name>
+          <default></default>
+          <type>integer</type>
+        </argument>
+        <argument line="0" by_reference="false">
+          <name>$table</name>
+          <default></default>
+          <type>String</type>
+        </argument>
+      </method>
+    </class>
+    <source>eJy9Vs1u20YQvgfIO0wEA5IMW7qrlp1EUhAXSW1YSnsoimBFjqQNyF1mf5y4iR8m6CHIOY+gF+vMkpRI2rFSt40hQ+LO/8z3DffoJFtlDx88fADQ39/nr30YXbwav9QxJr0g46PHwruVNvAzLhZorFYwFkpiAkdvypM4HFj7eJkKmfQinR4H237TeyKsxRAkHNROyQrS9RenY235wSsLqJxBEPQcdOgANMyFijTECLEg1V41UlAL/uFDfrKJzpHGmKATIB2Sb3LgUwFOzDER/CQibWId8qAMMmFEis6En9ZuQhVph84EHZDKwZ6MyVC59RcyBnogRwaX0pKDXkN/6oxUS9ijyAlWrJROuaYio29ZGYylwcidi2XVOBKpVCvN9tn601IqAW89d8tbv/5kpIZLIcGigcKB1IpqApGtv1oQsPBq/Xn9lw4q0UqkIq6kYNB5o+BSy7g465ftzfw8kRHbR458UiOpx9jhjhwUNR40su7ycCD8SRUlnnrf7vX6sSBtYZGh1/6p1MCIqmod2cjIzB1TwQtp0k57hilEaBz+mRcao8U3gsoRS2EAGVBl/0/a3aN+Yd/a+N2L5zAEhe8IznncrSijxgxZ45ADKsq7091K7duEpaR0eJwZpPFgpzWevJjMJvDs4uxlOdnfnk8uJoSF4UDGrbr94fFcqvhXkXjstEncPuB+NXXwPUaeesnnG0lKtXETh9A+Nzr2TgO+pybKArrWR6ShH207uEIRo+m0XuhI8IgGQM2mTwt6jcH0oMXNPyliDD+U0a43+V/fQquRThmjgMx+oqhFtRKMxL3X08l0enr2S0mqciREaMIX/WJagaqwkKdYQd6d1KkTBmgPMeDrWVyWmJ57G1VJvAE10/cCnTaUhg9sRmnyXjK0hHKSFg0jDBKimOCtxLwzXEHIHUN4Ngi4qyXQ28UXT8nNrjJmTF5Vd7u6iB+LDjzCNHNXnU0zf2+HCO0/uvDx4y3SEJelFZ7difddiCc5Z3kT9FMC/WhGvbwJ+5DicJD3Qqg478ZwEL5aVUQX3uuUyCs8gFuKbqZVN8yLrxmW/bhpeBvBSGj0u1dFvbkeHYy0V66hWACo1N/4v76LKopeQFsa0BbbvoTug/p77egoFFMD3L9dioFe30RIHnC/y69yp51IqohpNd3UB1MOBa1PHEcodBbootVIJz5VFb3wuiiU71hZT0O6+V1jO43aleA/mYYwRlxV10t+wLuiEXznojC0xp8kyY8c2/4/GNNGFpZkc06c+Pn4bDB4NpmNnr9+Mp2ejapWJZWC8f8zt/Kadjr+/svZ/ae7jQCZ0ZHnN93OES/RPb06jWuXpx8+52KBU5uG0Li5FBPdcXe5AxzlmL8HGptNyv8BCyfHfwOGBKdF</source>
+  </file>
+  <package name="Default" full_name="Default"/>
+  <package name="global" full_name="global"/>
+  <namespace name="global" full_name="global"/>
+  <deprecated count="0"/>
+</project>

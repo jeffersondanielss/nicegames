@@ -1,14 +1,22 @@
 <?php
 
-  /*
-  * Author Jeferson Daniel
-  * Version 1.0.0
-  * CRUD PDO
+  /**
+  * DatabaseModel.php
+  * @author Jefferson Daniel <jeffersondanielss@gmail.com>
+  */
+
+  /**
+  * Classe Database
   */
 
   class Database {
 
-    // Conecta ao banco de dados
+    /**
+    * Faz a conecção com o banco de dados.
+    *
+    * @return void
+    */
+
     public function connect() {
       $host = "localhost";
       $user = "root";
@@ -24,6 +32,12 @@
       return $pdo;
     }
 
+    /**
+    * Inicia uma seção.
+    *
+    * @return void
+    */
+
     public function sessionStart() {
       session_start();
 
@@ -32,7 +46,12 @@
       }
     }
 
-    // Login no sistema
+    /**
+    * Faz o login no sistema e redireciona o usuário dependendo de tipo.
+    *
+    * @return void
+    */
+
     public function login() {
       $pdo = $this->connect();
       $email = $_POST['email'];
