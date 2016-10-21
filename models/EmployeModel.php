@@ -98,6 +98,10 @@
       $db = new Database;
       $pdo = $db->connect();
 
+      if( $_SESSION['email'] === null ) {
+        session_start();
+      }
+      
       $email = $_SESSION['email'];
       $senha = $_SESSION['senha'];
 
@@ -116,9 +120,9 @@
     * @return void
     */
 
-    public function loggedUserName() {
+    public function getName() {
       $user = $this->getLoggedUser();
-      echo $user[0]['nome'];
+      return $user[0]['nome'];
     }
 
     /**

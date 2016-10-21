@@ -1,7 +1,9 @@
 <?php 
-$title = "NG - Funcionários";
-include 'views/header.php';
-include 'functions/functions.php';
+  $title = "NG - Funcionários";
+  include_once '../config.php';
+  include_once 'views/header.php';
+  inc('controllers/CountController');
+  $count = new CountController();
 ?>
 
 <body>
@@ -19,7 +21,7 @@ include 'functions/functions.php';
         <div class="row">
           <div class="col-lg-12">
             <h1 class="page-header">
-              Mensagens <span class="badge"><?php $message->count('mensagem'); ?></span>
+              Mensagens <span class="badge"><?php $count->allItens('mensagem'); ?></span>
             </h1>
           </div>
         </div>

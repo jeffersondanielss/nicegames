@@ -75,7 +75,7 @@
         session_start();
         $_SESSION['email'] = $email;
         $_SESSION['senha'] = $senha;
-        $_SESSION['id'] = $$dadosCliente[0]['id'];
+        $_SESSION['id'] = $dadosCliente[0]['id'];
 
         header("Location: ../.");
 

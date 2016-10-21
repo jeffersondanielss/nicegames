@@ -1,5 +1,7 @@
 <?php
-  $clients = $client->readAll('cliente');
+  inc('controllers/GetAllController');
+  $getAllCtrl = new GetAllController();
+  $clients = $getAllCtrl->getAll('cliente');
 
   foreach ($clients as $client) { ?>
     

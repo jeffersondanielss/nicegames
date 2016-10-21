@@ -1,8 +1,8 @@
 <?php 
-$title = "NG - Clientes";
-$page = "cliente";
-include 'views/header.php';
-include 'functions/functions.php';
+  $title = "NG - Clientes";
+  $page = "cliente";
+  include_once '../config.php';
+  include_once 'views/header.php';
 ?>
 
 <body>

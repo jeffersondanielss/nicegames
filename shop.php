@@ -1,9 +1,10 @@
 <?php 
   $title = 'NG - Shop';
+  include_once('config.php');
   include_once('views/head.php');
-  include_once('controllers/product/GetProductsController.php');
-  $productsCtrl = new GetProductsController();
-  $products = $productsCtrl->getProducts();
+  include_once('controllers/GetAllController.php');
+  $productsCtrl = new GetAllController();
+  $products = $productsCtrl->getAll('produto');
 ?>
 <body>
 

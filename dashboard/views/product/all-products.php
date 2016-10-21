@@ -1,5 +1,7 @@
 <?php
-  $products = $product->readAll('produto');
+  inc('controllers/GetAllController');
+  $getAllCtrl = new GetAllController();
+  $products = $getAllCtrl->getAll('produto');
 
   foreach ($products as $product) { ?>
     <tr>

@@ -1,6 +1,7 @@
 <?php
-
-  $messages = $message->readAll('mensagem');
+  inc('controllers/GetAllController');
+  $getAllCtrl = new GetAllController();
+  $messages = $getAllCtrl->getAll('mensagem');
 
   foreach ($messages as $message) { ?>
    <div class="panel-heading" role="tab" id="headingOne">

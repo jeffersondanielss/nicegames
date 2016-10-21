@@ -1,6 +1,7 @@
 <?php 
   $title = "NG - Cadastro de produto";
   include '../header.php';
+  // include_once '../../../config.php';
   include '../../functions/functions.php';
 ?>
 

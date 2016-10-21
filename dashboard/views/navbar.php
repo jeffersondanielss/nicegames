@@ -1,10 +1,14 @@
 <?php
-  $db->sessionStart();
-  $user = $employe->userType('funcionario');
+  // $db->sessionStart();
+  // $user = $employe->userType('funcionario');
 
-  if( $user < 1 ) {
-    header("Location: ../.");
-  }
+  // if( $user < 1 ) {
+  //   header("Location: ../.");
+  // }
+
+  inc('controllers/employe/NavbarController');
+  $navbar = new NavbarController();
+  $name = $navbar->getName();
 ?>
 <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
 
@@ -23,7 +27,7 @@
   <ul class="nav navbar-right top-nav">
     <li class="dropdown">
       <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-        <i class="fa fa-user"></i> <?php $employe->loggedUserName(); ?> <b class="caret"></b>
+        <i class="fa fa-user"></i> <?php echo $name ?> <b class="caret"></b>
       </a>
       <ul class="dropdown-menu">
         <li><a href="../."><i class="fa fa-fw fa-home"></i> home</a></li>

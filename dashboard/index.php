@@ -1,8 +1,11 @@
 <?php 
   $title = "Nicegames - admin";
   $page = 'home';
-  include 'views/header.php';
-  include 'functions/functions.php';
+  include_once '../config.php';
+  include_once 'views/header.php';
+  inc('models/models');
+  inc('controllers/CountController');
+  $count = new CountController();
 ?>
 
 <body>
@@ -35,7 +38,7 @@
                     <i class="fa fa-users fa-5x"></i>
                   </div>
                   <div class="col-xs-9 text-right">
-                    <div class="huge"><?php $product->count('produto'); ?></div>
+                    <div class="huge"><?php $count->allItens('produto'); ?></div>
                     <div>Número de produtos</div>
                   </div>
                 </div>
@@ -76,7 +79,7 @@
                     <i class="fa fa-ban fa-5x"></i>
                   </div>
                   <div class="col-xs-9 text-right">
-                    <div class="huge"><?php $client->count('cliente'); ?></div>
+                    <div class="huge"><?php $count->allItens('cliente'); ?></div>
                     <div>Clientes</div>
                   </div>
                 </div>
@@ -116,7 +119,7 @@
                     <i class="fa fa-user fa-5x"></i>
                   </div>
                   <div class="col-xs-9 text-right">
-                    <div class="huge"><?php $employe->count('funcionario'); ?></div>
+                    <div class="huge"><?php $count->allItens('funcionario'); ?></div>
                     <div>Funcionários</div>
                   </div>
                 </div>

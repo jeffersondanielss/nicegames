@@ -1,8 +1,8 @@
 <?php 
   $title = "NG - Funcionários";
   $page = "employe";
+  include_once '../config.php';
   include 'views/header.php';
-  include 'functions/functions.php';
 ?>
 
 <body>

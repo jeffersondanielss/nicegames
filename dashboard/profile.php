@@ -1,7 +1,8 @@
 <?php 
   $title = "NG - Perfil";
-  include 'views/header.php';
-  include 'functions/functions.php';
+  include_once '../config.php';
+  include_once 'views/header.php';
+  // include_once 'functions/functions.php';
 ?>
 
 <body>
@@ -18,10 +19,7 @@
           <!-- Page Heading -->
           <div class="row">
               <div class="col-lg-12">
-                  <h1 class="page-header">
-                      Perfil: <small><?php echo $employe->loggedUserName(); ?></small>
-
-                  </h1>
+                  <h1 class="page-header"> Perfil </h1>
               </div>
           </div>
           <!-- /.row -->

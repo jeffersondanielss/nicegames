@@ -1,6 +1,10 @@
 <?php
-  DEFINE('_ROOT_', dirname( __FILE__ ) );
-  set_include_path( get_include_path() . PATH_SEPARATOR . $_SERVER['DOCUMENT_ROOT'] );
-  // echo constant("IC");
-  // echo dirname( dirname( __FILE__ ) . '/nicegames' );
+
+  function inc( $file ) {
+    $path = dirname( __FILE__ );
+    // echo $path . '/' . $file;  
+    // die();
+    include_once $path . '/' . $file . '.php';  
+    
+  }
 ?>

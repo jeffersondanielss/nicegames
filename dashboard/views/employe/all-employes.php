@@ -1,5 +1,7 @@
 <?php
-  $employes = $employe->readAll('funcionario');
+  inc('controllers/GetAllController');
+  $getAllCtrl = new GetAllController();
+  $employes = $getAllCtrl->getAll('funcionario');
 
   foreach ($employes as $employe) { ?>
     
