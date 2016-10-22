@@ -1,7 +1,9 @@
 <?php
-  $employes = $employe->getLoggeduser();
+  inc('controllers/employe/CurrentController');
+  $current = new CurrentController();
+  $employeArray = $current->getCurrentEmploye();
 
-  foreach ($employes as $employe) { ?>
+  foreach ($employeArray as $employe) { ?>
     <tr>
       <td><?php echo $employe['id']; ?></td>
       <td><?php echo $employe['nome']; ?></td>

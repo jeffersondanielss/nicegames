@@ -1,7 +1,7 @@
 <?php 
   $title = "NG - Cadastro de Funcionário";
-  include '../header.php';
-  include '../../functions/functions.php';
+  include_once '../../../config.php';
+  include_once('../header.php');
 ?>
 
 <body>

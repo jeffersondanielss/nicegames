@@ -13,5 +13,9 @@
       return $this->EmployeModel->getName();
     }
 
+    function auth() {
+      $this->EmployeModel->auth();
+    }
+
   }
 ?>

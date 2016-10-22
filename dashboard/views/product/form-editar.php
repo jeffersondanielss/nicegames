@@ -1,67 +1,72 @@
-<?php $productEdit = $product->getById( $_GET['id'], 'produto' ); ?>
+<?php
+  inc('controllers/GetByIdController');
+  $ProductCtrl = new GetByIdController();
+  $productArray = $ProductCtrl->getById($_GET['id'], 'produto');
+  $productEdit = $productArray[0];
+?>
 
 <form class="form-horizontal" action="functions/product/update.php" method="post" enctype="multipart/form-data">
 
   <div class="form-group">
     <label class="col-sm-3 control-label">id</label>
     <div class="col-sm-9">
-      <input type="text" class="form-control" name="id" placeholder="id" value="<?php echo $productEdit[0]['id']; ?>">
+      <input type="text" class="form-control" name="id" placeholder="id" value="<?php echo $productEdit['id']; ?>">
     </div>
   </div>
 
   <div class="form-group">
     <label class="col-sm-3 control-label">titulo</label>
     <div class="col-sm-9">
-      <input type="text" class="form-control" name="titulo" placeholder="titulo" value="<?php echo $productEdit[0]['titulo']; ?>">
+      <input type="text" class="form-control" name="titulo" placeholder="titulo" value="<?php echo $productEdit['titulo']; ?>">
     </div>
   </div>
 
   <div class="form-group">
     <label class="col-sm-3 control-label">genero</label>
     <div class="col-sm-9">
-      <input type="text" class="form-control" name="genero" placeholder="genero" value="<?php echo $productEdit[0]['genero']; ?>">
+      <input type="text" class="form-control" name="genero" placeholder="genero" value="<?php echo $productEdit['genero']; ?>">
     </div>
   </div>
 
   <div class="form-group">
     <label class="col-sm-3 control-label">preço</label>
     <div class="col-sm-9">
-      <input type="text" class="form-control" name="preco" placeholder="Preço" value="<?php echo $productEdit[0]['preco']; ?>">
+      <input type="text" class="form-control" name="preco" placeholder="Preço" value="<?php echo $productEdit['preco']; ?>">
     </div>
   </div>
 
   <div class="form-group">
     <label class="col-sm-3 control-label">lancamento</label>
     <div class="col-sm-9">
-      <input type="text" class="form-control" name="lancamento" placeholder="lancamento" value="<?php echo $productEdit[0]['lancamento']; ?>">
+      <input type="text" class="form-control" name="lancamento" placeholder="lancamento" value="<?php echo $productEdit['lancamento']; ?>">
     </div>
   </div>
 
   <div class="form-group">
     <label class="col-sm-3 control-label">audio</label>
     <div class="col-sm-9">
-      <input type="text" class="form-control" name="audio" placeholder="audio" value="<?php echo $productEdit[0]['audio']; ?>">
+      <input type="text" class="form-control" name="audio" placeholder="audio" value="<?php echo $productEdit['audio']; ?>">
     </div>
   </div>
 
   <div class="form-group">
     <label class="col-sm-3 control-label">legenda</label>
     <div class="col-sm-9">
-      <input type="text" class="form-control" name="legenda" placeholder="legenda" value="<?php echo $productEdit[0]['legenda']; ?>">
+      <input type="text" class="form-control" name="legenda" placeholder="legenda" value="<?php echo $productEdit['legenda']; ?>">
     </div>
   </div>
 
   <div class="form-group">
     <label class="col-sm-3 control-label">tamanho</label>
     <div class="col-sm-9">
-      <input type="text" class="form-control" name="tamanho" placeholder="tamanho" value="<?php echo $productEdit[0]['tamanho']; ?>">
+      <input type="text" class="form-control" name="tamanho" placeholder="tamanho" value="<?php echo $productEdit['tamanho']; ?>">
     </div>
   </div>
 
   <div class="form-group">
     <label class="col-sm-3 control-label">Quantidade</label>
     <div class="col-sm-9">
-      <input type="text" class="form-control" name="quantidade" placeholder="Quantidade" value="<?php echo $productEdit[0]['quantidade']; ?>">
+      <input type="text" class="form-control" name="quantidade" placeholder="Quantidade" value="<?php echo $productEdit['quantidade']; ?>">
     </div>
   </div>
 

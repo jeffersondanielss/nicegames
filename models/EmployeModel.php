@@ -97,10 +97,6 @@
     public function getLoggedUser() {
       $db = new Database;
       $pdo = $db->connect();
-
-      if( $_SESSION['email'] === null ) {
-        session_start();
-      }
       
       $email = $_SESSION['email'];
       $senha = $_SESSION['senha'];
@@ -131,7 +127,8 @@
     * @return void
     */
 
-    public function authenticate() {
+    public function auth() {
+      $db = new Database;
       $db->sessionStart();
       $user = parent::userType('funcionario');
 

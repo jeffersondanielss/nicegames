@@ -1,7 +1,7 @@
 <?php 
   $title = "NG - Editar Cliente";
-  include '../header.php';
-  include '../../functions/functions.php';
+  include_once '../../../config.php';
+  inc('dashboard/views/header');
 ?>
 
 <body>

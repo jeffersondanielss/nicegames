@@ -1,7 +1,8 @@
 ﻿<?php
-  include_once 'controllers/product/getProductController.php';
-  $ProductCtrl = new GetProductController();
-  $productArray = $ProductCtrl->getProduct($_GET['id']);
+  include_once('config.php');
+  include_once 'controllers/GetByIdController.php';
+  $ProductCtrl = new GetByIdController();
+  $productArray = $ProductCtrl->getById($_GET['id'], 'produto');
 
   foreach ($productArray as $currProduct) {
     $title = 'NG - ' . $currProduct['titulo'];

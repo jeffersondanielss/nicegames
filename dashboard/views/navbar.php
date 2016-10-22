@@ -1,13 +1,7 @@
 <?php
-  // $db->sessionStart();
-  // $user = $employe->userType('funcionario');
-
-  // if( $user < 1 ) {
-  //   header("Location: ../.");
-  // }
-
   inc('controllers/employe/NavbarController');
   $navbar = new NavbarController();
+  $navbar->auth();
   $name = $navbar->getName();
 ?>
 <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
