@@ -1,7 +1,7 @@
 <?php 
   $title = "NG - Editar Funcionário";
   include_once '../../../config.php';
-  inc('dashboard/views/header');
+  get_file('dashboard/views/header');
 ?>
 
 <body>

@@ -1,6 +1,5 @@
 <div class="product-carousel">
   <?php
-    include_once('config.php');
     include_once('controllers/GetAllController.php');
     $productsCtrl = new GetAllController();
     $products = $productsCtrl->getAll('produto');

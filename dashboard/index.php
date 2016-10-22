@@ -3,8 +3,8 @@
   $page = 'home';
   include_once '../config.php';
   include_once 'views/header.php';
-  inc('models/models');
-  inc('controllers/CountController');
+  get_file('models/models');
+  get_file('controllers/CountController');
   $count = new CountController();
 ?>
 

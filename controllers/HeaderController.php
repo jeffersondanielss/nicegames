@@ -1,5 +1,5 @@
 <?php
-  include_once 'models/models.php';
+  get_file('models/models');
 
   class HeaderController {
 

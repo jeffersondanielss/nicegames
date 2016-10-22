@@ -2,7 +2,7 @@
   $title = "NG - Funcionários";
   include_once '../config.php';
   include_once 'views/header.php';
-  inc('controllers/CountController');
+  get_file('controllers/CountController');
   $count = new CountController();
 ?>
 

@@ -1,5 +1,5 @@
 <?php
-  inc('controllers/GetAllController');
+  get_file('controllers/GetAllController');
   $getAllCtrl = new GetAllController();
   $employes = $getAllCtrl->getAll('funcionario');
 

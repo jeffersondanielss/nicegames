@@ -1,10 +1,7 @@
 <?php 
   $title = 'NG - Carrinho';
   include_once('views/head.php');
-  include_once('controllers/buy/PurchasesController.php');
-  $PurchasesCtrl = new PurchasesController();
-  $purchases = $PurchasesCtrl->getPurchases();
-  $currUser = $PurchasesCtrl->getLoggedUser();
+  include_once('config.php');
 ?>
 <body>
 

@@ -18,9 +18,7 @@
     */
 
     public function insert() {
-      include '../database.php';
-      $db = new Database;
-      $pdo = $db->connect();
+      $pdo = parent::connect();
 
       $id =         $_POST['id'];
       $titulo =     $_POST['titulo'];
@@ -76,9 +74,7 @@
     */
 
     public function update() {
-      include '../database.php';
-      $db = new Database;
-      $pdo = $db->connect();
+      $pdo = parent::connect();
 
       $id =         $_POST['id'];
       $titulo =     $_POST['titulo'];

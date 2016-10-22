@@ -1,5 +1,5 @@
 <?php
-  inc('controllers/employe/NavbarController');
+  get_file('controllers/employe/NavbarController');
   $navbar = new NavbarController();
   $navbar->auth();
   $name = $navbar->getName();

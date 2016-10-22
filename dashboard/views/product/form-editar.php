@@ -1,5 +1,5 @@
 <?php
-  inc('controllers/GetByIdController');
+  get_file('controllers/GetByIdController');
   $ProductCtrl = new GetByIdController();
   $productArray = $ProductCtrl->getById($_GET['id'], 'produto');
   $productEdit = $productArray[0];

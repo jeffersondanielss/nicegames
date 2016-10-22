@@ -1,5 +1,6 @@
 <?php 
   $title = 'NG - Sobre nós';
+  include_once('config.php');
   include_once('views/head.php');
 ?>
 <body>

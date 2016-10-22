@@ -18,9 +18,7 @@
     */
 
     public function insert() {
-      include '../database.php';
-      $db = new Database;
-      $pdo = $db->connect();
+      $pdo = parent::connect();
 
       $nome =      $_POST['nome'];
       $email =     $_POST['email'];

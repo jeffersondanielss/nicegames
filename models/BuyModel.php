@@ -36,10 +36,8 @@
     */
 
     public function addCart( $productId ) {
-      $db = new Database;
       $userId = $this->getUserId();
-
-      $pdo = $db->connect();
+      $pdo = parent::connect();
       $sql = $pdo->prepare("INSERT INTO buy(id_cliente, id_produto)VALUES(:id_cliente, :id_produto)");
       $sql->bindValue(':id_cliente',  $userId);
       $sql->bindValue(':id_produto', $productId);
@@ -53,11 +51,10 @@
     */
 
     public function getBuyProducts() {
-      $db = new Database;
+      $pdo = parent::connect();
       $userId = $this->getUserId();
       $prod = [];
 
-      $pdo = $db->connect();
       $sql = $pdo->prepare("SELECT * FROM buy WHERE id_cliente = :id_cliente");
       $sql->bindValue(':id_cliente', $userId);
       $sql->execute();
@@ -116,8 +113,7 @@
     */
 
     public function purchase( $userId ) {
-      $db = new Database;
-      $pdo = $db->connect();
+      $pdo = parent::connect();
       $sql = $pdo->prepare("DELETE FROM buy WHERE id_cliente = :id_cliente");
       $sql->bindValue(':id_cliente', $userId);
       $sql->execute();

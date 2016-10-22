@@ -1,14 +1,14 @@
 <?php 
   $title = "NG - Editar Produto";
   include_once '../../../config.php';
-  inc('dashboard/views/header');
+  get_file('dashboard/views/header');
 ?>
 
 <body>
 
     <div id="wrapper">
 
-        <?php inc('dashboard/views/navbar'); ?>
+        <?php get_file('dashboard/views/navbar'); ?>
 
         <div id="page-wrapper">
 
@@ -26,7 +26,7 @@
 
                 <div class="row">
                     <div class="col-lg-8">
-                      <?php inc('dashboard/views/product/form-editar'); ?>
+                      <?php get_file('dashboard/views/product/form-editar'); ?>
                     </div>
                     
                 <!-- /.row -->
@@ -40,4 +40,4 @@
     </div>
     <!-- /#wrapper -->
 
-<?php inc('dashboard/views/footer'); ?>
+<?php get_file('dashboard/views/footer'); ?>

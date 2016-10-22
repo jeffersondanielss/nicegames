@@ -1,5 +1,5 @@
 <?php
-  inc('controllers/employe/CurrentController');
+  get_file('controllers/employe/CurrentController');
   $current = new CurrentController();
   $employeArray = $current->getCurrentEmploye();
 

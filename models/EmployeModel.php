@@ -18,9 +18,7 @@
     */
 
     public function insert() {
-      include '../database.php';
-      $db = new Database;
-      $pdo = $db->connect();
+      $pdo = parent::connect();
 
       $nome =      $_POST['nome'];
       $email =     $_POST['email'];
@@ -54,9 +52,7 @@
     */
 
     public function update() {
-      include '../database.php';
-      $db = new Database;
-      $pdo = $db->connect();
+      $pdo = parent::connect();
 
       $id =        $_POST['id'];
       $nome =      $_POST['nome'];
@@ -95,8 +91,7 @@
     */
 
     public function getLoggedUser() {
-      $db = new Database;
-      $pdo = $db->connect();
+      $pdo = parent::connect();
       
       $email = $_SESSION['email'];
       $senha = $_SESSION['senha'];
@@ -128,8 +123,7 @@
     */
 
     public function auth() {
-      $db = new Database;
-      $db->sessionStart();
+      parent::sessionStart();
       $user = parent::userType('funcionario');
 
       if( $user < 1 ) {

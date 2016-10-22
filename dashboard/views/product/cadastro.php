@@ -8,7 +8,7 @@
 
     <div id="wrapper">
 
-        <?php inc('dashboard/views/navbar'); ?>
+        <?php get_file('dashboard/views/navbar'); ?>
 
         <div id="page-wrapper">
 
@@ -26,7 +26,7 @@
 
                 <div class="row">
                     <div class="col-lg-8">
-                      <?php inc('dashboard/views/product/form-product'); ?>
+                      <?php get_file('dashboard/views/product/form-product'); ?>
                     </div>
                     
                 <!-- /.row -->
@@ -40,4 +40,4 @@
     </div>
     <!-- /#wrapper -->
 
-<?php inc('dashboard/views/footer'); ?>
+<?php get_file('dashboard/views/footer'); ?>

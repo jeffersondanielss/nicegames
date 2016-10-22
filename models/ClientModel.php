@@ -158,8 +158,7 @@
 
     public function getLoggedUser() {
       if( !empty($_SESSION['email']) || !empty($_SESSION['senha']) ):
-        $db = new Database;
-        $pdo = $db->connect();
+        $pdo = parent::connect();
 
         $email = $_SESSION['email'];
         $senha = $_SESSION['senha'];

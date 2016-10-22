@@ -1,5 +1,5 @@
 <?php
-  inc('models/models');
+  get_file('models/models');
 
   class CountController {
 

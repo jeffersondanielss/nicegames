@@ -1,5 +1,5 @@
 <?php
-  inc('controllers/GetByIdController');
+  get_file('controllers/GetByIdController');
   $employeCtrl = new GetByIdController();
   $employeArray = $employeCtrl->getById($_GET['id'], 'funcionario');
   $employeEdit = $employeArray[0];

@@ -11,6 +11,12 @@
 
   class Database {
 
+    private $host  = "localhost";
+    private $user  = "root";
+    private $pass  = "";
+    private $banco = "nicegames";
+
+
     /**
     * Faz a conecção com o banco de dados.
     *
@@ -18,13 +24,8 @@
     */
 
     public function connect() {
-      $host = "localhost";
-      $user = "root";
-      $pass = "";
-      $banco = "nicegames";
-
       try {
-        $pdo = new PDO("mysql:host=$host;dbname=$banco", $user, $pass);
+        $pdo = new PDO("mysql:host=$this->host;dbname=$this->banco", $this->user, $this->pass);
       } catch( PDOException $e ) {
         $e->getMessage();
       }

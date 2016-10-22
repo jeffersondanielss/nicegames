@@ -1,5 +1,5 @@
 <?php
-  inc('controllers/GetByIdController');
+  get_file('controllers/GetByIdController');
   $clientCtrl = new GetByIdController();
   $clientArray = $clientCtrl->getById($_GET['id'], 'cliente');
   $clientEdit = $clientArray[0];

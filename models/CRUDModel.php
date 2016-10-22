@@ -11,7 +11,7 @@
   * Classe com métodos comuns entre as classes e o banco de dados.
   */
 
-  class CRUD {
+  class CRUD extends Database {
 
     /**
     * Deleta itens de uma tabela de acordo com os parametros passados.
@@ -23,10 +23,8 @@
     */
 
     public function delete( $id, $table, $redirectPage ) {
-      include '../database.php';
       echo "<script>confirm('Tem certeza que deseja apagar esse registro?')</script>";
-      $db = new Database;
-      $pdo = $db->connect();
+      $pdo = parent::connect();
       $sql = $pdo->prepare("DELETE FROM $table WHERE id=:id");
       $sql->bindValue(':id', $id);
       $sql->execute();
@@ -45,8 +43,7 @@
     public function userType( $table ) {
 
       if( !empty($_SESSION['email']) || !empty($_SESSION['senha']) ) {
-        $db = new Database;
-        $pdo = $db->connect();
+        $pdo = parent::connect();
         $user = $pdo->prepare("SELECT * FROM $table WHERE email=:email and senha=:senha");
 
         $user->bindValue(':email', $_SESSION['email']);
@@ -67,8 +64,7 @@
     */
 
     public function count( $table ) {
-      $db = new Database;
-      $pdo = $db->connect();
+      $pdo = parent::connect();
       $busca = $pdo->prepare("SELECT count(*) as total FROM $table");
       $busca->execute();
       $result = $busca->fetchColumn();
@@ -83,8 +79,7 @@
     */
 
     public function readAll( $table ) {
-      $db = new Database;
-      $pdo = $db->connect();
+      $pdo = parent::connect();
       $busca = $pdo->prepare("SELECT * FROM $table");
       $busca->execute();
 
@@ -102,8 +97,7 @@
     */
 
     public function getById( $id, $table ) {
-      $db = new Database;
-      $pdo = $db->connect();
+      $pdo = parent::connect();
       $busca = $pdo->prepare("SELECT * FROM $table WHERE ID = :id");
       $busca->bindValue(':id', $id);
       $busca->execute();

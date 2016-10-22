@@ -1,3 +1,10 @@
+<?php
+  include_once('controllers/buy/PurchasesController.php');
+  $PurchasesCtrl = new PurchasesController();
+  $purchases = $PurchasesCtrl->getPurchases();
+  $currUser = $PurchasesCtrl->getLoggedUser();
+?>
+
 <table cellspacing="0" border="1" class="shop_table cart">
   <thead>
     <tr>
