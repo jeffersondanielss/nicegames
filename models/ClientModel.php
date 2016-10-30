@@ -14,13 +14,12 @@
     /**
     * Inseri um registro na tabela de client.
     * 
+    * @param $redirect caminho da página para qual o usuário vai ser redirecionado.
     * @return void
     */
 
     public function insert() {
-      include '../database.php';
-      $db = new Database;
-      $pdo = $db->connect();
+      $pdo = parent::connect();
 
       $nome =      $_POST['nome'];
       $sobrenome = $_POST['sobrenome'];
@@ -51,10 +50,10 @@
 
         $sql->execute();
         $message = 'Cadastro realizado com sucesso!';
-        header("Location: ../../client.php?message={$message}");
+        header("Location: ../../register.php?message={$message}");
       else:
-        $message = 'Já existe um cliente com este id!';
-        header("Location: ../../client.php?message={$message}");
+        $message = 'Já existe um cliente com este email!';
+        header("Location: ../../register.php?message={$message}");
       endif;
     }
 
@@ -65,9 +64,7 @@
     */
 
     public function update() {
-      include '../database.php';
-      $db = new Database;
-      $pdo = $db->connect();
+      $pdo = parent::connect();
 
       $id =        $_POST['id'];
       $nome =      $_POST['nome'];

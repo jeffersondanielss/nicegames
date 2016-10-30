@@ -3,7 +3,6 @@
   $page = 'home';
   include_once '../config.php';
   include_once 'views/header.php';
-  get_file('models/models');
   get_file('controllers/CountController');
   $count = new CountController();
 ?>

@@ -231,3 +231,11 @@ ul.alert-dropdown {
 .panel-yellow > a:hover {
     color: #df8a13;
 }
+
+.sub-collapse li {
+  background-color: #333;
+}
+
+.collapse .glyphicon {
+  margin-right: 5px;
+}

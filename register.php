@@ -14,7 +14,7 @@
 
   <div class="container">
     <div class="well well-sm form-contact">
-      <form class="form-horizontal" action="controllers/client/RegisterClientController.php" method="post" enctype="multipart/form-data">
+      <form class="form-horizontal" action="./controllers/client/RegisterClientController.php" method="post" enctype="multipart/form-data">
 
         <div class="form-group">
           <label class="col-sm-3 control-label">Nome</label>
@@ -95,8 +95,21 @@
           </div>
         </div>
 
+         <?php
+          if( !empty( $_REQUEST['message'] ) ) { ?>
+
+            <div class="alert alert-info" role="alert">
+              <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+              <?php echo $_REQUEST['message']; ?>
+            </div>
+
+        <?php } ?>
+
       </form>
     </div>
+
+ 
+
   </div>
 
 <?php include_once('views/footer.php'); ?>

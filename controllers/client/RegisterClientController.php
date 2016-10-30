@@ -1,7 +1,9 @@
 <?php
+  include_once "../../config.php";
+  get_file("models/models");
+
   function RegisterClientController() {
-    include '../../models/models.php';
-    $ClientCtrl = new Client;
+    $ClientCtrl = new Client();
     $ClientCtrl->insert();
   }
 
