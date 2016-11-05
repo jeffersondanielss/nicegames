@@ -14,7 +14,7 @@
       <span class="icon-bar"></span>
       <span class="icon-bar"></span>
     </button>
-    <a class="navbar-brand" href="index.php">NICE GAMES STORE</a>
+    <a class="navbar-brand" href="index.php">NICE GAMES</a>
   </div>
 
   <!-- Top Menu Items -->

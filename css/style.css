@@ -8,11 +8,14 @@
 
   .welcome__logout {
     font-size: 18px;
-    float: right;
+    float: right;    
   }
+  
+.glyphicon{color:#f4f4f4;}
 
   .welcome__name {
     float: left;
+    color: #f4f4f4;
   }
 
 
@@ -25,10 +28,6 @@
     list-style: none;
   }
 
-.gta-slide {
-  position: relative;
-  top: -172px;
-}
 
 .slider-area {
   overflow: hidden !important;
@@ -95,11 +94,17 @@ body { font-family:Arial, Helvetica, sans-serif; }
 
 
 .header-area {
-    background: none repeat scroll 0 0 #f4f4f4;
+    background: none repeat scroll 0 0 #5a88ca;
 }
 .header-area a {
     color: #888;
 }
+.header-area .btn {
+    border: 1px solid #4e72a7;
+    background: #386890;
+}
+
+
 .user-menu ul {
     list-style: outside none none;
     margin: 0;
@@ -138,7 +143,7 @@ body { font-family:Arial, Helvetica, sans-serif; }
 }
 
 .mainmenu-area {
-  background: none repeat scroll 0 0 #f4f4f4;
+  background: none repeat scroll 0 0 #000;
   font-family: "Roboto Condensed",sans-serif;
   text-transform: uppercase;
   width: 100%;
@@ -207,7 +212,7 @@ body { font-family:Arial, Helvetica, sans-serif; }
 
 
 .mainmenu-area ul.navbar-nav li a {
-    color: #6e6a6a;
+    color: #ccc;
     font-size: 14px;
     padding: 20px;
 }
@@ -621,8 +626,11 @@ body { font-family:Arial, Helvetica, sans-serif; }
 color: #999;
 padding: 35px 0 180px;}
 
-
-.footer-bottom-area {background: #000;color: #fff}
+.footer-bottom-area {
+    background: #5a88ca;
+    color: #fff;
+    padding-bottom: 40px;
+}
 .footer-about-us span {
   color: #5a88ca;
 }
@@ -677,7 +685,7 @@ padding: 35px 0 180px;}
 }
 .newsletter-form input[type="submit"] {
     background: none repeat scroll 0 0 #5a88ca;
-    border: medium none;
+    border: 1px solid #000;
     color: #fff;
     display: inline-block;
     font-size: 18px;
@@ -690,11 +698,7 @@ padding: 35px 0 180px;}
 }
 a {color: #5a88ca}
 a:hover, a:focus {color: #17a78b}
-.footer-bottom-area {
-  background: none repeat scroll 0 0 #000;
-  color: #fff;
-  padding-bottom: 40px;
-}
+
 
 
 .slide-bulletz {

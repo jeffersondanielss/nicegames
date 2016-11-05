@@ -7,7 +7,6 @@
 
     <div class="jumbotron text-center">
       <h1><img src="../img/ng-logo.png" alt=""></h1> 
-      <p>STORE</p> 
       <form class="form-inline" action="../controllers/LoginController.php" method="post">
         <div class="form-group">
           <label class="sr-only">Email</label>
