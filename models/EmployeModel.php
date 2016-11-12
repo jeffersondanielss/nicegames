@@ -37,10 +37,10 @@
 
         $sql->execute();
         $message = 'Cadastro realizado com sucesso!';
-        header("Location: ../../employe.php?message={$message}");
+        header("Location: ../../dashboard/employe.php?message={$message}");
       else:
         $message = 'Já existe um funcionario com este id!';
-        header("Location: ../../employe.php?message={$message}");
+        header("Location: ../../dashboard/employe.php?message={$message}");
       endif;
     }
 

@@ -15,7 +15,7 @@
         </a>
     </td>
     <td>
-      <a class="icon-table" href="./functions/employe/delete.php?id=<?php echo $employe['id']; ?>">
+      <a class="icon-table" href="./../controllers/employe/DeleteController.php?id=<?php echo $employe['id']; ?>">
          <i class="glyphicon glyphicon-trash"></i>
       </a>
     </td> 
