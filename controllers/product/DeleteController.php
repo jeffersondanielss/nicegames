@@ -1,10 +1,13 @@
 <?php
+
+  include_once "../../config.php";
+  get_file("models/models");
+
   function delete( $id ){
-    include '../CRUD.php';
-    include 'product.php';
-    $db = new Product;
-    $db->delete( $id, 'produto', 'index' );
+    $productCtrl = new Product();
+    $productCtrl->delete( $id, 'produto', 'dashboard/product' );
   }
 
   delete( $_GET['id'] );
+
 ?>

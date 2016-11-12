@@ -34,7 +34,7 @@
       if( isset($_FILES['image']) ) {
         $extensao = strtolower(substr($_FILES['image']['name'], -4));
         $newName = md5(time()). $extensao;
-        $diretorio = '../../../upload/';
+        $diretorio = '../../upload/';
 
         move_uploaded_file($image, $diretorio.$newName);
       }
@@ -58,12 +58,14 @@
           $sql->bindValue(':quantidade', $quantidade);
           $sql->bindValue(':image',      $newName);
 
+          
+
           $sql->execute();
           $message = 'Cadastro realizado com sucesso!';
-          header("Location: ../../index.php?message={$message}");
+          header("Location: ../../dashboard/index.php?message={$message}");
       else:
           $message = 'Já existe um produto com este id!';
-          header("Location: ../../index.php?message={$message}");
+          header("Location: ../../dashboard/index.php?message={$message}");
       endif;
     }
 

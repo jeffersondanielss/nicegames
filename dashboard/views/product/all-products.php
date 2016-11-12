@@ -21,7 +21,7 @@
         </a>
       </td>
       <td>
-       <a class="icon-table" href="./functions/product/delete.php?id=<?php echo $product['id']; ?>">
+       <a class="icon-table" href="./../controllers/product/DeleteController.php?id=<?php echo $product['id']; ?>">
           <i class="glyphicon glyphicon-trash"></i>
        </a>
       </td> 
