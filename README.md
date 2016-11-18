@@ -35,7 +35,7 @@ Se preciso altere as variaveis de coneção com o banco de dados na função `co
 ```
 
 ### Banco de dados
-Crie uma tabela com nome `nicegames` e importe o arquivo `migrations/db.sql` nela.
+Crie uma tabela com nome `nicegames` e importe o arquivo mais recente do diretório `/migrations` nela.
 
 ##### Acesso a administração da loja
 `Email: ` admin@ng.com
