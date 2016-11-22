@@ -4,7 +4,6 @@
   include_once('views/head.php');
 ?>
 <body>
-
   <?php include_once('views/header.php'); ?>
   <?php include_once('views/home/slider.php'); ?>
   <?php include_once('views/home/promo-area.php'); ?>
@@ -16,6 +15,6 @@
       <?php include_once('views/home/latest-products.php'); ?>
 
     </div>
-  </div>
+	</div>
   
 <?php include_once('views/footer.php'); ?>
