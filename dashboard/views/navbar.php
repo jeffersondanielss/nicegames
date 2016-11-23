@@ -28,7 +28,7 @@
         <li><a href="profile.php"><i class="fa fa-fw fa-user"></i> Perfil</a></li>
         <li><a href="message.php"><i class="fa fa-fw fa-envelope"></i> Mensagens</a></li>
         <li class="divider"></li>
-        <li><a href="./functions/logout.php"><i class="fa fa-fw fa-power-off"></i> Sair</a></li>
+        <li><a href="../controllers/LogoutController.php"><i class="fa fa-fw fa-power-off"></i> Sair</a></li>
       </ul>
     </li>
   </ul>

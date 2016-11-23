@@ -2,7 +2,6 @@
   $title = "NG - Perfil";
   include_once '../config.php';
   include_once 'views/header.php';
-  // include_once 'functions/functions.php';
 ?>
 
 <body>

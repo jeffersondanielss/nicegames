@@ -3,7 +3,6 @@
   $page = "product";
   include_once '../config.php';
   include 'views/header.php';
-  // include 'functions/functions.php';
 ?>
 
 <body>

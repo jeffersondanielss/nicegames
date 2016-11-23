@@ -35,7 +35,7 @@
     ?>
     <tr>
       <td class="actions" colspan="2">
-        <a href="dashboard/functions/buy/purchase.php?id=<?php echo $currUser[0]['id']; ?>" class="add_to_cart_button">Finalizar compra</a>
+        <a href="controllers/buy/PurchaseController.php?id=<?php echo $currUser[0]['id']; ?>" class="add_to_cart_button">Finalizar compra</a>
       </td>
       <td><?php $PurchasesCtrl->getTotal();?></td>
     </tr>

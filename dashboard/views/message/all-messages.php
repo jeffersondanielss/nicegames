@@ -15,7 +15,7 @@
   <div id="<?php echo $message['id']; ?>" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingOne">
     <div class="panel-body">
      <p> <strong>De: </strong><?php echo $message['email']; ?>
-       <a href="./functions/message/delete.php?id=<?php echo $message['id']; ?>" class="glyphicon glyphicon-trash pull-right"></a>
+       <a href="../controllers/message/DeleteController.php?id=<?php echo $message['id']; ?>" class="glyphicon glyphicon-trash pull-right"></a>
      </p>
      <h3>Mensagem</h3>
      <p><?php echo $message['mensagem']; ?></p>

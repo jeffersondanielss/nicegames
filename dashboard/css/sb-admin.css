@@ -239,3 +239,7 @@ ul.alert-dropdown {
 .collapse .glyphicon {
   margin-right: 5px;
 }
+
+.disabled:hover {
+  cursor: not-allowed;
+}

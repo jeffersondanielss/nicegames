@@ -142,7 +142,7 @@
 
 
       $message = 'Usuário atualizado com sucesso!';
-      header("Location: ../../client.php?message={$message}");
+      header("Location: ../../dashboard/client.php?message={$message}");
     }
 
     /**

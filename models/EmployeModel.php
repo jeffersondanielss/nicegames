@@ -81,7 +81,7 @@
       }
 
       $message = 'Usuário atualizado com sucesso!';
-      header("Location: ../../employe.php?message={$message}");
+      header("Location: ../../dashboard/employe.php?message={$message}");
     }
 
     /**

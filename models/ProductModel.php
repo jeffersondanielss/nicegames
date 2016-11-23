@@ -158,7 +158,7 @@
       }
 
       $message = 'Usuário atualizado com sucesso!';
-      header("Location: ../../index.php?message={$message}");
+      header("Location: ../../dashboard/product.php?message={$message}");
     }
 
   }

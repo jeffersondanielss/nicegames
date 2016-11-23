@@ -4,10 +4,10 @@
     include '../../models/models.php';
 
     $productId = $_GET['id'];
-    $buy = new Buy;
+    $buy = new Buy();
     $buy->addCart( $productId );
 
-    header("Location: /nicegames/cart.php");
+    header("Location: ../../cart.php");
   }
   
   addCart();

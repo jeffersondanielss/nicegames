@@ -4,8 +4,8 @@
   get_file("models/models");
 
   function delete( $id ){
-    $clientCtrl = new Client();
-    $clientCtrl->delete( $id, 'cliente', 'dashboard/client' );
+    $messageCtrl = new Message();
+    $messageCtrl->delete( $id, 'mensagem', 'dashboard/message' );
   }
 
   delete( $_GET['id'] );
