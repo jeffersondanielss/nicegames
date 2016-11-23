@@ -3,8 +3,8 @@
   get_file("models/models");
 
   function updateController(){
-    $product = new Product();
-    $product->update();
+    $client = new Client();
+    $client->update();
   }
 
   updateController();

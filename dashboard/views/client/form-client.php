@@ -1,4 +1,4 @@
-<form class="form-horizontal" action="../controllers/client/RegisterClientController.php" method="post" enctype="multipart/form-data">
+<form class="form-horizontal" action="../controllers/client/RegisterController.php" method="post" enctype="multipart/form-data">
 
   <div class="form-group">
     <label class="col-sm-3 control-label">Nome</label>

@@ -5,7 +5,7 @@
   $clientEdit = $clientArray[0];
 ?>
 
-<form class="form-horizontal" action="functions/client/update.php" method="post" enctype="multipart/form-data">
+<form class="form-horizontal" action="../controllers/client/UpdateController.php" method="post" enctype="multipart/form-data">
 
   <div class="form-group invisible">
     <label class="col-sm-3 control-label">id</label>
