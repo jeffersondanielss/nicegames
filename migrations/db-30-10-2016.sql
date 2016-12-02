@@ -61,11 +61,3 @@ CREATE TABLE `buy` (
   FOREIGN KEY (id_cliente) REFERENCES cliente(id),
   FOREIGN KEY (id_produto) REFERENCES produto(id)
 ) ENGINE=InnoDB  DEFAULT CHARSET=utf8;
-
-CREATE TABLE `request` (
-  `id` int(11) NOT NULL AUTO_INCREMENT PRIMARY KEY,
-  `id_cliente` int(11) NOT NULL,
-  `data_compra` date NOT NULL,
-  `data_entrega` date NOT NULL,
-  FOREIGN KEY (id_cliente) REFERENCES cliente(id),
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8;
