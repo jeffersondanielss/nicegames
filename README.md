@@ -34,13 +34,25 @@ Se preciso altere as variaveis de coneção com o banco de dados na função `co
   $banco = "nicegames";
 ```
 
-### Banco de dados
-Crie um banco de dados chamado `nicegames` e importe o arquivo mais recente do diretório `/migrations` nela.
+## Instalação
 
-##### Acesso a administração da loja
+### Download
+Faça o download ou clone esse repositório na pasta pré-definida pelo seu ambiente de desenvolvimento web, caso esteja usando o `Wamp` a pasta é algo como: `c:\wamp\www`.
+
+
+### Banco de dados
+Crie um banco de dados chamado `nicegames` e importe nele o arquivo mais recente do diretório `/migrations` desse projeto.
+
+### Acessando
+Para acessar o projeto entre em `http://localhost/nicegames`, dependendo do seu ambiente você precisará acessar esse endereço por outra porta que não a padrão, se está porta fosse a `3000`, nesse caso o endereço ficará mais ou menos assim: `http://localhost:3000/nicegames`, verifique em seu ambiente qual porta está sendo útilizada.
+
+### Acessos
+
+##### Administração da loja
 `Email: ` admin@ng.com
 `senha: ` 123
 
 ##### Acesso de cliente
 `Email: ` cliente@ng.com
-`senha: ` 123 
+`senha: ` 123
+
