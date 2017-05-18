@@ -12,6 +12,12 @@
   </header>
 
   <section class="container about">
+    
+    <?php
+      $currentPage = "Sobre nós";
+      include_once('views/breadcrumbs.php');
+    ?>
+    
     <article>
       <h2>A EMPRESA</h2>
       <p>Nossa empresa foi desenvolvida para atender todos os Buscamos facilitar a sua vida como jogador, na comodidade de sua casa. Optamos em trabalhar somente pela internet e possui uma loja virtual que está sempre trazendo os últimos lançamentos dos games mais desejados. Com preços abaixo do esperado e condições de negociação facilitadas, a empresa preza muito pela honestidade e também pelo bom atendimento. Ao adquirir qualquer produto da nossa empresa, você adquire também a certeza de que fez um excelente negócio.</p>
