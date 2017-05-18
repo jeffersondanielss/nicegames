@@ -24,7 +24,12 @@
 
   <div class="container">
 
-    <?php foreach ($productArray as $currProduct) { ?>
+    <?php foreach ($productArray as $currProduct) { 
+
+      $currentPage = $currProduct['titulo'];
+      include_once('views/breadcrumbs.php');
+    
+    ?>
 
        <div class="col-sm-6">
          <div class="product-main-img">
