@@ -6,7 +6,7 @@
       <div class="single-shop-product">
         <div class="product-upper">
           <a href="product.php?id=<?php echo $product['id']; ?>">
-            <img src="upload/<?php echo $product['image'] ; ?>" alt="">
+            <img src="upload/<?php echo $product['image'] ; ?>" alt="<?php echo $product['titulo']; ?>">
           </a>
         </div>
         <h2>
