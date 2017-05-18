@@ -92,12 +92,13 @@ div.cart-collaterals ul.products li.product {
     float: none;
     margin: 10px auto;
 }
-.navbar-toggle .icon-bar { background: none repeat scroll 0 0 #333 }  
+.navbar-toggle .icon-bar { background: none repeat scroll 0 0 #FFFFFF }  
 .navbar-collapse.collapse.in {
-  background: none repeat scroll 0 0 #f4f4f4;
+  background: none repeat scroll 0 0 #000000;
   position: relative;
   z-index: 99;
 } 
+.navbar-collapse.collapse.in
 .mainmenu-area ul.navbar-nav li a {
   padding: 15px;
 }  
@@ -210,7 +211,5 @@ div.coupon input[type="text"] {
 }
 /* Wide Mobile Layout: 480px. */
 @media only screen and (min-width: 480px) and (max-width: 767px) { 
-    
-  
     
 }
