@@ -47,6 +47,7 @@
           <span class="icon-bar"></span>
         </button>
       </div> 
+      
       <div class="navbar-collapse collapse">
         <ul class="nav navbar-nav">
           <li><a href="index.php">Home</a></li>
@@ -56,7 +57,16 @@
           <li><a href="register.php">Cadastre-se</a></li>
           <li><a href="contact.php">Contato</a></li>
         </ul>
+        
+        <form class="navbar-form navbar-right">
+          <div class="form-group">
+            <input type="text" class="form-control" placeholder="Search">
+          </div>
+          <button type="submit" class="btn btn-default">Submit</button>
+        </form>
+        
       </div>  
+      
     </div>
   </div>
 </div> <!-- End mainmenu area -->
