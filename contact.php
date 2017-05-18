@@ -13,6 +13,12 @@
 
 
   <div class="container">
+    
+    <?php
+      $currentPage = "Fale Conosco";
+      include_once('views/breadcrumbs.php');
+    ?>
+    
     <div class="form-contact">
       <form class="" action="controllers/message/SendMessageController.php" method="post">
 
