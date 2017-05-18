@@ -16,6 +16,11 @@
 
 
   <div class="single-product-area container">
+    <?php
+      $currentPage = "Produtos";
+      include_once('views/breadcrumbs.php');
+    ?>
+    
     <?php include_once('views/shop/all-products.php'); ?>
   </div>
 
