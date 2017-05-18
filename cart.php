@@ -11,6 +11,12 @@
 
   <div class="single-product-area">
     <div class="container">
+      
+      <?php
+        $currentPage = "Carrinho";
+        include_once('views/breadcrumbs.php');
+      ?>
+      
       <?php include_once('views/cart/table.php'); ?>
       <?php include_once('dashboard/views/message.php'); ?>
     </div>
