@@ -13,6 +13,12 @@
 
 
   <div class="container">
+    
+    <?php
+      $currentPage = "Cadastre-se";
+      include_once('views/breadcrumbs.php');
+    ?>
+    
     <div class="well well-sm form-contact">
       <form class="form-horizontal" action="./controllers/client/RegisterController.php" method="post" enctype="multipart/form-data">
 
