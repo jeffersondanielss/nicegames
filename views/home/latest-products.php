@@ -8,7 +8,7 @@
      <div class="single-product">';
 
        <div class="product-f-image">
-        <img src="upload/<?php echo $product['image']; ?>" alt="">
+        <img src="upload/<?php echo $product['image']; ?>" alt="<?php echo $product['titulo'] ?>">
         <div class="product-hover">
           <a href="product.php?id=<?php echo $product['id']; ?>" class="view-details-link">
             <i class="fa fa-link"></i> Ver detalhes
