@@ -33,7 +33,7 @@
 
        <div class="col-sm-6">
          <div class="product-main-img">
-           <img src="upload/<?php echo $currProduct['image']; ?>" width="450px" alt="">
+           <img src="upload/<?php echo $currProduct['image']; ?>" width="450px" alt="<?php echo $currProduct['titulo']; ?>">
          </div>
        </div>
 
