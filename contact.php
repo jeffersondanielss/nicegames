@@ -23,15 +23,15 @@
       <form class="" action="controllers/message/SendMessageController.php" method="post">
 
         <div class="form-group">
-          <input name="nome" type="text" placeholder="Nome" class="form-control">
+          <input name="nome" type="text" placeholder="Nome" class="form-control" required>
         </div>
 
         <div class="form-group">
-          <input name="email" type="email" placeholder="Endereço de Email" class="form-control">
+          <input name="email" type="email" placeholder="Endereço de Email" class="form-control" required>
         </div>
 
         <div class="form-group">
-          <textarea class="form-control" name="mensagem" placeholder="Introduza a sua mensagem para nós aqui. Nós entraremos em contato com você dentro de 2 dias úteis." rows="7"></textarea>
+          <textarea class="form-control" name="mensagem" placeholder="Introduza a sua mensagem para nós aqui. Nós entraremos em contato com você dentro de 2 dias úteis." rows="7" required></textarea>
         </div>
 
         <div class="form-group text-center">
