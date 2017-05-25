@@ -62,7 +62,7 @@ CREATE TABLE `buy` (
   FOREIGN KEY (id_produto) REFERENCES produto(id)
 ) ENGINE=InnoDB  DEFAULT CHARSET=utf8;
 
-CREATE TABLE `supportMessage` (
+CREATE TABLE `supportmessage` (
   `id` int(11) NOT NULL AUTO_INCREMENT PRIMARY KEY,
   `email_cliente` varchar(32) NOT NULL,
   `subject` varchar(50) NOT NULL,
