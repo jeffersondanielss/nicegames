@@ -66,6 +66,5 @@ CREATE TABLE `supportmessage` (
   `id` int(11) NOT NULL AUTO_INCREMENT PRIMARY KEY,
   `email_cliente` varchar(32) NOT NULL,
   `subject` varchar(50) NOT NULL,
-  `message` varchar(800) NOT NULL,
-  FOREIGN KEY (email_cliente) REFERENCES cliente(email)
+  `message` varchar(800) NOT NULL
 ) ENGINE=InnoDB  DEFAULT CHARSET=utf8;
