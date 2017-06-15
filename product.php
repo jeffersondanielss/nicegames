@@ -42,7 +42,7 @@
         <div class="product-inner-price">
          <span>Preço: </span><ins><?php echo $currProduct['preco']; ?></ins>
         </div>
-        <a class="add_to_cart_button" href="controllers/buy/addCartController.php?id=<?php echo $currProduct['id']; ?>">Adicionar ao carrinho</a>
+        <a class="add_to_cart_button" href="controllers/buy/AddCartController.php?id=<?php echo $currProduct['id']; ?>">Adicionar ao carrinho</a>
 
         <!--- prod-infos -->
         <ul class="prod-infos">
