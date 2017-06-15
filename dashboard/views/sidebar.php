@@ -36,5 +36,7 @@
       </ul>
     </li>
 
+    <li><a href="support.php"><i class="fa fa-fw fa-life-ring"></i> Suporte</a></li>
+
   </ul>
 </div>
