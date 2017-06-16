@@ -66,13 +66,13 @@ CREATE TABLE `buy` (
 CREATE TABLE `responsesupport` (
   `id` int(11) NOT NULL AUTO_INCREMENT PRIMARY KEY,
   `id_message` int(11) NOT NULL,
-  `response` varchar(1000) NOT NULL,
-  FOREIGN KEY (id_message) REFERENCES supportmessage(id),
+  `response` varchar(2000) NOT NULL,
+  FOREIGN KEY (id_message) REFERENCES supportmessage(id)
 ) ENGINE=InnoDB  DEFAULT CHARSET=utf8;
 
 CREATE TABLE `supportmessage` (
   `id` int(11) NOT NULL AUTO_INCREMENT PRIMARY KEY,
   `email_cliente` varchar(32) NOT NULL,
   `subject` varchar(50) NOT NULL,
-  `message` varchar(800) NOT NULL
+  `message` varchar(2000) NOT NULL
 ) ENGINE=InnoDB  DEFAULT CHARSET=utf8;
