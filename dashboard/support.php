@@ -29,7 +29,7 @@
         <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
           <div class="panel panel-default">
 
-            <?php include 'views/message/all-support.php'; ?>
+            <?php include 'views/support/all-support.php'; ?>
 
           </div>
 
