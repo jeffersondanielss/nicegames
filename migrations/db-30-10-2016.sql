@@ -6,7 +6,7 @@ CREATE TABLE `cliente` (
   `senha` varchar(32) NOT NULL,
   `endereco` varchar(80) NOT NULL,
   `cidade` varchar(64) NOT NULL,
-  `cpf` int(11) NOT NULL,
+  `cpf` varchar(25) NOT NULL,
   `cep` varchar(10) NOT NULL,
   `telefone` varchar(16) NOT NULL
 ) ENGINE=InnoDB  DEFAULT CHARSET=utf8;

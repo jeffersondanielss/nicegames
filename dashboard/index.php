@@ -34,7 +34,7 @@
               <div class="panel-heading">
                 <div class="row">
                   <div class="col-xs-3">
-                    <i class="fa fa-users fa-5x"></i>
+                    <i class="fa fa-shopping-cart fa-5x" aria-hidden="true"></i>
                   </div>
                   <div class="col-xs-9 text-right">
                     <div class="huge"><?php $count->allItens('produto'); ?></div>
@@ -46,7 +46,10 @@
     
             <div class="panel panel-primary">
               <div class="panel-heading">
-                <h3 class="panel-title"><i class="fa fa-user fa-fw"></i> Produtos</h3>
+                <h3 class="panel-title">
+                  <i class="fa fa-shopping-cart" aria-hidden="true"></i> 
+                  Produtos
+                </h3>
               </div>
               <div class="panel-body">
                 <div class="table-responsive">
@@ -75,7 +78,7 @@
               <div class="panel-heading">
                 <div class="row">
                   <div class="col-xs-3">
-                    <i class="fa fa-ban fa-5x"></i>
+                    <i class="fa fa-user fa-5x" aria-hidden="true"></i>
                   </div>
                   <div class="col-xs-9 text-right">
                     <div class="huge"><?php $count->allItens('cliente'); ?></div>
@@ -87,7 +90,10 @@
 
             <div class="panel panel-red">
               <div class="panel-heading">
-                <h3 class="panel-title"><i class="fa fa-user fa-fw"></i> Clientes</h3>
+                <h3 class="panel-title">
+                  <i class="fa fa-user fa-fw"></i> 
+                  Clientes
+                </h3>
               </div>
               <div class="panel-body">
                 <div class="table-responsive">
@@ -115,7 +121,7 @@
               <div class="panel-heading">
                 <div class="row">
                   <div class="col-xs-3">
-                    <i class="fa fa-user fa-5x"></i>
+                    <i class="fa fa-user fa-5x" aria-hidden="true"></i>
                   </div>
                   <div class="col-xs-9 text-right">
                     <div class="huge"><?php $count->allItens('funcionario'); ?></div>
@@ -127,7 +133,10 @@
 
             <div class="panel panel-green">
               <div class="panel-heading">
-                <h3 class="panel-title"><i class="fa fa-user fa-fw"></i> Funcionários</h3>
+                <h3 class="panel-title">
+                  <i class="fa fa-user fa-fw"></i> 
+                  Funcionários
+                </h3>
               </div>
               <div class="panel-body">
                 <div class="table-responsive">
